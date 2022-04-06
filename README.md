@@ -1,21 +1,22 @@
 # Trainee-2022.1
 # MonsterShop
-# Projeto de trainee da empresa Code Jr, Grupo 4 - 2022.1
+## Projeto de trainee da empresa Code Jr, Grupo 4 - 2022.1
 
 Desenvolvedores:
 
-Frederico Dôndici Gama Vieira
-Pedro do Couto Filgueiras
-Christian Rafael De Oliveira Coelho
-Gabriel Gomes Bahia
-Rafael de Oliveira Zimbrão
+-Frederico Dôndici Gama Vieira
+-Pedro do Couto Filgueiras
+-Christian Rafael De Oliveira Coelho
+-Gabriel Gomes Bahia
+-Rafael de Oliveira Zimbrão
 
 Scrum Master:
 Gustavo Carvalhaes da Fonseca Ferreira
 
-#GIT TUTORIAL
+##GIT TUTORIAL
 
-Primeira configuração
+###Primeira configuração
+
 Pelo terminal entre na pasta onde irá guardar o projeto: cd /caminho/para/a/pasta, depois inicialize o git na pasta com o comando: git init
 
 Outro jeito de fazer o citado acima: clique com o botão direito na pasta e selecione "Git Bash Here" para abrir o terminal do git
@@ -28,7 +29,8 @@ Crie sua branch usando como o padrão o nome da feature que você está a desenv
 
 Após criada a branch você será redirecionado automaticamente a ela, neste espaço que você desenvolverá sua parte do projteto
 
-#Rotina
+###Rotina
+
 Adicione as alterações feitas: git add .
 
 Cheque em qual branch está e quais alterações foram adicionadas: git status
@@ -37,7 +39,7 @@ Dê um commit com uma mensagem especificando as alterações realizadas: git com
 
 Envie o commit feito para sua branch: git push origin suabranch
 
-#Quando estiver tudo pronto
+###Quando estiver tudo pronto
 
 Volte para a main: git checkout main
 
@@ -57,7 +59,7 @@ Mescle a main com as alterações enviadas para sua branch (apenas quando solici
 
 Confirme o merge (apenas quando solicitado pelo SM): git push origin main
 
-#Comandos básicos
+###Comandos básicos
 
 Para atualizar a main: git pull
 

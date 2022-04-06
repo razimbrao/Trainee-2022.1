@@ -3,12 +3,11 @@
 ## Projeto de trainee da empresa Code Jr, Grupo 4 - 2022.1
 
 Desenvolvedores:
-
--Frederico Dôndici Gama Vieira
--Pedro do Couto Filgueiras
--Christian Rafael De Oliveira Coelho
--Gabriel Gomes Bahia
--Rafael de Oliveira Zimbrão
+- Frederico Dôndici Gama Vieira
+- Pedro do Couto Filgueiras
+- Christian Rafael De Oliveira Coelho
+- Gabriel Gomes Bahia
+- Rafael de Oliveira Zimbrão
 
 Scrum Master:
 Gustavo Carvalhaes da Fonseca Ferreira

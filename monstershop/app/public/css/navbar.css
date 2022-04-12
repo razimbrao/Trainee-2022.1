@@ -1,11 +1,26 @@
 body {
-    color: #0F1223;
-    background-image: url(../../public/img/monsterShop_oficial.png);
+    background-color: #0F1223;
+    color: aliceblue;
+    /* background-image: url(../../public/img/monsterShop_oficial.png); */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.ele h1, .ele h2{
-    display: flex;
-    justify-content: center;
+.navbar-custom {
+    background-color: #0F1223 !important;
+    height: 70px;
+    width: 100%;
+}
+
+.navbar-custom a {
+    color: white !important;
+}
+
+.navbar-custom img {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-custom button {
+    color: white !important;
 }

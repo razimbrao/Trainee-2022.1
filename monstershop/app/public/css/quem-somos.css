@@ -1,0 +1,73 @@
+body{
+    background-image: linear-gradient(rgb(23, 25, 39, 0.7), rgb(23, 25, 39, 1)), url(../../public/img/MonsterShop-logo-sem-nome.png);
+    margin: 0px;
+    background-size: cover;
+    background-color: #171927;
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    font-family: 'Heebo', sans-serif;
+}
+
+body p{
+    font-size: 26px;
+    opacity: 100%;
+}
+
+body h1{
+    font-size: 50px;
+    opacity: 1;
+}
+
+.quem_somos{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    width: 50%;
+    float: left;
+}
+.quem_somos h1{
+    color: #35dfda;
+}
+
+.missao{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: right;
+    margin-top: 20px;
+    width: 50%;
+    text-align: end;
+}
+.missao h1{
+    color: #a53339;
+}
+
+.visao{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    width: 50%;
+    float: left;
+}
+.visao h1{
+    color: #35dfda;
+}
+
+.valores{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: right;
+    margin-top: 20px;
+    width: 50%;
+    text-align: end;
+}
+.valores h1{
+    color: #a53339;
+}
+
+
+.nav-bar{
+    height: 120px;
+    width: auto;
+    background-color: red;
+}

@@ -1,0 +1,23 @@
+body {
+    background-color: #0f1223;
+}
+
+
+.img-fundo{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    width: 70rem;
+    height: 20rem;
+    
+}
+
+.conteiner{
+    margin-right: 10rem;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+

@@ -1,5 +1,5 @@
 body {
-    background-color: #0f1223;
+    background-color: #171927;
     color: #35dfda;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@ body {
 /* Navbar-Start */
 
 .navbar-custom {
-    background-color: #0f1223 !important;
+    background-color: #171927 !important;
     height: 70px;
     width: 100%;
     font-size: 18px;
@@ -35,8 +35,8 @@ body {
 
 .navbar-custom img {
     position: fixed !important;
-    margin-top: -30px;
-    height: 60px;
+    margin-top: -1rem;
+    height: 31px;
     width: 180px;
 }
 
@@ -46,7 +46,8 @@ body {
 
 .link-nav:hover {
     color: #35dfda !important;
-    transition: 0.5s;
+    padding-top: 3px !important;
+    transition: 0.4s;
 } 
 
 .nav-img {

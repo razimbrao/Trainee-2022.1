@@ -47,23 +47,27 @@ body {
     font-weight: 800;
 }
 
+
+
 .img-qs {
-    margin-left: 20%;
-    margin-right: 20%;
     margin-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
 }
 
 .img-ct {
     margin-top: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
     margin-bottom: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; 
 }
 
+.linksimg img {
+    max-width: 100%;
+}

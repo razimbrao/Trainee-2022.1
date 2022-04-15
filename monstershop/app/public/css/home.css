@@ -1,9 +1,9 @@
 body {
     background-color: #171927;
-    color: aliceblue;
+    font-family: 'Nunito';
 }
 
-.conteiner{
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,39 +12,54 @@ body {
 }
 
 .img-fundo {
-    background-color: yellow;
     width: 100%;
    
 }    
 
 .carousel-home {
-    background-color: greenyellow;
     width: 75%;
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
 
-.cartas {
-    display: grid;
-    width: 100vh;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 50px 100px;
-}    
 
-.card1 {
-    width: 100%;
-    height: 100%;
-    background-color: #a7a9ac;
-    border-color: #a53339;
-}    
-
-.btn-primary {
-    background-color: #a53339;
-    border-color:#a53339;
-    color: black;
+.title-cards {
+    font-weight: 800;
 }
+
+.text-cards {
+    font-weight: 600;
+}
+
+.cartoes2 {
+    background-color: #a7a9ac;
+    border-radius: 20px;
+}
+
+.corpocards {
+    border-radius: 20px;
+}
+
+.btnc {
+    background-color: red;
+    border-color: red;
+    border-radius: 50px;
+    font-weight: 800;
+}
+
+.img-qs {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+
+.img-ct {
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    margin-bottom: 5%;
+}
+

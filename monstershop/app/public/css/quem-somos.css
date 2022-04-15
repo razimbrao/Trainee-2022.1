@@ -33,42 +33,47 @@ body span{
 }
 .quem_somos h1{
     color: #35dfda;
-}
-.quem_somos img{
-    width: 100px;
-    height: 100px;
+    background-color: #a5333950;
+    border-radius: 5px;
+    padding-left: 25px;
 }
 
 .missao{
     margin-left: 10%;
     margin-right: 10%;
     float: right;
-    margin-top: 50px;
     text-align: start;
 }
 .missao h1{
+    background-color: #35dfda50;
+    border-radius: 5px;
     color: #a53339;
+    padding-left: 25px;
 }
 
 .visao{
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50px;
     float: left;
 }
 .visao h1{
+    background-color: #a5333950;
+    border-radius: 5px;
     color: #35dfda;
+    padding-left: 25px;
 }
 
 .valores{
     margin-left: 10%;
     margin-right: 10%;
     float: left;
-    margin-top: 50px;
     text-align: start;
 }
 .valores h1{
+    background-color: #35dfda50;
+    border-radius: 5px;
     color: #a53339;
+    padding-left: 25px;
 }
 
 .descricao-esq{
@@ -77,6 +82,8 @@ body span{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .descricao-esq p, ul{
     width: 70%;
@@ -85,8 +92,9 @@ body span{
     margin-top: 20px;
 }
 .descricao-esq img{
-    width: 220px;
+    width: 250px;
     height: 220px;
+    border-radius: 5px;
 }
 
 @media (max-width: 1098px){
@@ -104,7 +112,6 @@ body span{
     margin-left: 10%;
     margin-right: 10%;
     float: center;
-    margin-top: 50px;
     text-align: center;
 }
 .missao h1{
@@ -114,7 +121,6 @@ body span{
 .visao{
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50px;
     float: center;
     text-align: center;
 }
@@ -126,7 +132,6 @@ body span{
     margin-left: 10%;
     margin-right: 10%;
     float: center;
-    margin-top: 50px;
     text-align: center;
 }
 .valores h1{
@@ -151,7 +156,6 @@ body span{
     width: 220px;
     height: 220px;
     order: -1;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 }

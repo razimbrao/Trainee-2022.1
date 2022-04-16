@@ -71,9 +71,10 @@ body {
 /* Footer-Start */
 
 .foot-list{
+    padding: 0;
     display: flex;
     justify-content: center;
-}
+}   
 
 .foot-list li {
     list-style: none;

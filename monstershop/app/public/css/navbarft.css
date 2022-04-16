@@ -1,5 +1,5 @@
 body {
-    background-color: #171927;
+    background-color: #0f1223;
     color: #35dfda;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,6 +15,7 @@ body {
     font-size: 18px;
     font-weight: 500;   
     text-transform: uppercase;
+    position: fixed;
 
     display: flex !important;
     align-items: center !important;
@@ -51,16 +52,80 @@ body {
 } 
 
 .nav-img {
+    margin-left: 0.6rem;
     overflow: hidden !important;
 }
 
 /* Navbar-End */
 
 
+.conteudo {
+    height: 800px;
+}
+
 
 /* Footer-Start */
 
+.foot-list{
+    display: flex;
+    justify-content: center;
+}
+
+.foot-list li {
+    list-style: none;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.foot-list a {
+    color: #35dfda;
+    text-decoration: none;
+}
+
+.foot-list i {
+    color: #a53339;
+}
+
+.foot-list i:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer-img {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sign {
+    margin-bottom: 3rem;
+    color: #a7a9ac;
+}
+
 /* Footer-End */
+
+
+/*  */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #171927;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:  #a53339;
+    border-radius: 6px;
+}
+
+
+/*  */
 
 @media (max-width: 992px)
 {

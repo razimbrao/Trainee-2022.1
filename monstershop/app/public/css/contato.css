@@ -66,16 +66,7 @@ main{
     margin: 0 25% 0 25%;
 }
 
-/* .botao{
-    background-color: #a53339;
-    border-color: #a53339;
-}
 
-.botao:hover{
-    background-color: #a53339;
-    border-color: #a53339;
-}
- */
 .mapa{
     margin-top: 4rem;
     display: flex;

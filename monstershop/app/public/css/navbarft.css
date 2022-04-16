@@ -45,6 +45,10 @@ body {
     color: white !important;
 }
 
+.link-nav {
+    transition: 0.5s;
+}
+
 .link-nav:hover {
     color: #35dfda !important;
     padding-top: 3px !important;
@@ -84,6 +88,8 @@ body {
 
 .foot-list i {
     color: #a53339;
+
+    transition: 0.4s;
 }
 
 .foot-list i:hover {

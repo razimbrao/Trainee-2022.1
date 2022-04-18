@@ -1,5 +1,5 @@
 body {
-    background-color: #0f1223;
+    background-color: #171927;
     color: #35dfda;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@ body {
 /* Navbar-Start */
 
 .navbar-custom {
-    background-color: #171927 !important;
+    background-color: #0f1223 !important;
     height: 70px;
     width: 100%;
     font-size: 18px;
@@ -122,7 +122,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #171927;
+    background-color: #0f1223;
     border-radius: 6px;
 }
 

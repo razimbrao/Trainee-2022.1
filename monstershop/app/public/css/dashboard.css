@@ -1,0 +1,17 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #bb2d3b;
+    color: white;
+}
+
+.botao{
+    margin-bottom: 1rem;
+}
+
+.botao-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 20% 5% 20%;
+    padding: 5rem;
+}

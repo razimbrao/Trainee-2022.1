@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/public/css/front-produto.css" media="screen" />
+
+  <title>(nome-do-produto)</title>
+</head>
+
+<body>
+  <!--Produto principal-->
+  <div class="produto-principal">
+    <img src="/public/img/camisetaMS.jpg" alt="(foto-do-produto)">
+    <div class="opcoes-de-compra">
+      <h1>(nome-do-produto)</h1>
+      <h2>(categoria-do-produto)</h2>
+
+
+      <hr>
+
+      <h3>Quantidade:</h3>
+      <div class="btn-quantidade">
+        <button type="button" class="btn btn-danger">-</button>
+        <input class="form-control" type="text" placeholder="1" readonly>
+        <button type="button" class="btn btn-success">+</button>
+      </div>
+
+      <h3>Tamanho:</h3>
+      <div class="btn-group btn-tamanho" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio1">PP</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">P</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">M</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio4">G</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio5">GG</label>
+      </div>
+
+
+    </div>
+    <div class="informacoes-compra">
+      <h3>Por: (preço-do-produto)</h3>
+
+      <hr>
+
+      <h3>Formas de pagamento:</h3>
+
+      <div class="form-check formas-de-pagamento">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Pix
+        </label>
+      </div>
+      <div class="form-check formas-de-pagamento">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          Boleto
+        </label>
+      </div>
+      <div class="form-check formas-de-pagamento">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          Cartão de crédito
+        </label>
+      </div>
+
+      <hr>
+
+      <h3>CEP:</h3>
+
+      <div class="input-group input-cep">
+        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+        <button type="button" class="btn btn-outline-secondary">Calcular</button>
+        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-opcoes">
+          <li><a class="dropdown-item" href="#">Sedex</a></li>
+          <li><a class="dropdown-item" href="#">Express</a></li>
+        </ul>
+      </div>
+      <hr>
+      <div class="d-grid gap-2 btn-comprar">
+        <button class="btn btn-primary" type="button">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <!--Outros produtos da mesma categoria-->
+    <div class="recomendacoes">
+      <h1>Você também pode gostar de: </h1>
+    </div>
+  </div>
+  <div class="col d-flex">
+    <div class="card  card1 cartoes2" style="width: 18rem;">
+      <img src="/public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
+      <div class="card-body">
+        <h5 class="card-title cartao title-cards">Camiseta</h5>
+        <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
+        <a href="#" class="btn btn-primary btnc">Ver</a>
+      </div>
+    </div>
+    <div class="card  card1 cartoes2" style="width: 18rem;">
+      <img src="/public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
+      <div class="card-body">
+        <h5 class="card-title cartao title-cards">Camiseta</h5>
+        <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
+        <a href="#" class="btn btn-primary btnc">Ver</a>
+      </div>
+    </div>
+    <div class="card  card1 cartoes2" style="width: 18rem;">
+      <img src="/public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
+      <div class="card-body">
+        <h5 class="card-title cartao title-cards">Camiseta</h5>
+        <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
+        <a href="#" class="btn btn-primary btnc">Ver</a>
+      </div>
+    </div>
+  </div>
+
+  <!--informacoes do Produto-->
+  <div class="accordion informacoes-produto" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingInfo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+          Informações do produto
+        </button>
+      </h2>
+      <div id="collapseInfo" class="accordion-collapse collapse" aria-labelledby="headingInfo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>(nome-do-produto)</strong> aqui pode vir algumas informacoes-produto.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <!--Avaliação do Produto-->
+    <div class="accordion avaliacoes-produto" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Avaliações
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

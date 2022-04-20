@@ -1,0 +1,162 @@
+body{
+    background-color: #171927;
+    color: white;
+}
+
+.produto-principal, .recomendacoes, .produtos-recomendados{
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.produto-principal{
+    height: 400px;
+    display: flex;
+    align-content: center;
+}
+
+.produto-principal h1{
+    font-size: 32px;
+}
+.produto-principal h2{
+    margin-left: 25px;
+    opacity: 70%;
+    font-size: 20px;
+}
+
+.produto-principal img{
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.opcoes-de-compra{
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 400px;
+    width: 40%;
+    border-radius: 10px;
+    background: #292c46;
+
+}
+.opcoes-de-compra h1{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.opcoes-de-compra h3{
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+
+.informacoes-compra{
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 400px;
+    width: 30%;
+    border-radius: 10px;
+    background: #292c46;
+}
+.informacoes-compra h1{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.informacoes-compra h3{
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+.input-cep{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dropdown-opcoes{
+    margin-right: 10px;
+}
+
+.btn-quantidade{   
+    display: flex;
+    margin-top: 5px;
+    margin-left: 25px;
+    height: 40px;
+    width: 120px;
+}
+
+.btn-quantidade button{
+    border-radius: 10px;
+}
+
+.btn-quantidade form-control{
+    border-radius: 10px;
+}
+
+.btn-tamanho{
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 10%;
+}
+
+.btn-tamanho{
+    color: #35dfda;
+}
+
+.btn-comprar{
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.formas-de-pagamento{
+    margin-left: 25px;
+}
+
+.recomendacoes h1{
+    font-size: 26px;
+}
+
+/* TESTE */
+.cartoes2 {
+    border-radius: 5px;
+    margin-left: 10%;
+    color: white;
+    background-color: #292c46;
+}
+
+.corpocards {
+    border-radius: 5px;
+}
+
+.informacoes-produto{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    color: black;
+}
+.informacoes-produto button{
+    font-size: 26px;
+    color: white;
+    background-color: #292c46;
+}
+
+
+.avaliacoes-produto{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    color: black;
+}
+.avaliacoes-produto button{
+    font-size: 26px;
+    color: white;
+    background-color: #292c46;
+}
+
+.avaliacoes-produto button.collapsed{
+    font-size: 26px;
+    color: white;
+    background: #292c46;
+}
+

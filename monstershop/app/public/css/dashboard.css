@@ -1,20 +1,13 @@
 body{
     font-family: 'Nunito', sans-serif;
-    background-color: #bb2d3b;
+    background-color: #171927;
     color: white;
-}
-
-.header{
-    grid-area: hd;
-}
-
-.content{
-    grid-area: main;
 }
 
 .container{
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    margin: 12rem auto auto auto;
     grid-template-rows: 1fr 2fr 1fr;
     background-color: yellowgreen;
     grid-template-areas:
@@ -25,6 +18,17 @@ body{
    justify-content: center;
 }
 
+.header{
+    height: 8rem;
+    grid-area: hd;
+}
+
+.content{
+    grid-area: main;
+}
+
 .botao{
     margin-bottom: 1rem;
+    width: 50rem;
 }
+

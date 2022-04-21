@@ -6,29 +6,41 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 100%;
     margin: 12rem auto auto auto;
-    grid-template-rows: 1fr 2fr 1fr;
-    background-color: yellowgreen;
+    width: 60rem;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
-    "hd hd hd"
-   ". main ."
-   ". . .";
+    "hd"
+   "main";
    justify-items: center;
    justify-content: center;
+   backdrop-filter: blur(25px) saturate(13%);
+   -webkit-backdrop-filter: blur(25px) saturate(13%);
+   background-color: rgba(23, 25, 38, 0.47);
+   border-radius: 12px;
+   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-.header{
-    height: 8rem;
+.titulo{
+    height: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     grid-area: hd;
 }
 
 .content{
+    display: flex;
+    flex-direction: column;
     grid-area: main;
+    width: 40rem;
 }
 
 .botao{
     margin-bottom: 1rem;
-    width: 50rem;
+    width: 100%;
 }
 
+.logout{
+    width: 4rem;
+}

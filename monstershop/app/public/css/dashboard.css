@@ -2,6 +2,7 @@ body{
     font-family: 'Nunito', sans-serif;
     background-image: url(../img/dashboard/fundo-metade.svg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #171927;
     color: white;
 }
@@ -25,10 +26,22 @@ body{
 }
 
 .titulo{
-    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
     grid-area: hd;
+}
+
+.titulo-adm{
+    height: 6rem;
+    margin-right: -2rem;
+}
+
+.titulo-monster{
+    height: 6rem;
 }
 
 .content{
@@ -51,4 +64,10 @@ body{
 
 .logout{
     width: 4rem;
+}
+
+@media (max-width: 700px) {
+    body{
+        background-image: none;
+    }
 }

@@ -1,11 +1,17 @@
 body{
     background-color: #171927;
     color: white;
+    font-family: 'Heebo', sans-serif;
 }
 
-.produto-principal, .recomendacoes, .produtos-recomendados{
+hr{
+    color: #a7a9ac;
+}
+
+.produto-principal, .recomendacoes, .produtos-recomendados, .informacoes-compra{
     margin-top: 50px;
     margin-left: 10%;
+    margin-bottom: 50px;
     width: 80%;
 }
 
@@ -18,6 +24,7 @@ body{
 .produto-principal h1{
     font-size: 32px;
 }
+
 .produto-principal h2{
     margin-left: 25px;
     opacity: 70%;
@@ -34,34 +41,36 @@ body{
     margin-top: 0px;
     margin-left: 10px;
     height: 400px;
-    width: 40%;
+    width: 35%;
     border-radius: 10px;
     background: #292c46;
-
 }
+
 .opcoes-de-compra h1{
     margin-top: 10px;
     margin-left: 10px;
 }
+
 .opcoes-de-compra h3{
     margin-top: 20px;
     margin-left: 25px;
     font-size: 20px;
 }
 
-
 .informacoes-compra{
     margin-top: 0px;
     margin-left: 10px;
     height: 400px;
-    width: 30%;
+    width: 35%;
     border-radius: 10px;
     background: #292c46;
 }
+
 .informacoes-compra h1{
     margin-top: 10px;
     margin-left: 10px;
 }
+
 .informacoes-compra h3{
     margin-top: 20px;
     margin-left: 25px;
@@ -69,8 +78,12 @@ body{
 }
 
 .input-cep{
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.input-cep button{
+    color: white;
 }
 
 .dropdown-opcoes{
@@ -85,12 +98,21 @@ body{
     width: 120px;
 }
 
-.btn-quantidade button{
-    border-radius: 10px;
+.input-qtde{
+    border: 0px;
+    border-radius: 0px;
+    text-align: center;
 }
 
-.btn-quantidade form-control{
-    border-radius: 10px;
+.diminuir-quantidade{
+    background-color: #a53339;
+    border-radius: 10px 0px  0px 10px;
+    border: 0px;
+}
+
+.aumentar-quantidade{
+    border-radius:  0px 10px 10px 0px ;
+    border: 0px;
 }
 
 .btn-tamanho{
@@ -99,18 +121,23 @@ body{
     width: 10%;
 }
 
-.btn-tamanho{
-    color: #35dfda;
-}
-
 .btn-comprar{
     margin-top: 25px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
+.btn-comprar :hover{
+    background-color: #35dfda;
+}
+
 .formas-de-pagamento{
     margin-left: 25px;
+}
+
+.lista-recomendacoes{
+    display: flex;
+    justify-content: space-between;
 }
 
 .recomendacoes h1{
@@ -120,7 +147,7 @@ body{
 /* TESTE */
 .cartoes2 {
     border-radius: 5px;
-    margin-left: 10%;
+    margin-top: 20px;
     color: white;
     background-color: #292c46;
 }
@@ -135,12 +162,12 @@ body{
     margin-top: 50px;
     color: black;
 }
+
 .informacoes-produto button{
     font-size: 26px;
     color: white;
     background-color: #292c46;
 }
-
 
 .avaliacoes-produto{
     margin-left: 10%;
@@ -148,6 +175,7 @@ body{
     margin-top: 50px;
     color: black;
 }
+
 .avaliacoes-produto button{
     font-size: 26px;
     color: white;
@@ -160,3 +188,19 @@ body{
     background: #292c46;
 }
 
+.row{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.col-sm{
+    background-color: red;
+    margin-top: 25px;
+    height: 500px;
+    border: 5px green solid;
+}
+
+.img-produto-principal{
+    border-radius: 10px;
+    height: 400px;
+}

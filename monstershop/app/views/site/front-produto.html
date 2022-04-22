@@ -13,11 +13,13 @@
 </head>
 
 <body>
-  <!--Produto principal-->
-  <div class="produto-principal">
-    <img src="../../public/img/camisetaMS.jpg" alt="(foto-do-produto)">
-    <div class="opcoes-de-compra">
-      <h1>(nome-do-produto)</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm img-produto-principal">
+        <img src="../../public/img/camisetaMS.jpg" alt="(foto-do-produto)"> 
+      </div>
+      <div class="col-sm opcoes-de-compra">
+        <h1>Camiseta</h1>
       <h2>(categoria-do-produto)</h2>
 
 
@@ -48,53 +50,53 @@
         <label class="btn btn-outline-primary" for="btnradio5">GG</label>
       </div>
 
-
-    </div>
-    <div class="informacoes-compra">
-      <h3>Por: (preço-do-produto)</h3>
-
-      <hr>
-
-      <h3>Formas de pagamento:</h3>
-
-      <div class="form-check formas-de-pagamento">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Pix
-        </label>
       </div>
-      <div class="form-check formas-de-pagamento">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Boleto
-        </label>
-      </div>
-      <div class="form-check formas-de-pagamento">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-        <label class="form-check-label" for="flexRadioDefault3">
-          Cartão de crédito
-        </label>
-      </div>
-
-      <hr>
-
-      <h3>CEP:</h3>
-      <div class="input-group input-cep">
-        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="____-__">
-        <button type="button" class="btn btn-outline-secondary">Calcular</button>
-        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="visually-hidden">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end dropdown-opcoes">
-          <li><a class="dropdown-item" href="#">Sedex</a></li>
-          <li><a class="dropdown-item" href="#">Express</a></li>
-        </ul>
-      </div>
-      <hr>
-      <div class="d-grid gap-2 btn-comprar">
-        <button class="btn btn-primary" type="button">Comprar</button>
-      </div>
+      <div class="col-sm opcoes-de-compra2">
+          <h3>Por: (preço-do-produto)</h3>
+    
+          <hr>
+    
+          <h3>Formas de pagamento:</h3>
+    
+          <div class="form-check formas-de-pagamento">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Pix
+            </label>
+          </div>
+          <div class="form-check formas-de-pagamento">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Boleto
+            </label>
+          </div>
+          <div class="form-check formas-de-pagamento">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+            <label class="form-check-label" for="flexRadioDefault3">
+              Cartão de crédito
+            </label>
+          </div>
+    
+          <hr>
+    
+          <h3>CEP:</h3>
+          <div class="input-group input-cep">
+            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="____-__">
+            <button type="button" class="btn btn-outline-secondary">Calcular</button>
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-opcoes">
+              <li><a class="dropdown-item" href="#">Sedex</a></li>
+              <li><a class="dropdown-item" href="#">Express</a></li>
+            </ul>
+          </div>
+          <hr>
+          <div class="d-grid gap-2 btn-comprar">
+            <button class="btn btn-primary" type="button">Comprar</button>
+          </div>
+        </div>
     </div>
   </div>
 

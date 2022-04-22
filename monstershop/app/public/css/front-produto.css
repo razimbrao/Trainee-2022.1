@@ -8,7 +8,7 @@ hr{
     color: #a7a9ac;
 }
 
-.produto-principal, .recomendacoes, .produtos-recomendados, .informacoes-compra{
+.produto-principal, .recomendacoes, .produtos-recomendados{
     margin-top: 50px;
     margin-left: 10%;
     margin-bottom: 50px;
@@ -38,10 +38,7 @@ hr{
 }
 
 .opcoes-de-compra{
-    margin-top: 0px;
-    margin-left: 10px;
-    height: 400px;
-    width: 35%;
+    height: 200px;
     border-radius: 10px;
     background: #292c46;
 }
@@ -51,27 +48,30 @@ hr{
     margin-left: 10px;
 }
 
+.opcoes-de-compra h2{
+    font-size: 16px;
+    opacity: 70%;
+    margin-left: 20px;
+}
+
 .opcoes-de-compra h3{
     margin-top: 20px;
     margin-left: 25px;
     font-size: 20px;
 }
 
-.informacoes-compra{
-    margin-top: 0px;
-    margin-left: 10px;
+.opcoes-de-compra2{
     height: 400px;
-    width: 35%;
     border-radius: 10px;
     background: #292c46;
 }
 
-.informacoes-compra h1{
+.opcoes-de-compra2 h1{
     margin-top: 10px;
     margin-left: 10px;
 }
 
-.informacoes-compra h3{
+.opcoes-de-compra2 h3{
     margin-top: 20px;
     margin-left: 25px;
     font-size: 20px;
@@ -80,6 +80,7 @@ hr{
 .input-cep{
     padding-left: 25px;
     padding-right: 25px;
+    flex-wrap: nowrap;
 }
 
 .input-cep button{
@@ -150,6 +151,19 @@ hr{
     margin-top: 20px;
     color: white;
     background-color: #292c46;
+    margin-bottom: 50px;
+    
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+.cartoes2:hover{
+    margin-top: 50px;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .corpocards {
@@ -194,13 +208,34 @@ hr{
 }
 
 .col-sm{
-    background-color: red;
+    border-radius: 10px;
+    background-color: #292c46;
     margin-top: 25px;
-    height: 500px;
-    border: 5px green solid;
+    height: 430px;
+    border: 2px #171927 solid;
 }
 
+
 .img-produto-principal{
+    justify-content: center;
+    align-items: center;
+}
+
+.img-produto-principal img{
     border-radius: 10px;
     height: 400px;
+    width: 400px;
+    margin-top: 13px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+   -webkit-transition: -webkit-transform .5s ease;
+   transition:  .5s ease;
 }
+
+.img-produto-principal :hover{
+    margin-top: 30px;
+    transform: scale(1.15);
+}
+

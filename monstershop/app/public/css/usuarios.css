@@ -1,6 +1,25 @@
 body {
     background-color: #0f1223;
     margin-top: 10rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.title {
+    margin-bottom: 5rem;
+}
+
+.usuarios-logo{
+    margin-right: 1rem;
+}
+
+.monster-logo{
+    margin-left: 1rem;
+}
+
+
+.cont-custom {
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 .table-custom {
@@ -10,13 +29,6 @@ body {
 .btn-add {
     margin-bottom: 1rem;
 }
-
-
-
-
-
-
-
 
 /* Scroll-bar */
 
@@ -32,4 +44,15 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #a53339;
     border-radius: 6px;
+}
+
+@media (max-width:1300px)
+{
+    .usuarios-logo{
+        margin-right: 0;
+    }
+    
+    .monster-logo{
+        margin-left: 0;
+    }
 }

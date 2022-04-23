@@ -22,25 +22,18 @@ body{
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
-
-.titulo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+ .titulo{
     margin-top: 2rem;
     margin-bottom: 2rem;
+    column-gap: 2%;
 }
 
 .titulo-adm{
-    max-width: 80%;
-    height: 15vh;
+    max-height: 8rem;
 }
 
 .titulo-monster{
-    margin-top: -5%;
-    max-width: 80%;
-    height: 15vh;
+    max-height: 7rem;
 }
 
 .content{
@@ -55,7 +48,6 @@ body{
     width: 100%;
 
 }
-
 .botao:hover{
     background-color: #BB2D3B;
     
@@ -63,26 +55,6 @@ body{
 
 .logout{
     width: 4rem;
-}
-
-@media (max-width: 1000px) {
-    .titulo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin-left: 20%;
-    }
-    
-    .titulo-adm{
-        max-width: 80%;
-    }
-    
-    .titulo-monster{
-        max-width: 80%;
-        margin-top: -5vh;
-    }
-
 }
 
 @media (max-width: 700px) {

@@ -8,47 +8,46 @@ body{
 }
 
 .container{
-    display: grid;
-    grid-template-columns: 100%;
-    margin: 12rem auto auto auto;
-    width: 60rem;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas:
-    "hd"
-   "main";
-   justify-items: center;
-   justify-content: center;
-   backdrop-filter: blur(0) saturate(13%);
-   -webkit-backdrop-filter: blur(0) saturate(13%);
-   background-color: rgba(23, 25, 38, 0.8);
-   border-radius: 12px;
-   border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0) saturate(13%);
+    -webkit-backdrop-filter: blur(0) saturate(13%);
+    background-color: rgba(23, 25, 38, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 .titulo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    grid-area: hd;
 }
 
 .titulo-adm{
-    height: 6rem;
-    margin-right: -2rem;
+    max-width: 80%;
+    height: 15vh;
 }
 
 .titulo-monster{
-    height: 6rem;
+    margin-top: -5%;
+    max-width: 80%;
+    height: 15vh;
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    grid-area: main;
     width: 40rem;
+    max-width: 80%;
 }
 
 .botao{
@@ -64,6 +63,26 @@ body{
 
 .logout{
     width: 4rem;
+}
+
+@media (max-width: 1000px) {
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 20%;
+    }
+    
+    .titulo-adm{
+        max-width: 80%;
+    }
+    
+    .titulo-monster{
+        max-width: 80%;
+        margin-top: -5vh;
+    }
+
 }
 
 @media (max-width: 700px) {

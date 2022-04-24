@@ -5,20 +5,20 @@ body {
 
 .edit-pesquisa{
    margin-top: 15%;
-   margin-left: 35%;
-   margin-right: 38%;
+   display: flex;
+   justify-content: center;
 
 }
 .edit-filtro{
    margin-top: 2%;
-   margin-left: 39%;
+   display: flex;
+   justify-content: center;
 }
+
 
 .edit-card {
    margin-top: 5%;
    margin-bottom: 10%;
-   margin-left: 10%;
-   margin-right: 10%;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
@@ -26,6 +26,6 @@ body {
 
 .edit-paginacao {
    margin-bottom: 10%;
-   margin-left: 40%;
-   margin-right: 40%;
+   display: flex;
+   justify-content: center;
 }

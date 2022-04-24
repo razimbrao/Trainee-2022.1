@@ -1,0 +1,229 @@
+body{
+    background-image: linear-gradient(rgb(23, 25, 39, 0.7), rgb(23, 25, 39, 1)), url(../../public/img/MonsterShop-logo-sem-nome.png);
+    margin: 0px;
+    background-size: cover;
+    background-color: #171927;
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    font-family: 'Heebo', sans-serif;
+}
+
+body p{
+    font-size: 26px;
+}
+
+body h1{
+    font-size: 50px;
+}
+
+body li{
+    font-size: 26px;
+}
+
+body span{
+    text-decoration: underline;
+}
+
+.quem_somos{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    float: left;
+}
+.quem_somos h1{
+    color: #35dfda;
+    background-color: #a5333950;
+    border-radius: 5px;
+    padding-left: 25px;
+    
+    
+    animation: animacao-background-h1;
+    animation-duration: 2s;
+    
+}
+
+.missao{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: right;
+    text-align: start;
+}
+.missao h1{
+    background-color: #35dfda50;
+    border-radius: 5px;
+    color: #a53339;
+    padding-left: 25px;
+
+    
+    animation: animacao-background-h1;
+    animation-duration: 2s;
+}
+
+.visao{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+}
+.visao h1{
+    background-color: #a5333950;
+    border-radius: 5px;
+    color: #35dfda;
+    padding-left: 25px;
+
+    animation: animacao-background-h1;
+    animation-duration: 2s;
+}
+
+.valores{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+    text-align: start;
+}
+.valores h1{
+    background-color: #35dfda50;
+    border-radius: 5px;
+    color: #a53339;
+    padding-left: 25px;
+
+    animation: animacao-background-h1;
+    animation-duration: 2s;
+}
+
+.descricao-esq{
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.descricao-esq p, ul{
+    animation: animacao-esquerda-direita;
+    animation-duration: 2s;
+    width: 70%;
+}
+.descricao-esq il{
+    margin-top: 10px;
+}
+.descricao-esq img{
+    width: 250px;
+    height: 220px;
+    border-radius: 5px;
+    
+    animation: animacao-direita-esquerda;
+    animation-duration: 2s;
+}
+
+@media (max-width: 1098px){
+    
+.quem_somos{
+    margin-top: 50px;
+    float: center;
+    text-align: center;
+}
+.quem_somos h1{
+    color: #35dfda;
+}
+
+.missao{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: center;
+    text-align: center;
+}
+.missao h1{
+    color: #a53339;
+}
+
+.visao{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: center;
+    text-align: center;
+}
+.visao h1{
+    color: #35dfda;
+}
+
+.valores{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: center;
+    text-align: center;
+}
+.valores h1{
+    color: #a53339;
+}
+
+.descricao-esq{
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.descricao-esq p, ul{
+    list-style: none;
+    width: 75%;
+}
+.descricao-esq il{
+    margin-top: 20px;
+}
+.descricao-esq img{
+    width: 220px;
+    height: 220px;
+    order: -1;
+    margin-bottom: 30px;
+}
+.descricao-esq a{
+    order: -1;
+}
+}
+
+@keyframes animacao-h1 {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    0%{
+        opacity: 100%;
+    }
+}
+
+@keyframes animacao-background-h1{
+    0%{
+        transform: scaleX(0.2);
+        transform-origin: 0% 0%;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: 0% 0%;
+    }
+}
+
+@keyframes animacao-esquerda-direita{
+    0%{
+        opacity: 0%;
+        transform: translate(-50px, 0px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes animacao-direita-esquerda{
+    0%{
+        opacity: 0%;
+        transform: translate(50px, 0px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+}

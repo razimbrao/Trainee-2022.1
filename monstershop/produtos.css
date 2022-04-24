@@ -1,0 +1,31 @@
+body {
+   background-color: #171927;
+
+}
+
+.edit-pesquisa{
+   margin-top: 15%;
+   margin-left: 35%;
+   margin-right: 38%;
+
+}
+.edit-filtro{
+   margin-top: 2%;
+   margin-left: 39%;
+}
+
+.edit-card {
+   margin-top: 5%;
+   margin-bottom: 10%;
+   margin-left: 10%;
+   margin-right: 10%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.edit-paginacao {
+   margin-bottom: 10%;
+   margin-left: 40%;
+   margin-right: 40%;
+}

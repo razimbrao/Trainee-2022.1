@@ -95,12 +95,25 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <h4>Nome:</h4>
-                                        <p></p>
-                                        <h4>Email:</h4>
-                                        <p></p>
-                                        <h4>Senha:</h4>
-                                        <p></p>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Nome</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Nome-teste"
+                                                    readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Endereço de Email</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="teste@teste.test"
+                                                    readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                                    placeholder="teste123" readonly>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"

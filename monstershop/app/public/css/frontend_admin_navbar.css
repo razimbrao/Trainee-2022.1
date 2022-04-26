@@ -1,0 +1,35 @@
+body {
+    background-color: #171927;
+    font-family: 'Nunito';
+}
+
+.container {
+    margin-left: -0.7%;
+}
+
+.btn-slide {
+    width: 7%;
+    background-color: #35dfda;
+    border-color: #35dfda;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.btn-slide:hover {
+    background-color: #a53339;
+    border-color: #a53339;
+}
+
+.title-head {
+    font-weight: 800;
+}
+
+.nav-head {
+    background-color: #35dfda;
+}
+
+.nav-slide {
+    background-color: #a53339;
+}
+
+

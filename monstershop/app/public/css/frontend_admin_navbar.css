@@ -3,33 +3,106 @@ body {
     font-family: 'Nunito';
 }
 
-.container {
-    margin-left: -0.7%;
-}
-
-.btn-slide {
-    width: 7%;
-    background-color: #35dfda;
-    border-color: #35dfda;
-    transition: 0.5s;
-    opacity: 0.7;
-}
-
-.btn-slide:hover {
-    background-color: #a53339;
-    border-color: #a53339;
-}
-
-.title-head {
+.left h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
     font-weight: 800;
 }
-
-.nav-head {
-    background-color: #35dfda;
+.left span{
+    color: #35dfda;
 }
-
-.nav-slide {
-    background-color: #a53339;
+.sair_btn{
+    padding: 5px;
+    background: #35dfda;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
 }
-
-
+.sair_btn:hover{
+    background: #35dfda;
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-top: 70px;
+    padding-top: 30px;
+    left: 0;
+    background: #a53339;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebar .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.sidebar h2{
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property:background ;
+}
+.sidebar a:hover{
+    background: #35dfda;
+}
+.sidebar ion-icon{
+    padding-right: 10px;
+}
+label #sidebar_btn{
+    z-index: 1;
+    position: fixed;
+    left: 300px;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property:color ;
+}
+label #sidebar_btn:hover{
+    color: #35dfda;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+.content{
+    background: url(/image/img-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+}
+#check:checked ~ .content{
+    margin-left: 60px;
+}
+#check{
+    display: none;
+}

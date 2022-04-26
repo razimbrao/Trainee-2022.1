@@ -145,21 +145,26 @@
                                         <!-- Form de Edição -->
                                         <form>
                                             <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Nome</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Usuário">
+                                            </div>
+                                            <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Endereço de
                                                     Email</label>
                                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-
+                                                    aria-describedby="emailHelp" placeholder="exemplo@email.com">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Senha</label>
                                                 <input type="password" class="form-control" id="exampleInputPassword1">
                                             </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <form>
+                                                <div class="form-group">
+                                                  <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                                  <br>
+                                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                </div>
+                                              </form>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -205,8 +210,9 @@
                 <tr>
 
                     <!-- Exemplos testes -->
+            <tbody>
                 <tr>
-                    <th scope="row">2</th>
+                    <th scope="row">1</th>
                     <td>Teste</td>
 
                     <td>
@@ -217,30 +223,7 @@
                         </button>
 
                         <!-- Modal de vizualização -->
-                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h4>Nome:</h4>
-                                        <p></p>
-                                        <h4>Email:</h4>
-                                        <p></p>
-                                        <h4>Senha:</h4>
-                                        <p></p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Fechar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <!-- Botão de Edição -->
                         <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal"
@@ -249,45 +232,6 @@
                         </button>
 
                         <!-- Modal de edição -->
-                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Form de Edição -->
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">We'll never share your email with
-                                                    anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
 
                         <!-- Botão de exclusão -->
@@ -297,31 +241,14 @@
                         </button>
 
                         <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Tem certeza que deseja excluir esse usuário?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-danger">Excluir</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
+
+            <tbody>
+
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">1</th>
                     <td>Teste</td>
 
                     <td>
@@ -332,30 +259,7 @@
                         </button>
 
                         <!-- Modal de vizualização -->
-                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h4>Nome:</h4>
-                                        <p></p>
-                                        <h4>Email:</h4>
-                                        <p></p>
-                                        <h4>Senha:</h4>
-                                        <p></p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Fechar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <!-- Botão de Edição -->
                         <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal"
@@ -364,45 +268,6 @@
                         </button>
 
                         <!-- Modal de edição -->
-                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Form de Edição -->
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">We'll never share your email with
-                                                    anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
 
                         <!-- Botão de exclusão -->
@@ -412,26 +277,6 @@
                         </button>
 
                         <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Tem certeza que deseja excluir esse usuário?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-danger">Excluir</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </td>
                 </tr>
                 <tr>

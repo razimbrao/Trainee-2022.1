@@ -43,6 +43,15 @@ body {
 }
 
 
+@media (max-width: 500px) 
+{
+    .btn-custom {
+        margin-bottom: 0.1rem;
+        margin-top: 0.1rem;
+    }
+
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

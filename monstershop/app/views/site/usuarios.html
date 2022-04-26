@@ -78,20 +78,46 @@
                     <td>Teste</td>
 
                     <td>
-                        <!-- Botão de Visualizar -->
+                        <!-- Botão de vizualização -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#mod-visualizar">
                             <i class="fa-solid fa-eye"></i>
                         </button>
 
+                        <!-- Modal de vizualização -->
+                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Nome:</h4>
+                                        <p></p>
+                                        <h4>Email:</h4>
+                                        <p></p>
+                                        <h4>Senha:</h4>
+                                        <p></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Botão de Edição -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#mod-editar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
                         <!-- Modal de edição -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -134,13 +160,13 @@
 
                         <!-- Botão de exclusão -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                            data-bs-target="#mod-excluir">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
 
                         <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -164,19 +190,50 @@
                 <tr>
 
                     <!-- Exemplos testes -->
-                <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">2</th>
                     <td>Teste</td>
 
                     <td>
+                        <!-- Botão de vizualização -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#mod-visualizar">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                        <!-- Modal de vizualização -->
+                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Nome:</h4>
+                                        <p></p>
+                                        <h4>Email:</h4>
+                                        <p></p>
+                                        <h4>Senha:</h4>
+                                        <p></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Botão de Edição -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#mod-editar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
                         <!-- Modal de edição -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -219,13 +276,13 @@
 
                         <!-- Botão de exclusão -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                            data-bs-target="#mod-excluir">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
 
                         <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -247,102 +304,51 @@
                     </td>
                 </tr>
                 <tr>
-                <tr>
-                    <th scope="row">1</th>
+
+                    <th scope="row">3</th>
                     <td>Teste</td>
 
                     <td>
-                        <!-- Botão de Edição -->
+                        <!-- Botão de vizualização -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                            data-bs-target="#mod-visualizar">
+                            <i class="fa-solid fa-eye"></i>
                         </button>
 
-                        <!-- Modal de edição -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <!-- Modal de vizualização -->
+                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Form de Edição -->
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">We'll never share your email with
-                                                    anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- Botão de exclusão -->
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </button>
-
-                        <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Tem certeza que deseja excluir esse usuário?
+                                        <h4>Nome:</h4>
+                                        <p></p>
+                                        <h4>Email:</h4>
+                                        <p></p>
+                                        <h4>Senha:</h4>
+                                        <p></p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-danger">Excluir</button>
+                                            data-bs-dismiss="modal">Fechar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Teste</td>
 
-                    <td>
                         <!-- Botão de Edição -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#mod-editar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
                         <!-- Modal de edição -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -385,13 +391,13 @@
 
                         <!-- Botão de exclusão -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                            data-bs-target="#mod-excluir">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
 
                         <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">

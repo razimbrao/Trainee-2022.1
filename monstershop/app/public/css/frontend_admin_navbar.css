@@ -3,6 +3,15 @@ body {
     font-family: 'Nunito';
 }
 
+.container {
+    display: flex;
+}
+
+.btn-menu {
+    background-color: green;
+
+}
+
 .left h3{
     color: #fff;
     margin: 0;
@@ -13,6 +22,8 @@ body {
 .left span{
     color: #35dfda;
 }
+
+
 .sair_btn{
     padding: 5px;
     background: #35dfda;
@@ -34,7 +45,7 @@ body {
     position: fixed;
     width: 250px;
     height: 100%;
-    margin-top: 70px;
+    margin-top: 50px;
     padding-top: 30px;
     left: 0;
     background: #a53339;
@@ -105,4 +116,19 @@ label #sidebar_btn:hover{
 }
 #check{
     display: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f1223;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a53339;
+    border-radius: 6px;
 }

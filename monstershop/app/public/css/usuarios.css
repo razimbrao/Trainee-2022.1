@@ -56,3 +56,11 @@ body {
         margin-left: 0;
     }
 }
+
+@media (max-width: 500px)
+{
+    .btn-custom {
+        margin-bottom: 0.1rem;
+        margin-top: 0.1rem;
+    }
+}

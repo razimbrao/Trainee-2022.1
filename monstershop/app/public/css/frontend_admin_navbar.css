@@ -5,11 +5,12 @@ body {
 
 .container {
     display: flex;
+    align-items: center;
 }
 
-.btn-menu {
-    background-color: green;
 
+.menu1 {
+   margin-left: -5%;
 }
 
 .left h3{
@@ -24,23 +25,6 @@ body {
 }
 
 
-.sair_btn{
-    padding: 5px;
-    background: #35dfda;
-    text-decoration: none;
-    float: right;
-    margin-top: -30px;
-    margin-right: 40px;
-    border-radius: 2px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    transition: 0.5s;
-    transition-property: background;
-}
-.sair_btn:hover{
-    background: #35dfda;
-}
 .sidebar{
     position: fixed;
     width: 250px;
@@ -77,7 +61,7 @@ body {
     background: #35dfda;
 }
 .sidebar ion-icon{
-    padding-right: 10px;
+    padding-right: 1px;
 }
 label #sidebar_btn{
     z-index: 1;
@@ -85,7 +69,7 @@ label #sidebar_btn{
     left: 300px;
     color: #fff;
     font-size: 25px;
-    margin: 5px 0;
+    /*margin: 5px 0;*/
     cursor: pointer;
     transition: 0.5s;
     transition-property:color ;

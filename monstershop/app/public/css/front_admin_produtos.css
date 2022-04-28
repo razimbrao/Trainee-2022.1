@@ -4,6 +4,23 @@ body{
     color: white;
 }
 
+.titulo{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    column-gap: 2%;
+}
+
+.titulo-produtos{
+    max-height: 8rem;
+}
+
+.titulo-monster{
+    max-height: 8rem;
+}
+
+
 .table-custom{
     background-color: #a7a9ac;
     border-radius: 5px;
@@ -23,4 +40,10 @@ body{
     align-self: center;
     border-radius: 5px;
     width: 45vh;
+}
+@media (max-width:1070px) {
+    .titulo-monster{
+        margin-left: none;
+    }
+    
 }

@@ -15,6 +15,10 @@ body{
     flex-direction: column;
 }
 
+.img-edicao{
+    margin-bottom: 1rem;
+}
+
 .imagem-teste{
     align-self: center;
     border-radius: 5px;

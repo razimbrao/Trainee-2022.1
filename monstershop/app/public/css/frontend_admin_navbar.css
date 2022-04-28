@@ -1,16 +1,22 @@
 body {
-    background-color: #171927;
+    background-color:  #0f1223;
     font-family: 'Nunito';
 }
 
-.container {
+.retangle {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color:#171926;
+    width:100%;
+    height: 70px;
+    position: fixed;
 }
 
-
-.menu1 {
-   margin-left: -5%;
+.imgname {
+    margin-left: 0.6rem;
+    overflow: hidden !important; 
 }
 
 .left h3{
@@ -29,7 +35,7 @@ body {
     position: fixed;
     width: 250px;
     height: 100%;
-    margin-top: 50px;
+    margin-top: 70px;
     padding-top: 30px;
     left: 0;
     background: #a53339;
@@ -66,13 +72,14 @@ body {
 label #sidebar_btn{
     z-index: 1;
     position: fixed;
-    left: 300px;
+    left: 10px;
     color: #fff;
-    font-size: 25px;
-    /*margin: 5px 0;*/
+    font-size: 30px;
+    margin: 5px 0;
     cursor: pointer;
     transition: 0.5s;
-    transition-property:color ;
+    transition-property:color;
+    border-color: #fff;
 }
 label #sidebar_btn:hover{
     color: #35dfda;
@@ -115,4 +122,15 @@ label #sidebar_btn:hover{
 ::-webkit-scrollbar-thumb {
     background: #a53339;
     border-radius: 6px;
+}
+
+
+@media (max-width: 992px) {
+
+    .imgname {
+        height: auto;
+        width: 80%;
+        margin-left: 10%;
+    }
+
 }

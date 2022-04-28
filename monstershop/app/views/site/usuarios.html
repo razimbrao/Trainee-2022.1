@@ -31,12 +31,13 @@
 
         <div class="d-flex justify-content-end">
             <!-- Adicionar usuarios -->
-            <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal"
+                data-bs-target="#mod-adicionar">
                 Adicionar Usuário
             </button>
 
             <!-- Modal de adicionar usuarios -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="mod-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -45,7 +46,30 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="Nome do Usuário">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Endereço de
+                                        Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="exemplo@email.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                        <br>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                </form>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -97,8 +121,8 @@
                                     <div class="modal-body">
                                         <form>
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                <label for="exampleInputText" class="form-label">Nome</label>
+                                                <input type="text" class="form-control" id="exampleInputText"
                                                     aria-describedby="emailHelp" placeholder="Nome-teste" readonly>
                                             </div>
                                             <div class="mb-3">
@@ -146,7 +170,8 @@
                                         <form>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Usuário">
+                                                <input type="text" class="form-control" id="formGroupExampleInput2"
+                                                    placeholder="Nome do Usuário">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Endereço de
@@ -160,11 +185,12 @@
                                             </div>
                                             <form>
                                                 <div class="form-group">
-                                                  <label for="exampleFormControlFile1">Foto de Perfil</label>
-                                                  <br>
-                                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                    <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                                    <br>
+                                                    <input type="file" class="form-control-file"
+                                                        id="exampleFormControlFile1">
                                                 </div>
-                                              </form>
+                                            </form>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -212,7 +238,7 @@
                     <!-- Exemplos testes -->
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">2</th>
                     <td>Teste</td>
 
                     <td>
@@ -248,7 +274,7 @@
             <tbody>
 
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">3</th>
                     <td>Teste</td>
 
                     <td>

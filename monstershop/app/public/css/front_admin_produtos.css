@@ -20,6 +20,10 @@ body{
     max-height: 8rem;
 }
 
+.tabela{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 .table-custom{
     background-color: #a7a9ac;
@@ -40,6 +44,7 @@ body{
     border-radius: 5px;
     width: 45vh;
 }
+
 @media (max-width:1070px) {
     .titulo-monster{
         margin-left: 0;

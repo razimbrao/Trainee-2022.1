@@ -9,7 +9,6 @@ body{
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    column-gap: 2%;
 }
 
 .titulo-produtos{
@@ -17,6 +16,7 @@ body{
 }
 
 .titulo-monster{
+    margin-left: -6vh;
     max-height: 8rem;
 }
 
@@ -24,7 +24,6 @@ body{
 .table-custom{
     background-color: #a7a9ac;
     border-radius: 5px;
-
 }
 
 .imagem-modal{
@@ -43,7 +42,6 @@ body{
 }
 @media (max-width:1070px) {
     .titulo-monster{
-        margin-left: none;
+        margin-left: 0;
     }
-    
 }

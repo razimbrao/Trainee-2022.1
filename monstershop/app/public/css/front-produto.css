@@ -334,12 +334,6 @@ hr{
     display: flex;
 }
 
-
-.recomendacoes-responsivo{
-    display: flex;
-    justify-content: space-around;
-}
-
 .cartoes2-responsivo{
     border-radius: 5px;
     margin-left: 50px;
@@ -348,11 +342,20 @@ hr{
     background-color: #292c46;
     margin-bottom: 50px;
     
-
-    display: flex;
     justify-content: center;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.recomendacoes-responsivo{
+    justify-content: center;
+}
 
 
 }

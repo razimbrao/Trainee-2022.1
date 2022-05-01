@@ -30,6 +30,18 @@ body {
     margin-bottom: 1rem;
 }
 
+.imagem-modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-teste{
+    align-self: center;
+    border-radius: 5px;
+    width: 45vh;
+    max-width: 100%;
+}
+
 /* Scroll-bar */
 
 ::-webkit-scrollbar {

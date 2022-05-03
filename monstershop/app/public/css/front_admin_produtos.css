@@ -31,9 +31,10 @@ body{
     border-radius: 5px;
 }
 
-.imagem-modal{
+.carousel-modal{
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .img-edicao{

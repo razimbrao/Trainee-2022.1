@@ -59,19 +59,42 @@
                                         <form>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                <input class="form-control" type="text" value="Nome" aria-label="nome do produto" disabled readonly>
+                                                <input class="form-control" type="text" value="Nome do produto" aria-label="nome do produto" disabled readonly>
                                             </div>
-                                            <div class="mb-3 imagem-modal">
-                                                <label for="exampleInputPassword1" class="form-label">Imagem</label>
-                                                <img src="../../public/assets/MonsterShop-logo (1).png" alt="imagem de teste" class="imagem-teste">
-                                            </div>
+                                            <div id="carouselExampleIndicators" class="carousel slide carousel-modal" data-bs-ride="carousel">
+                                                <label for="exampleInputPassword1" class="form-label">Imagens</label>
+                                                <div class="carousel-indicators">
+                                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                </div>
+                                                <div class="carousel-inner">
+                                                  <div class="carousel-item active">
+                                                    <img src="../../public/assets/MonsterShop-logo (1).png" class="d-block w-100 imagem-teste" alt="...">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img src="../../public/assets/MonsterShop-logo (1).png" class="d-block w-100 imagem-teste" alt="...">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img src="../../public/assets/MonsterShop-logo (1).png" class="d-block w-100 imagem-teste" alt="...">
+                                                  </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Next</span>
+                                                </button>
+                                              </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Categoria</label>
-                                                <input class="form-control" type="text" value="Categoria" aria-label="Categoria" disabled readonly>
+                                                <input class="form-control" type="text" value="Categoria do produto" aria-label="Categoria" disabled readonly>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Descrição</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled>Diam sanctus gubergren justo sanctus erat, rebum stet magna dolore dolores magna, est aliquyam ut dolore eos et stet voluptua.</textarea>
+                                                <textarea class="form-control text-justify" id="exampleFormControlTextarea1" rows="3" disabled>Diam sanctus gubergren justo sanctus erat, rebum stet magna dolore dolores magna, est aliquyam ut dolore eos et stet voluptua.</textarea>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputPassword1" class="form-label">Preço</label>
@@ -118,7 +141,7 @@
                                             </form>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Categoria">
+                                                <input type="text" class="form-control text-justify" id="formGroupExampleInput2" placeholder="Categoria">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Descrição</label>

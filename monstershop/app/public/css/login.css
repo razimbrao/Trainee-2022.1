@@ -1,0 +1,178 @@
+
+@media (max-width: 5000px){
+
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+    background-position-y: 5% ;
+ }
+
+ .edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    box-shadow: 0px 0px 25px 0px red;
+ }
+ .edit-email{
+     color: red;
+ }
+.edit-senha{
+     color: red;
+}
+.edit-conectado{
+    color:white;
+}
+.edit-cadastro{
+    color:white;
+}
+.edit-cadastro a {
+    color: red;
+    
+}
+}
+
+@media (max-width: 1030px){
+
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 22%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+
+@media (max-width: 991px){
+
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 27%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+
+@media (max-width: 767px){
+
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 29%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+
+@media (max-width: 378px){
+
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 28%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+@media (max-width: 300px){
+
+body {
+   background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+
+@media (max-width: 248px){
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 32%;
+    box-shadow: 0px 0px 20px 0px red;
+    }
+}
+@media (max-width: 225px){
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+    
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 39%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}
+@media (max-width: 166px){
+body {
+    background-color: #171927;
+    background-image: url(../../public/img/fundo6.jpg);
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: top center;
+    background-position-y: 5% ;
+}
+        
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
+    box-shadow: 0px 0px 20px 0px red;
+}
+}

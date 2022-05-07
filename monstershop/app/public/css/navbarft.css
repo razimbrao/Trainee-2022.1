@@ -1,0 +1,158 @@
+body {
+    background-color: #0f1223;
+    color: #35dfda;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    ;
+}
+
+/* Navbar-Start */
+
+.navbar-custom {
+    background-color: #171927 !important;
+    height: 70px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: fixed;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+.navbar-custom ul {
+    margin-right: 7rem;
+}
+
+.navbar-custom li {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.navbar-custom a {
+    color: white !important;
+}
+
+.navbar-custom img {
+    position: fixed !important;
+    margin-top: -1rem;
+    height: 31px;
+    width: 180px;
+}
+
+.navbar-custom button {
+    color: white !important;
+}
+
+.link-nav {
+    padding-top: 8px;
+    transition: 0.5s;
+}
+
+.link-nav:hover {
+    color: #35dfda !important;
+    padding-top: 3px !important;
+    transition: 0.4s;
+}
+
+.nav-img {
+    margin-left: 0.6rem;
+    overflow: hidden !important;
+}
+
+/* Navbar-End */
+
+
+.conteudo {
+    height: 800px;
+}
+
+
+/* Footer-Start */
+
+.foot-list {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.foot-list li {
+    list-style: none;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.foot-list a {
+    color: #35dfda;
+    text-decoration: none;
+}
+
+.foot-list i {
+    color: #a53339;
+
+    transition: 0.4s;
+}
+
+.foot-list i:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer-img {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sign {
+    margin-bottom: 3rem;
+    color: #a7a9ac;
+}
+
+/* Footer-End */
+
+
+/*  */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a7a9ac;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a53339;
+    border-radius: 6px;
+}
+
+
+/*  */
+
+@media (max-width: 992px) {
+
+    .navbar-custom {
+        height: auto;
+    }
+
+    .link-nav {
+        text-align: right !important;
+        margin-top: 0.5rem;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .log-nav {
+        text-align: right !important;
+        margin-top: 0rem;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

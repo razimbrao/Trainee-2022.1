@@ -1,0 +1,55 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #171927;
+    color: white;
+    overflow-x: hidden;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.titulo-produtos{
+    max-height: 8rem;
+}
+
+.titulo-monster{
+    margin-left: -6vh;
+    max-height: 8rem;
+}
+
+.tabela{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.table-custom{
+    background-color: #a7a9ac;
+    border-radius: 5px;
+}
+
+.carousel-modal{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.img-edicao{
+    margin-bottom: 1rem;
+}
+
+.imagem-teste{
+    align-self: center;
+    border-radius: 5px;
+    width: 45vh;
+    max-width: 100%;
+}
+
+@media (max-width:1000px) {
+    .titulo-monster{
+        margin-left: 0;
+    }
+}

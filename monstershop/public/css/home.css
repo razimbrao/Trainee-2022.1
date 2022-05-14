@@ -1,0 +1,73 @@
+body {
+    background-color: #171927;
+    font-family: 'Nunito';
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.img-fundo {
+    width: 100%;
+}    
+
+.carousel-home {
+    width: 75%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+
+
+.title-cards {
+    font-weight: 800;
+}
+
+.text-cards {
+    font-weight: 600;
+}
+
+.cartoes2 {
+    background-color: #a7a9ac;
+    border-radius: 20px;
+}
+
+.corpocards {
+    border-radius: 20px;
+}
+
+.btnc {
+    background-color: red;
+    border-color: red;
+    border-radius: 50px;
+    font-weight: 800;
+}
+
+
+
+.img-qs {
+    margin-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.img-ct {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+
+.linksimg img {
+    max-width: 100%;
+}

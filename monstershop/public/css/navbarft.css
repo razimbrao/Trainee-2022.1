@@ -64,16 +64,11 @@ body {
 
 /* Navbar-End */
 
-
-.conteudo {
-    height: 800px;
-}
-
-
 /* Footer-Start */
 
 .foot-list {
     padding: 0;
+    padding-top: 2rem;
     display: flex;
     justify-content: center;
 }

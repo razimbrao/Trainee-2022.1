@@ -50,6 +50,10 @@ class UsuariosController
 
     public function delete()
     {
- 
+        $id = $_POST['id'];
+
+        App::get('database')->deletaUsuario('usuarios', $id);
+
+        header('Location: /admin/usuarios');
     }
 }

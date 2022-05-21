@@ -41,4 +41,17 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function deletaUsuario($table, $id)
+    {
+        $sql = "delete from {$table} where id={$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

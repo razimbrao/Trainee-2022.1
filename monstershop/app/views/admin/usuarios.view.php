@@ -91,8 +91,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <?php foreach ($usuarios as $usuario) : ?>
+                <?php foreach ($usuarios as $usuario) : ?>
+                    <tr>
                         <th scope="row"><?= $usuario->id ?></th>
                         <td><?= $usuario->nome ?></td>
 
@@ -186,7 +186,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                    <input type="hidden" name="id", value="<?= $usuario->id ?>">
+                                                    <input type="hidden" name="id" , value="<?= $usuario->id ?>">
                                                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                                                 </div>
 
@@ -219,10 +219,9 @@
                                 </div>
                             </div>
                         </td>
-                    <?php endforeach; ?>
-                </tr>
-                <tr>
 
+                    </tr>
+                <?php endforeach; ?>
 
 
             </tbody>

@@ -32,6 +32,14 @@ class ProdutosController
     {
         
     }
+    public function index()
+    {
+        $produtos = App::get('database')->selectAll('produtos');
+        $table = [
+            'produtos' => $produtos,
+        ];
+        return view('admin/produtos', $table);
+    }
 
     public function delete()
     {

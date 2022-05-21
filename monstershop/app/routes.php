@@ -2,7 +2,5 @@
 
 use App\Controllers\ExampleController;
 use App\Core\Router;
-
-$router->method('produtos', 'produtosController@show');
-
+$router->get('produtos', 'ProdutosController@index');
 ?> 

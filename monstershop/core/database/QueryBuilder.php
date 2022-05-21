@@ -29,6 +29,8 @@ class QueryBuilder
         }
     }
 
+    // Funções de Usuários
+
     public function adicionaUsuario($table, $dados)
     {
         $sql = "insert into {$table} (nome, email, senha, foto) values ('{$dados['nome']}', '{$dados['email']}', '{$dados['senha']}', '{$dados['foto']}')";

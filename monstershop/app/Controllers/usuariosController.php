@@ -45,7 +45,17 @@ class UsuariosController
 
     public function update()
     {
-        
+        $dados = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
+            'foto' => $_POST['foto']
+        ];
+
+        App::get('database')->editaUsuario('usuarios', $dados);
+
+        header('Location: /admin/usuarios');
     }
 
     public function delete()

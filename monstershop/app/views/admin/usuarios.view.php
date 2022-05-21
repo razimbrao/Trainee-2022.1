@@ -164,33 +164,35 @@
                                         </div>
                                         <div class="modal-body">
                                             <!-- Form de Edição -->
-                                            <form>
+                                            <form action="usuarios/editar" method="POST">
                                                 <div class="mb-3">
                                                     <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                    <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $usuario->nome ?>">
+                                                    <input name="nome" type="text" class="form-control" id="formGroupExampleInput2" value="<?= $usuario->nome ?>">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="exampleInputEmail1" class="form-label">Endereço de
                                                         Email</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $usuario->email ?>">
+                                                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $usuario->email ?>">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                                    <input name="senha" type="password" class="form-control" id="exampleInputPassword1" value="<?= $usuario->senha ?>">
                                                 </div>
-                                                <form>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlFile1">Foto de Perfil</label>
-                                                        <br>
-                                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                                    </div>
-                                                </form>
+
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                                    <br>
+                                                    <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                    <input type="hidden" name="id", value="<?= $usuario->id ?>">
+                                                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                                </div>
+
                                             </form>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>

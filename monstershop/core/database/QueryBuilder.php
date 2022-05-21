@@ -54,4 +54,17 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function editaUsuario($table, $dados)
+    {
+        $sql = "update {$table} set nome = '{$dados['nome']}', email = '{$dados['email']}', senha = '{$dados['senha']}', foto = '{$dados['foto']}' where id='{$dados['id']}'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

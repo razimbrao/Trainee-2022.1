@@ -10,7 +10,7 @@ class ExampleController
 
     public function show()
     {
-
+        echo "Passou";
     }
 
     public function create()

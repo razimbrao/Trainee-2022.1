@@ -42,32 +42,33 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="usuarios/adicionar" method="POST">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Usuário">
+                                    <input name="nome" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Usuário">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Endereço de
                                         Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+                                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <input name="senha" type="password" class="form-control" id="exampleInputPassword1">
                                 </div>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlFile1">Foto de Perfil</label>
-                                        <br>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-                                </form>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                    <br>
+                                    <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Salvar Usuário</button>
+                                </div>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Salvar Usuário</button>
+
                         </div>
                     </div>
                 </div>
@@ -91,127 +92,129 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Teste</td>
+                    <?php foreach ($usuarios as $usuario) : ?>
+                        <th scope="row"><?= $usuario->id ?></th>
+                        <td><?= $usuario->nome ?></td>
 
-                    <td>
-                        <!-- Botão de vizualização -->
-                        <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                        <td>
+                            <!-- Botão de vizualização -->
+                            <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $usuario->id ?>">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
 
-                        <!-- Botão de Edição -->
-                        <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
+                            <!-- Botão de Edição -->
+                            <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $usuario->id ?>">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
 
-                        <!-- Botão de exclusão -->
-                        <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal" data-bs-target="#mod-excluir">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </button>
-
-
-                        <!----------------- Modais ------------------>
+                            <!-- Botão de exclusão -->
+                            <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $usuario->id ?>">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
 
 
-                        <!-- Modal de vizualização -->
-                        <div class="modal fade" id="mod-visualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3 imagem-modal">
-                                                <label for="exampleInputPassword1" class="form-label">Foto de Perfil</label>
-                                                <img src="../../../public/assets/MonsterShop-logo.png" alt="imagem de teste" class="imagem-teste">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputText" class="form-label">Nome</label>
-                                                <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp" placeholder="Nome-teste" readonly>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Endereço de
-                                                    Email</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="teste@teste.test" readonly>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="teste123" readonly>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar">Editar Usuário</button>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <!----------------- Modais ------------------>
 
 
-                        <!-- Modal de edição -->
-                        <div class="modal fade" id="mod-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Form de Edição -->
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Usuário">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Endereço de
-                                                    Email</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
+                            <!-- Modal de vizualização -->
+                            <div class="modal fade" id="mod-visualizar-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
                                             <form>
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlFile1">Foto de Perfil</label>
-                                                    <br>
-                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                <div class="mb-3 imagem-modal">
+                                                    <label for="exampleInputPassword1" class="form-label">Foto de Perfil</label>
+                                                    <img src="../../../public/assets/MonsterShop-logo.png" alt="imagem de teste" class="imagem-teste">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputText" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp" placeholder="<?= $usuario->nome ?>" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Endereço de
+                                                        Email</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<?= $usuario->email ?>" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<?= $usuario->senha ?>" readonly>
                                                 </div>
                                             </form>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar">Editar Usuário</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Modal de confirmação de exclusão -->
-                        <div class="modal fade" id="mod-excluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Tem certeza que deseja excluir esse usuário?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-danger">Excluir</button>
+
+                            <!-- Modal de edição -->
+                            <div class="modal fade" id="mod-editar-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Form de Edição -->
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $usuario->nome ?>">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Endereço de
+                                                        Email</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $usuario->email ?>">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlFile1">Foto de Perfil</label>
+                                                        <br>
+                                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                    </div>
+                                                </form>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </td>
+
+                            <!-- Modal de confirmação de exclusão -->
+                            <div class="modal fade" id="mod-excluir-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Tem certeza que deseja excluir esse usuário?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-danger">Excluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    <?php endforeach; ?>
                 </tr>
                 <tr>
 

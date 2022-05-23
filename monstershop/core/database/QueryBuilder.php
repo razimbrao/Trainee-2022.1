@@ -33,12 +33,16 @@ class QueryBuilder
 
     public function adicionaUsuario($table, $dados)
     {
-        $sql = "insert into {$table} (nome, email, senha, foto) values ('{$dados['nome']}', '{$dados['email']}', '{$dados['senha']}', '{$dados['foto']}')";
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)', 
+            $table, implode(',', array_keys($dados)), 
+            ':' . implode(', :', array_keys($dados))
+        );
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute();
+            $stmt->execute($dados);
         } catch(Exception $e) {
             die($e->getMessage());
         }
@@ -51,20 +55,29 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute();
+            $stmt->execute(compact('id'));
         } catch(Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function editaUsuario($table, $dados)
+    public function editaUsuario($table, $dados, $id)
     {
-        $sql = "update {$table} set nome = '{$dados['nome']}', email = '{$dados['email']}', senha = '{$dados['senha']}', foto = '{$dados['foto']}' where id='{$dados['id']}'";
+        $sql = sprintf(
+            'UPDATE %s SET %s WHERE %s', 
+            $table, implode(', ', array_map(function ($dados){
+                return "{$dados} = :{$dados}";
+            },
+            array_keys($dados))),
+            'id = :id'
+        );
+
+        $dados['id'] = $id;
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute();
+            $stmt->execute($dados);
         } catch(Exception $e) {
             die($e->getMessage());
         }

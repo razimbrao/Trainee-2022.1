@@ -182,7 +182,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Foto de Perfil</label>
                                                     <br>
-                                                    <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                    <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1" value="<?= $usuario->foto ?>">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>

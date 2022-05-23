@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/css/frontend_adm_categorias.css">
+    <link rel="stylesheet" href="../../../public/css/frontend_adm_categorias.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
         <div class="container">
 
             <div class="imgCat">
-                <img src="../../public/img_adm_categorias/Categorias.png" alt="a" width="55%">
-                <img src="../../public/img_adm_categorias/carMonsterShop.png" alt="a" width="55%">
+                <img src="../../../public/img/img_adm_categorias/Categorias.png" alt="a" width="55%">
+                <img src="../../../public/img/img_adm_categorias/carMonsterShop.png" alt="a" width="55%">
             </div>
     
         
@@ -51,11 +51,11 @@
                         <form>
                             <div class="form-group">
                               <label for="">Nome da categoria</label>
-                              <input class="form-control" type="text" placeholder="">
+                              <input name="nomeCat" class="form-control" type="text" placeholder="">
                             </div>
                             <div class="form-group">
                               <label for="">Descrição</label>
-                              <input class="form-control" type="text" placeholder="">
+                              <input name= "desCat" class="form-control" type="text" placeholder="">
                             </div>
                         </form>
 

@@ -48,6 +48,17 @@ body{
     max-width: 100%;
 }
 
+.add-produto{
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    margin-bottom: 0.5rem;
+}
+
+.modal-add h5, label{
+    color: black;
+}
+
 @media (max-width:1000px) {
     .titulo-monster{
         margin-left: 0;

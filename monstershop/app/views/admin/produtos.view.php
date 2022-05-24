@@ -13,12 +13,67 @@
     <script src="https://kit.fontawesome.com/2b94009ee2.js" crossorigin="anonymous"></script>
     <title>ADM - Produtos</title>
 </head>
+
 <body>
     <main>
+
         <div class="titulo title row justify-content-md-center user-select-none">
             <img class="titulo-produtos col-md-auto" src="../../../public/img/adm-produtos/titulo-produtos.svg" alt="Titulo Administração">
             <img class="titulo-monster col-md-auto" src="../../../public/img/adm-produtos/titulo-monster.svg" alt="Titulo Monster">
         </div>
+
+        <div class="add-produto">
+            <!-- Adicionar produto -->
+            <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal"
+                data-bs-target="#mod-adicionar">
+                Adicionar Produto
+            </button>
+
+            <!-- Modal de adicionar produto -->
+            <div class="modal fade modal-add" id="mod-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Adicionar Produto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome">
+                            </div>
+                            <form>
+                                <div class="form-group img-edicao">
+                                    <label for="exampleFormControlFile1">Imagem do produto</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Categoria</label>
+                                <input type="text" class="form-control text-justify" id="formGroupExampleInput2" placeholder="Categoria">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Descrição</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Descrição do produto">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Preço</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="R$">
+                            </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Salvar Produto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!-- Tabela-Start -->   
         <div class="tabela">
             <table class="table table-hover table-bordered border-dark table-custom">
@@ -152,7 +207,6 @@
                                                 <label for="exampleInputPassword1" class="form-label">Preço</label>
                                                 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="R$">
                                             </div>
-                                            
                                         </form>
                                     </div>
                                     <div class="modal-footer">

@@ -3,14 +3,14 @@
 use App\Controllers\ExampleController;
 use App\Core\Router;
 
-$router->get('produtos', 'ProdutosController@index');
+$router->get('admin/produtos', 'ProdutosController@view');
 
-$router->post('produtos/create', 'ProdutosController@create');
+$router->post('admin/produtos/criar', 'ProdutosController@create');
 
-$router->post('produtos/delete', 'PController@delete');
+$router->post('admin/produtos/excluir', 'ProdutosController@delete');
 
-$router->get('produtos/show', 'PController@show');
+$router->get('admin/produtos/show', 'ProdutosController@show');
 
-$router->post('produtos/update', 'PController@update');
+$router->post('admin/produtos/editar', 'ProdutosController@update');
 
 ?> 

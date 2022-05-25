@@ -32,7 +32,7 @@ class ProdutosController
     {
         
     }
-    public function index()
+    public function view()
     {
         $produtos = App::get('database')->selectAll('produtos');
         $table = [
@@ -43,6 +43,8 @@ class ProdutosController
 
     public function delete()
     {
- 
+
+        app::get('database')->deletaProdutos('produtos', $_POST['id']);
+        header('Location: /admin/produtos');
     }
 }

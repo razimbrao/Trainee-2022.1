@@ -71,22 +71,19 @@ class QueryBuilder
     }
 
     
-    public function criaProdutos($tabela, $parametros)
+    public function criaProdutos($table, $parametros)
     {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)', 
-            $tabela, 
-            implode(', ', array_keys($parametros)),
+            $table, implode(',', array_keys($parametros)), 
             ':' . implode(', :', array_keys($parametros))
         );
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
+            $stmt->execute($parametros);
+        } catch(Exception $e) {
             die($e->getMessage());
         }
     }

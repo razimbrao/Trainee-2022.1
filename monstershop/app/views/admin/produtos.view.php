@@ -207,33 +207,32 @@
                                                 <form action="produtos/editar" method="$_POST">
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="<?= $produto->nome ?>">
+                                                        <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" placeholder="<?= $produto->nome ?>">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Categoria</label>
+                                                        <input type="text" name="categoria" class="form-control text-justify" id="formGroupExampleInput2" placeholder="<?= $produto->categoria ?>">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Descrição</label>
+                                                        <textarea class="form-control text-justify" name="descricao" id="exampleFormControlTextarea1" rows="3"><?= $produto->descricao ?></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputPassword1" class="form-label">Preço</label>
+                                                        <input type="text" class="form-control" name="preco" id="exampleInputPassword1" placeholder="R$<?= $produto->preco ?>">
                                                     </div>
 
                                                     <div class="form-group img-edicao">
                                                         <label for="exampleFormControlFile1">Imagem 1</label>
-                                                        <input type="file" accept="image/*" class="form-control-file" id="exampleFormControlFile1">
+                                                        <input type="file" accept="image/*" name="foto1" class="form-control-file" id="exampleFormControlFile1">
                                                     </div>
                                                     <div class="form-group img-edicao">
                                                         <label for="exampleFormControlFile1">Imagem 2</label>
-                                                        <input type="file" accept="image/*" class="form-control-file" id="exampleFormControlFile1">
+                                                        <input type="file" accept="image/*" name="foto2" class="form-control-file" id="exampleFormControlFile1">
                                                     </div>
                                                     <div class="form-group img-edicao">
                                                         <label for="exampleFormControlFile1">Imagem 3</label>
-                                                        <input type="file" accept="image/*" class="form-control-file" id="exampleFormControlFile1">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                                                        <input type="text" class="form-control text-justify" id="formGroupExampleInput2" placeholder="<?= $produto->categoria ?>">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputEmail1" class="form-label">Descrição</label>
-                                                        <textarea class="form-control text-justify" id="exampleFormControlTextarea1" rows="3"><?= $produto->descricao ?></textarea>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputPassword1" class="form-label">Preço</label>
-                                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="R$<?= $produto->preco ?>">
+                                                        <input type="file" accept="image/*" name="foto3" class="form-control-file" id="exampleFormControlFile1">
                                                     </div>
                                                 </form>
                                             </div>

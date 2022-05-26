@@ -15,7 +15,17 @@ class ProdutosController
 
     public function create()
     {
- 
+        $parametros = [
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'categoria' => $_POST['categoria'],
+            'preco' => $_POST['preco'],
+            'foto1' => $_POST['foto1'],
+            'foto2' => $_POST['foto2'],
+            'foto3' => $_POST['foto3'],
+        ];
+        App::get('database')->criaProdutos('produtos', $parametros);
+        header('Location: /admin/produtos');
     }
 
     public function store()
@@ -25,12 +35,23 @@ class ProdutosController
 
     public function edit()
     {
-  
+
     }
 
     public function update()
     {
-        
+        $parametros = [
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'categoria' => $_POST['categoria'],
+            'preco' => $_POST['preco'],
+            'foto1' => $_POST['foto1'],
+            'foto2' => $_POST['foto2'],
+            'foto3' => $_POST['foto3'],
+        ];
+        $id = $_POST['id'];
+        App::get('database')->editaProdutos($id, 'produtos', $parametros);
+        header('Location: /admin/produtos');
     }
     public function view()
     {

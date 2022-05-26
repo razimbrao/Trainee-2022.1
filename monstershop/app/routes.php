@@ -5,7 +5,7 @@ use App\Core\Router;
 
 $router->get('admin/produtos', 'ProdutosController@view');
 
-$router->post('admin/produtos/criar', 'ProdutosController@create');
+$router->post('admin/produtos/adicionar', 'ProdutosController@create');
 
 $router->post('admin/produtos/excluir', 'ProdutosController@delete');
 

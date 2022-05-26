@@ -45,28 +45,27 @@ class QueryBuilder
         }
     }
 
-    public function editaProdutos($idp, $tabela, $parametros)
+    public function editaProdutos($idp, $table, $parametros)
     {
         $sql = sprintf(
             'UPDATE %s
             SET %s
             WHERE %s;', 
-            $tabela, 
+            $table,
             implode(', ', array_map(function ($parametros) {
                 return "{$parametros} = :{$parametros}";
             }, array_keys($parametros))),
             'id = :id'
         );
-        $parametros['id']= $idp;
-        
+
+        $parametros['id'] = $idp;
+
         try {
-            $stmt = $this->pdo->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
 
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            $statement->execute($parametros);
         } catch (Exception $e) {
-            die($e->getMessage());
+            die("An error occurred when trying to update database: {$e->getMessage()}");
         }
     }
 

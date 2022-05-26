@@ -202,9 +202,11 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
+
+                                            <!-- Form de Edição -->
+
                                             <div class="modal-body">
-                                                <!-- Form de Edição -->
-                                                <form action="produtos/editar" method="$_POST">
+                                                <form action="produtos/editar" method="POST">
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Nome</label>
                                                         <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" placeholder="<?= $produto->nome ?>">
@@ -234,13 +236,14 @@
                                                         <label for="exampleFormControlFile1">Imagem 3</label>
                                                         <input type="file" accept="image/*" name="foto3" class="form-control-file" id="exampleFormControlFile1">
                                                     </div>
-                                                </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                        <input type="hidden" name="id" value="<?= $produto->id ?>">
+                                                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                                    </div>
+                                                </form> 
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Fechar</button>
-                                                <button type="button" class="btn btn-primary">Salvar Alterações</button>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

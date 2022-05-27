@@ -59,6 +59,8 @@ class CategoriasController
 
     public function delete()
     {
- 
+        App::get('database')->deletaCategoria('categorias', $_POST['id']);
+
+        header('Location: /admin/categorias');
     }
 }

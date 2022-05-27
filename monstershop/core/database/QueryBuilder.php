@@ -71,5 +71,25 @@ class QueryBuilder
         }
     }
 
+
+    public function deletaCategoria($table, $id)
+    {
+        //$sql = "delete from {$table} where id={$id}";
+
+        $sql = sprintf( 
+            'DELETE FROM %s WHERE %s;',
+            $table,
+            "id = :id"
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('id'));
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     
 }

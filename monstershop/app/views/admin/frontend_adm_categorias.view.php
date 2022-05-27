@@ -188,18 +188,19 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
+                                                <h3 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h3>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <form action="usuarios/excluir" method="POST">
-                                                    Tem certeza que deseja excluir essa categoria?
+                                            <form action="categorias/delete" method="POST">
+                                                <div>
+                                                    <h5> Tem certeza que deseja excluir essa categoria?</h5>
                                                 </div>
                                                 <input type="hidden" value="<?= $categoria->id ?>" name="id">
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="button" class="btn btn-danger">Excluir</button>
+                                                    <button type="submit" class="btn btn-danger">Excluir</button>
                                                 </div>
                                             </form>
                                         </div>

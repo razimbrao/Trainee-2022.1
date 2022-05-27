@@ -33,8 +33,8 @@ class CategoriasController
 
     public function store()
     {   
-        $nome = filter_input(INPUT_POST, 'nomeCat');
-        $descricao = filter_input(INPUT_POST, 'desCat');
+        $nome = filter_input(INPUT_POST, 'nome');
+        $descricao = filter_input(INPUT_POST, 'descricao');
 
         if($nome && $descricao) {
             App::get('datebase')->store('categorias', $nome, $descricao);
@@ -48,7 +48,13 @@ class CategoriasController
 
     public function update()
     {
-        
+        //filtagrem para seguranca
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
+        $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
+   
+        App::get('database')->editaCategoria('categorias', compact('nome', 'descricao'), $_POST['id']);
+
+        header('Location: /admin/categorias');
     }
 
     public function delete()

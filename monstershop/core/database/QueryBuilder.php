@@ -48,5 +48,28 @@ class QueryBuilder
         }
     }
 
+
+    public function editaCategoria($table, $dados, $id)
+    {
+        $sql = sprintf(
+            'UPDATE %s SET %s WHERE %s', 
+            $table, implode(', ', array_map(function ($dados){
+                return "{$dados} = :{$dados}";
+            },
+            array_keys($dados))),
+            'id = :id'
+        );
+
+        $dados['id'] = $id;
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute($dados);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     
 }

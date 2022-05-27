@@ -152,13 +152,13 @@
                                                         </div>
                                                         <div class="carousel-inner">
                                                         <div class="carousel-item active">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="...">
+                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 1 do produto">
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="...">
+                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 2 do produto">
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="...">
+                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 3 do produto">
                                                         </div>
                                                         </div>
                                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -209,11 +209,11 @@
                                                 <form action="produtos/editar" method="POST">
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Nome</label>
-                                                        <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" placeholder="<?= $produto->nome ?>">
+                                                        <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" value="<?= $produto->nome ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                                                        <input type="text" name="categoria" class="form-control text-justify" id="formGroupExampleInput2" placeholder="<?= $produto->categoria ?>">
+                                                        <input type="text" name="categoria" class="form-control text-justify" id="formGroupExampleInput2" value="<?= $produto->categoria ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Descrição</label>
@@ -221,7 +221,7 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputPassword1" class="form-label">Preço</label>
-                                                        <input type="text" class="form-control" name="preco" id="exampleInputPassword1" placeholder="R$<?= $produto->preco ?>">
+                                                        <input type="text" class="form-control" name="preco" id="exampleInputPassword1" value="<?= $produto->preco ?>">
                                                     </div>
 
                                                     <div class="form-group img-edicao">

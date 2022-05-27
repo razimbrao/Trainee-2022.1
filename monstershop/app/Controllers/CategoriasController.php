@@ -9,9 +9,9 @@ class CategoriasController
 {
     public function index()
     {
-       $allCategorias = App::get('database')->selectAll('categorias');
+       $categorias = App::get('database')->selectAll('categorias');
 
-       return view('admin/frontend_adm_categorias', compact('allCategorias'));
+       return view('admin/frontend_adm_categorias', compact('categorias')); 
     }
 
     public function show()
@@ -21,7 +21,13 @@ class CategoriasController
 
     public function create()
     {
+        //filtagrem para seguranca
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
+        $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);      
         
+        App::get('database')->adicionaCategoria('categorias', compact('nome', 'descricao'));
+
+        header('Location: /admin/categorias');
  
     }
 

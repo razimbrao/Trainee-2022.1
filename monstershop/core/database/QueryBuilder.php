@@ -23,8 +23,27 @@ class QueryBuilder
 
             $stmt->execute();
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            return $stmt->fetchAll(PDO::FETCH_OBJ); 
         } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+
+    public function adicionaCategoria($table, $dados)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)', 
+            $table, implode(',', array_keys($dados)), 
+            ':' . implode(', :', array_keys($dados))
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute($dados);
+        } catch(Exception $e) {
             die($e->getMessage());
         }
     }

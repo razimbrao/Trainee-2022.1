@@ -128,7 +128,7 @@
                                             <form>
                                                 <div class="mb-3 imagem-modal">
                                                     <label for="exampleInputPassword1" class="form-label">Foto de Perfil</label>
-                                                    <img src="..\..\..\public\img\usuarios\<?=$usuario->foto?>" alt="imagem de teste" class="imagem-teste">
+                                                    <img src="..\..\..\public\img\usuarios\<?= $usuario->foto ?>" alt="foto do usuário" class="imagem-teste">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="exampleInputText" class="form-label">Nome</label>

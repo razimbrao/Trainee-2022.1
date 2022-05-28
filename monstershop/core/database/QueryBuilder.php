@@ -34,8 +34,9 @@ class QueryBuilder
     public function adicionaUsuario($table, $dados)
     {
         $sql = sprintf(
-            'INSERT INTO %s (%s) VALUES (%s)', 
-            $table, implode(',', array_keys($dados)), 
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $table,
+            implode(',', array_keys($dados)),
             ':' . implode(', :', array_keys($dados))
         );
 
@@ -43,7 +44,7 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute($dados);
-        } catch(Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -56,29 +57,53 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute(compact('id'));
-        } catch(Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function editaUsuario($table, $dados, $id)
+    public function editaUsuario($table, $dados, $foto, $id)
     {
-        $sql = sprintf(
+        /* $dados['id'] = $id;
+
+       $sql = sprintf(
             'UPDATE %s SET %s WHERE %s', 
             $table, implode(', ', array_map(function ($dados){
                 return "{$dados} = :{$dados}";
             },
             array_keys($dados))),
-            'id = :id'
+            'id = :id'  
         );
 
-        $dados['id'] = $id;
+        if($foto != ''){
+            $sql = $sql . ", `foto` = {$foto}";
+        }
+
+        $sql = $sql . " WHERE `id` = {$id}";
+        
+
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute($dados);
         } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    } */
+
+        $sql = "update {$table} set nome = '{$dados['nome']}', email = '{$dados['email']}', senha = '{$dados['senha']}'";
+
+        if ($foto != '') {
+            $sql = $sql . ", foto = '{$foto}' WHERE id = {$id}";
+        } else {
+            $sql = $sql . "WHERE id = {$id}";
+        }
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }

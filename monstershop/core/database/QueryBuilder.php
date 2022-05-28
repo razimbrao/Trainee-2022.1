@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function selectAll($table)
     {
-        $sql = "select * from {$table}";
+        $sql = "select * from {$table}"; 
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -74,8 +74,7 @@ class QueryBuilder
 
     public function deletaCategoria($table, $id)
     {
-        //$sql = "delete from {$table} where id={$id}";
-
+        
         $sql = sprintf( 
             'DELETE FROM %s WHERE %s;',
             $table,
@@ -91,5 +90,25 @@ class QueryBuilder
         }
     }
 
+
+    public function procurarCategoria($table, $nome)
+    {
+
+        $sql = sprintf( 
+            'SELECT * FROM %s WHERE %s;',
+            $table,
+            "nome like '%' :nome '%' "
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('nome'));
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }  
+    }
     
 }

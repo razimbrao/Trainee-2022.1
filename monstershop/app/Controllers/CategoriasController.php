@@ -14,10 +14,10 @@ class CategoriasController
        return view('admin/frontend_adm_categorias', compact('categorias')); 
     }
 
-    public function show()
+    /*public function show()
     {
        
-    }
+    }*/
 
     public function create()
     {
@@ -31,7 +31,7 @@ class CategoriasController
  
     }
 
-    public function store()
+    /*public function store()
     {   
         $nome = filter_input(INPUT_POST, 'nome');
         $descricao = filter_input(INPUT_POST, 'descricao');
@@ -39,12 +39,12 @@ class CategoriasController
         if($nome && $descricao) {
             App::get('datebase')->store('categorias', $nome, $descricao);
         }
-    }
+    }*/
 
-    public function edit()
+   /* public function edit()
     {
   
-    }
+    }*/
 
     public function update()
     {
@@ -62,5 +62,13 @@ class CategoriasController
         App::get('database')->deletaCategoria('categorias', $_POST['id']);
 
         header('Location: /admin/categorias');
+    }
+
+
+    public function search()
+    {
+        $categorias = App::get('database')->procurarCategoria('categorias', $_POST['categoria']);
+
+        return view('admin/frontend_adm_categorias', compact('categorias'));                                       
     }
 }

@@ -11,4 +11,7 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
+$router->post('admin/search/categorias', 'CategoriasController@search');
+
+
 ?> 

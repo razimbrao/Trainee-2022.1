@@ -88,10 +88,12 @@
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <form action="/admin/search/categorias" class="d-flex" method="POST">
+                                    <input name="categoria" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    
                                     <button class="btn btn-outline-success" type="submit"><i
-                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+
                                 </form>
                             </th>
                         </tr>
@@ -99,7 +101,7 @@
                     <tbody>
 
                     <?php foreach ($categorias as $categoria) : ?>
-                        
+   
                         <tr>
                             <th scope="row"><?= $categoria->id ?></th>
                             <td><?=$categoria->nome?></td>
@@ -110,17 +112,23 @@
                                 <button type="button " class="btn btn-primary btn-custom" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $categoria->id ?>">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
+
                                 
                                 <!-- Modal de vizualização -->
                                 <div class="modal fade" id="mod-visualizar-<?= $categoria->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
+                                        <h2 class="modal-title" id="exampleModalLabel">Vizualização</h2>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                         <h4>Descrição:</h4>
+                                         <h5>Nome da categoria:</h5>
+                                         <p><?= $categoria->nome ?></p>
+                                        </div>
+
+                                        <div class="modal-body">
+                                         <h5>Descrição da categoria:</h5>
                                          <p><?= $categoria->descricao ?></p>
                                         </div>
                                         <div class="modal-footer">
@@ -143,7 +151,7 @@
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                                                <h2 class="modal-title" id="exampleModalLabel">Editar Categoria</h2>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
@@ -188,7 +196,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h3 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h3>
+                                                <h2 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h2>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>

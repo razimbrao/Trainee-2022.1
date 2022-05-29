@@ -88,7 +88,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">
-                                <form action="/admin/search/categorias" class="d-flex" method="POST">
+                                <form action="/admin/categorias" class="d-flex" method="POST">
                                     <input name="categoria" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                     
                                     <button class="btn btn-outline-success" type="submit"><i

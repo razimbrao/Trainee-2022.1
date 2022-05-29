@@ -9,9 +9,14 @@ class CategoriasController
 {
     public function index()
     {
-       $categorias = App::get('database')->selectAll('categorias');
-
-       return view('admin/frontend_adm_categorias', compact('categorias')); 
+        if(!empty($_POST['categoria'])) {
+            $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);  
+            $categorias = App::get('database')->procurarCategoria('categorias', $categoria);
+            return view('admin/frontend_adm_categorias', compact('categorias'));  
+        }
+        
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('admin/frontend_adm_categorias', compact('categorias')); 
     }
 
     /*public function show()
@@ -65,10 +70,4 @@ class CategoriasController
     }
 
 
-    public function search()
-    {
-        $categorias = App::get('database')->procurarCategoria('categorias', $_POST['categoria']);
-
-        return view('admin/frontend_adm_categorias', compact('categorias'));                                       
-    }
 }

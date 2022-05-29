@@ -56,7 +56,7 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute(compact('id'));
+            $stmt->execute();
         } catch (Exception $e) {
             die($e->getMessage());
         }

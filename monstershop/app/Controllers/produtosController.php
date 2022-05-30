@@ -56,8 +56,11 @@ class ProdutosController
     public function view()
     {
         $produtos = App::get('database')->selectAll('produtos');
+        $categorias = App::get('database')->selectAll('categorias');
+
         $table = [
             'produtos' => $produtos,
+            'categorias' => $categorias,
         ];
         return view('admin/produtos', $table);
     }

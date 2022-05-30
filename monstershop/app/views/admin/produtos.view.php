@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    
+
     <script src="https://kit.fontawesome.com/2b94009ee2.js" crossorigin="anonymous"></script>
     <title>ADM - Produtos</title>
 </head>
@@ -24,8 +25,7 @@
 
         <div class="add-produto">
             <!-- Adicionar produto -->
-            <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal"
-                data-bs-target="#mod-adicionar">
+            <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
                 Adicionar Produto
             </button>
 
@@ -45,14 +45,17 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                                    <input type="text" class="form-control text-justify" name="categoria" id="formGroupExampleInput2" placeholder="Categoria">
+                                    <label>Categoria</label>
+                                    <select class="form-select" aria-label="Default select example" name="categoria">
+                                        <?php foreach ($categorias as $cat) : ?>
+                                            <option value="<?= $cat->nome ?>"><?= $cat->nome ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Descrição</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" name="descricao" placeholder="Descrição do produto">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="descricao" placeholder="Descrição do produto">
                                 </div>
 
                                 <div class="mb-3">
@@ -84,7 +87,7 @@
             </div>
         </div>
 
-    <!-- Tabela-Start -->   
+        <!-- Tabela-Start -->
         <div class="tabela">
             <table class="table table-hover table-bordered border-dark table-custom">
                 <thead>
@@ -109,33 +112,29 @@
                                 <!----------------- Botões ------------------>
 
                                 <!-- Botão de vizualização -->
-                            <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $produto->id ?>">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
+                                <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $produto->id ?>">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
 
                                 <!-- Botão de Edição -->
-                                <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#mod-editar-<?= $produto->id ?>">
+                                <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $produto->id ?>">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
 
                                 <!-- Botão de exclusão -->
-                                <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#mod-excluir-<?= $produto->id ?>">
+                                <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $produto->id ?>">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 
                                 <!----------------- Modais ------------------>
 
                                 <!-- Modal de vizualização -->
-                                <div class="modal fade" id="mod-visualizar-<?= $produto->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true">
+                                <div class="modal fade" id="mod-visualizar-<?= $produto->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Vizualização</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <form>
@@ -146,28 +145,28 @@
                                                     <div id="carouselExampleIndicators" class="carousel slide carousel-modal" data-bs-ride="carousel">
                                                         <label for="exampleInputPassword1" class="form-label">Imagens</label>
                                                         <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                                         </div>
                                                         <div class="carousel-inner">
-                                                        <div class="carousel-item active">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 1 do produto">
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 2 do produto">
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img src="../../../public/assets/MonsterShop-logo.png" class="d-block w-100 imagem-teste" alt="Imagem 3 do produto">
-                                                        </div>
+                                                            <div class="carousel-item active">
+                                                            </div> <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto1 ?>" class="d-block w-100 imagem-teste" alt="Imagem 1 do produto">
+
+                                                            <div class="carousel-item">
+                                                                <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto2 ?>" class="d-block w-100 imagem-teste" alt="Imagem 2 do produto">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto3 ?>" class="d-block w-100 imagem-teste" alt="Imagem 3 do produto">
+                                                            </div>
                                                         </div>
                                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="visually-hidden">Previous</span>
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
                                                         </button>
                                                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="visually-hidden">Next</span>
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
                                                         </button>
                                                     </div>
                                                     <div class="mb-3">
@@ -185,22 +184,19 @@
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Modal de edição -->
-                                <div class="modal fade" id="mod-editar-<?= $produto->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true">
+                                <div class="modal fade" id="mod-editar-<?= $produto->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
 
                                             <!-- Form de Edição -->
@@ -212,9 +208,14 @@
                                                         <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" value="<?= $produto->nome ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                                                        <input type="text" name="categoria" class="form-control text-justify" id="formGroupExampleInput2" value="<?= $produto->categoria ?>">
+                                                        <label>Categoria</label>
+                                                        <select class="form-select" aria-label="Default select example" name="categoria">
+                                                            <?php foreach ($categorias as $cat) : ?>
+                                                                <option value="<?= $cat->nome ?>"><?= $cat->nome ?></option>
+                                                            <?php endforeach; ?>
+                                                        </select>
                                                     </div>
+                                                    
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Descrição</label>
                                                         <textarea class="form-control text-justify" name="descricao" id="exampleFormControlTextarea1" rows="3"><?= $produto->descricao ?></textarea>
@@ -241,7 +242,7 @@
                                                         <input type="hidden" name="id" value="<?= $produto->id ?>">
                                                         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                                                     </div>
-                                                </form> 
+                                                </form>
                                             </div>
 
                                         </div>
@@ -250,25 +251,25 @@
 
                                 <!-- Modal de confirmação de exclusão -->
                                 <div class="modal fade" id="mod-excluir-<?= $produto->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Confirmação de exclusão</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form action="produtos/excluir" method="POST">
+                                                <div class="modal-body">
+                                                    Tem certeza que deseja excluir esse usuário?
+                                                </div>
+                                                <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <form action="produtos/excluir" method="POST">
-                                            <div class="modal-body">
-                                                Tem certeza que deseja excluir esse usuário?
-                                            </div>
-                                            <input type="hidden" value="<?= $produto->id ?>" name="id">
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="submit" class="btn btn-danger">Excluir</button>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
-                            </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -277,8 +278,7 @@
         </div>
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>

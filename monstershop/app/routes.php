@@ -9,7 +9,7 @@ $router->post('admin/produtos/adicionar', 'ProdutosController@create');
 
 $router->post('admin/produtos/excluir', 'ProdutosController@delete');
 
-$router->get('admin/produtos/show', 'ProdutosController@show');
+$router->post('admin/produtos/pesquisar', 'ProdutosController@show');
 
 $router->post('admin/produtos/editar', 'ProdutosController@update');
 

@@ -95,8 +95,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <form class="d-flex" action="produtos/pesquisar" method="POST">
+                                <input class="form-control me-2" type="search" placeholder="Search" name="pesquisa" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </th>

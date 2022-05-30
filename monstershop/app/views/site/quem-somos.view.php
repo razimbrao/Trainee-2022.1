@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/quem-somos.css">
+    <link rel="stylesheet" href="../../../public/css/navbarft.css">
+
     <title>Quem Somos?</title>
 </head>
+
+
 <body>
+        <?php require 'navbar.php' ?>
+
         <div class="quem_somos">
             <h1>Quem Somos?</h1>
 
@@ -61,6 +67,10 @@
             </div>
             </div>
         </div>
+
+        <?php require 'footer.php' ?>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
     
 </body>
 </html>

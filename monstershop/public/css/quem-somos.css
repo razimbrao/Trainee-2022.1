@@ -9,19 +9,19 @@ body{
     font-family: 'Heebo', sans-serif;
 }
 
-body p{
+.body-quemSomos p{
     font-size: 26px;
 }
 
-body h1{
+.body-quemSomos h1{
     font-size: 50px;
 }
 
-body li{
+.body-quemSomos li{
     font-size: 26px;
 }
 
-body span{
+.body-quemSomos span{
     text-decoration: underline;
 }
 

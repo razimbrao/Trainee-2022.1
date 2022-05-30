@@ -10,9 +10,23 @@ class ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701
         '5ec26a44593cffc3089bdca7ce7a56c3' => __DIR__ . '/../..' . '/core/helpers.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+    );
+
     public static $classMap = array (
-        'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController copy 2.php',
-        'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/LoginController.php',
+        'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
+        'App\\Controllers\\ViewController' => __DIR__ . '/../..' . '/app/Controllers/ViewController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
@@ -27,6 +41,8 @@ class ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701::$classMap;
 
         }, null, ClassLoader::class);

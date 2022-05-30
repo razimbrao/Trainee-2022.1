@@ -10,7 +10,7 @@ class ViewController
 
     public function quemSomos()
     {
-        return view('quem-somos');
+        return view('site/quem-somos');
     }
 
     public function create()

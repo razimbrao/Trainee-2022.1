@@ -7,4 +7,6 @@ use App\Core\Router;
 
 $router->get('quem-somos', 'ViewController@quemSomos');
 
+$router->get('home', 'ViewController@home');
+
 ?> 

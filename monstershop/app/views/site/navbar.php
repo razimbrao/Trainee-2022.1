@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="link-nav nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="link-nav nav-link active" aria-current="page" href="home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="link-nav nav-link" href="#">Produtos</a>

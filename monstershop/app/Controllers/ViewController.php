@@ -13,10 +13,15 @@ class ViewController
         return view('site/quem-somos');
     }
 
+    public function home()
+    {
+        return view('site/home');
+    }
+
     public function create()
     {
  
-    }
+    }   
 
     public function store()
     {

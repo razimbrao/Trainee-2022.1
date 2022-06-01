@@ -128,7 +128,7 @@
                                             <form>
                                                 <div class="mb-3 imagem-modal">
                                                     <label for="exampleInputPassword1" class="form-label">Foto de Perfil</label>
-                                                    <img src="../../../public/assets/MonsterShop-logo.png" alt="imagem de teste" class="imagem-teste">
+                                                    <img src="..\..\..\public\img\usuarios\<?= $usuario->foto ?>" alt="foto do usuário" class="imagem-teste">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="exampleInputText" class="form-label">Nome</label>
@@ -146,7 +146,7 @@
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar">Editar Usuário</button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $usuario->id ?>">Editar Usuário</button>
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@
                                                     <br>
                                                     <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1" value="<?= $usuario->foto ?>">
                                                 </div>
-                                                <div class="modal-footer">
+                                                <div class="modal-footer">  
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                                     <input type="hidden" name="id" , value="<?= $usuario->id ?>">
                                                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>

@@ -5,7 +5,7 @@ use App\Core\Router;
 
 //---------Rotas de Usuários----------//
 
-$router->get('admin/usuarios', 'UsuariosController@show');
+$router->get('admin/usuarios', 'UsuariosController@view');
 
 $router->post('admin/usuarios/adicionar', 'UsuariosController@create');
 
@@ -27,4 +27,4 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
 
-?> 
+?>

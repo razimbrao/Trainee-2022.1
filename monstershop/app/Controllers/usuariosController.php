@@ -8,7 +8,7 @@ use Exception;
 class UsuariosController
 {
 
-    public function show()
+    public function view()
     {
         $usuarios = App::get('database')->selectAll('usuarios');
 
@@ -49,10 +49,11 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'foto' => $_POST['foto']
         ];
 
-        App::get('database')->editaUsuario('usuarios', $dados, $_POST['id']);
+        $foto = $_POST['foto'];
+
+        App::get('database')->editaUsuario('usuarios', $dados, $foto, $_POST['id']);
 
         header('Location: /admin/usuarios');
     }

@@ -36,8 +36,8 @@
 }
 
 .navbar-custom img {
-    position: fixed !important;
-    margin-top: -1rem;
+    position: relative !important;
+    margin-top: 0rem;
     height: 31px;
     width: 180px;
 }

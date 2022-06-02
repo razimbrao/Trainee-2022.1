@@ -10,13 +10,13 @@
 /* Navbar-Start */
 
 .navbar-custom {
-    background-color: #171927 !important;
+    background-color: #0f1223    !important;
     height: 70px;
     width: 100%;
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
-    position: fixed;
+    position: relative;
 
     display: flex !important;
     align-items: center !important;
@@ -37,7 +37,6 @@
 
 .navbar-custom img {
     position: relative !important;
-    margin-top: 0rem;
     height: 31px;
     width: 180px;
 }

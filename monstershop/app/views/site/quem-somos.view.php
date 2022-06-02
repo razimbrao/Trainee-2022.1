@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +18,9 @@
 
 
 <body>
-        <?php require 'navbar.php' ?>
+    <?php require 'navbar.php' ?>
 
-        <div class="body-quemSomos">
+    <div class="body-quemSomos">
         <div class="quem_somos">
             <h1>Quem Somos?</h1>
 
@@ -39,11 +40,10 @@
                 <a href="https://www.youtube.com/watch?v=8XuwZPGDMBA">
                     <img src="../../../public/img/goku-gym.gif" alt="Goku"></a>
             </div>
-            </div>
         </div>
         <div class="visao">
             <h1>Visão</h1>
-            
+
             <div class="descricao-esq">
                 <p>Temos como visão nos tornarmos uma empresa de referência nacional na área de comercialização de produtos voltados à esportes físicos.
                 </p>
@@ -70,13 +70,13 @@
                 <a href="">
                     <img src="../../../public/img/aperto-de-maos.gif" alt="aperto-de-maos"></a>
             </div>
-            </div>
         </div>
-        </div>
+    </div>
 
-        <?php require 'footer.php' ?>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
-    
+    <?php require 'footer.php' ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
+
 </html>

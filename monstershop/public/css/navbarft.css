@@ -22,10 +22,6 @@
     align-items: center !important;
 }
 
-.navbar-custom ul {
-    margin-right: 7rem;
-}
-
 .navbar-custom li {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -63,8 +59,7 @@
 /* Footer-Start */
 
 .foot-list {
-    padding: 0;
-    padding-top: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
 }

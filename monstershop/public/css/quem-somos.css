@@ -6,7 +6,7 @@ body{
     background-repeat: no-repeat;
     color: white;
     background-position: center;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .body-quemSomos p{
@@ -118,68 +118,69 @@ body{
 }
 
 @media (max-width: 1098px){
-    
-.quem_somos{
-    margin-top: 50px;
-    float: center;
-    text-align: center;
-}
-.quem_somos h1{
-    color: #35dfda;
-}
+        
+    .quem_somos{
+        margin-top: 50px;
+        float: center;
+        text-align: center;
+    }
+    .quem_somos h1{
+        color: #35dfda;
+    }
 
-.missao{
-    margin-left: 10%;
-    margin-right: 10%;
-    float: center;
-    text-align: center;
-}
-.missao h1{
-    color: #a53339;
-}
+    .missao{
+        margin-left: 10%;
+        margin-right: 10%;
+        float: center;
+        text-align: center;
+    }
+    .missao h1{
+        color: #a53339;
+    }
 
-.visao{
-    margin-left: 10%;
-    margin-right: 10%;
-    float: center;
-    text-align: center;
-}
-.visao h1{
-    color: #35dfda;
-}
+    .visao{
+        margin-left: 10%;
+        margin-right: 10%;
+        float: center;
+        text-align: center;
+    }
+    .visao h1{
+        color: #35dfda;
+    }
 
-.valores{
-    margin-left: 10%;
-    margin-right: 10%;
-    float: center;
-    text-align: center;
-}
-.valores h1{
-    color: #a53339;
-}
+    .valores{
+        margin-left: 10%;
+        margin-right: 10%;
+        float: center;
+        text-align: center;
+    }
+    .valores h1{
+        color: #a53339;
+    }
 
-.descricao-esq{
-    flex-wrap: wrap;
-    display: inline-flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-}
-.descricao-esq p, .descricao-esq ul{
-    list-style: none;
-    width: 75%;
-}
-.descricao-esq il{
-    margin-top: 20px;
-}
-.descricao-esq img{
-    width: 220px;
-    height: 220px;
-    order: -1;
-    margin-bottom: 30px;
-}
-.descricao-esq a{
-    order: -1;
+    .descricao-esq{
+        flex-wrap: wrap;
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .descricao-esq p, .descricao-esq ul{
+        list-style: none;
+        width: 75%;
+    }
+    .descricao-esq il{
+        margin-top: 20px;
+    }
+    .descricao-esq img{
+        width: 220px;
+        height: 220px;
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .descricao-esq a{
+        order: -1;
+    }
 }
 
 
@@ -226,5 +227,4 @@ body{
         opacity: 100%;
         transform: translate(0px, 0px);
     }
-}
 }

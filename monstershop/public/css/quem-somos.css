@@ -100,7 +100,7 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.descricao-esq p, ul{
+.descricao-esq p, .descricao-esq ul{
     animation: animacao-esquerda-direita;
     animation-duration: 2s;
     width: 70%;
@@ -165,7 +165,7 @@ body{
     align-items: center;
     width: 100%;
 }
-.descricao-esq p, ul{
+.descricao-esq p, .descricao-esq ul{
     list-style: none;
     width: 75%;
 }
@@ -181,7 +181,7 @@ body{
 .descricao-esq a{
     order: -1;
 }
-}
+
 
 @keyframes animacao-h1 {
     0%{
@@ -226,4 +226,5 @@ body{
         opacity: 100%;
         transform: translate(0px, 0px);
     }
+}
 }

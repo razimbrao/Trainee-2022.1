@@ -18,7 +18,7 @@
 
 
 <body>
-    <?php require 'navbar.php' ?>
+    <?php include 'navbar.php' ?>
 
     <div class="body-quemSomos">
         <div class="quem_somos">

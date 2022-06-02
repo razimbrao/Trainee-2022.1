@@ -36,7 +36,9 @@
 }
 
 .navbar-custom img {
-    position: relative !important;
+    margin-left: 0.3rem;
+    margin-top: -1rem;
+    position: absolute !important;
     height: 31px;
     width: 180px;
 }
@@ -54,11 +56,6 @@
     color: #35dfda !important;
     padding-top: 3px !important;
     transition: 0.4s;
-}
-
-.nav-img {
-    margin-left: 0.6rem;
-    overflow: hidden !important;
 }
 
 /* Navbar-End */

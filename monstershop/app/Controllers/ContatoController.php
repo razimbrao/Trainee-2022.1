@@ -35,7 +35,9 @@ class ContatoController
         
         $mail->isHTML(true);
         $mail->Subject = $dados['assunto'];
-        $mail->Body = nl2br("Nome: {$dados['nome']}<br>Email: {$dados['email']}<br>Mensagem: {$dados['mensagem']}");
+        $mail->Body = nl2br("Nome: {$dados['nome']}
+        Email: {$dados['email']}
+        Mensagem: {$dados['mensagem']}");
         $mail->AltBody = nl2br(strip_tags($dados['mensagem']));
 
         if(!$mail->send()) {

@@ -64,22 +64,17 @@
                                 </div>
 
                                 <div class="form-group img-edicao">
-                                    <label for="exampleFormControlFile1">Imagem 1</label>
-                                    <input type="file" accept="image/*" name="foto1" class="form-control-file" id="exampleFormControlFile1">
-                                </div>
-                                <div class="form-group img-edicao">
-                                    <label for="exampleFormControlFile1">Imagem 2</label>
-                                    <input type="file" accept="image/*" name="foto2" class="form-control-file" id="exampleFormControlFile1">
-                                </div>
-                                <div class="form-group img-edicao">
-                                    <label for="exampleFormControlFile1">Imagem 3</label>
-                                    <input type="file" accept="image/*" name="foto3" class="form-control-file" id="exampleFormControlFile1">
+                                    <label for="exampleFormControlFile1">Imagem</label>
+                                    <input type="file" accept="image/*" multiple name="nome_imagem" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-primary">Salvar Produto</button>
                                 </div>
+                                
+                                <input type="hidden" name="id_produto" value="<?= $produto->id ?>">
+                            
                             </form>
                         </div>
                     </div>
@@ -150,15 +145,15 @@
                                                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                                         </div>
                                                         <div class="carousel-inner">
-                                                            <div class="carousel-item active">
-                                                            </div> <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto1 ?>" class="d-block w-100 imagem-teste" alt="Imagem 1 do produto">
 
-                                                            <div class="carousel-item">
-                                                                <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto2 ?>" class="d-block w-100 imagem-teste" alt="Imagem 2 do produto">
+                                                        <?php foreach ($imagens as $imagem) : ?>
+                                                        
+                                                            <div class="carousel-item active">
+                                                                <img src="../../../public/img/adm-produtos/produtos/<?= $imagem->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
                                                             </div>
-                                                            <div class="carousel-item">
-                                                                <img src="../../../public/img/adm-produtos/produtos/<?= $produto->foto3 ?>" class="d-block w-100 imagem-teste" alt="Imagem 3 do produto">
-                                                            </div>
+
+                                                        <?php endforeach; ?>
+
                                                         </div>
                                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

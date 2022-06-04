@@ -86,4 +86,21 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+   
+    public function criaImagem($table, $parametros)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)', 
+            $table, implode(',', array_keys($parametros)), 
+            ':' . implode(', :', array_keys($parametros))
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute($parametros);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

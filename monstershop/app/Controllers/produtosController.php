@@ -15,16 +15,21 @@ class ProdutosController
 
     public function create()
     {
+        $parametrosImagens = [
+            'nome_imagem' => $_POST['nome_imagem'],
+            'id_produto' => $_POST['id_produto'],
+        ];
+
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'categoria' => $_POST['categoria'],
             'preco' => $_POST['preco'],
-            'foto1' => $_POST['foto1'],
-            'foto2' => $_POST['foto2'],
-            'foto3' => $_POST['foto3'],
         ];
-        App::get('database')->criaProdutos('produtos', $parametros);
+        
+        App::get('database')->criaProdutos('produtos', $parametros);        
+        App::get('database')->criaImagem('imagens', $parametrosImagens);
+        
         header('Location: /admin/produtos');
     }
 
@@ -45,9 +50,9 @@ class ProdutosController
             'descricao' => $_POST['descricao'],
             'categoria' => $_POST['categoria'],
             'preco' => $_POST['preco'],
-            'foto1' => $_POST['foto1'],
-            'foto2' => $_POST['foto2'],
-            'foto3' => $_POST['foto3'],
+            'foto1' => "" + $_POST['foto1'],
+            'foto2' => "" + $_POST['foto2'],
+            'foto3' => "" + $_POST['foto3'],
         ];
         $id = $_POST['id'];
         App::get('database')->editaProdutos($id, 'produtos', $parametros);
@@ -57,10 +62,12 @@ class ProdutosController
     {
         $produtos = App::get('database')->selectAll('produtos');
         $categorias = App::get('database')->selectAll('categorias');
+        $imagens = App::get('database')->selectAll('imagens');
 
         $table = [
             'produtos' => $produtos,
             'categorias' => $categorias,
+            'imagens' => $imagens,
         ];
         return view('admin/produtos', $table);
     }

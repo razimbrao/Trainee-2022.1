@@ -1,3 +1,29 @@
+<?php 
+
+$login = $_POST['login'];
+$senha = md5($_POST['senha']);
+$entrar = $_POST['entrar']; 
+$connect = new mysqli('localhost', 'root' , ' ' , 'login');
+
+if(isset($entrar)){
+  $verifica = $connect -> query("SELECT * FROM usuarios_login WHERE  login = '$login' AND senha = '$senha'")
+  or die ("Erro");
+
+  $rows = $verifica -> num_rows;
+  if($rows <= 0){
+     echo "<script language= 'javascript' type='text/javascript'>
+  }
+  alert('login e senha incorretos'); windows.location.href='login.view.php';</script>";
+  die();
+
+  }else{
+    setcookie("login", $login);
+    header("location:login.view.php");
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +39,22 @@
 
    <!--inicio do formulario de login-->
       <div class="edit-login">
-        <form>
+        <form method = "POST">
             <div class="mb-3 edit-email">
               <label for="exampleInputEmail1" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" name = "login" id="login" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Ex: nomeusuario@email.com</div>
             </div>
             <div class="mb-3 edit-senha">
               <label for="exampleInputPassword1" class="form-label">Senha:</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control"  name = "senha"  id="senha">
             </div>
             <div class="mb-3 form-check edit-conectado">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Mantenha conectado</label>
             </div>
             <div class="editbotaosenha">
-                <button type="submit" class="btn btn-danger">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">  Esqueceu a senha?</a>
+                <button type="submit"  name = "entrar" id="entrar" class="btn btn-danger">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">  Esqueceu a senha?</a>
             </div>
 
             <div class="edit-cadastro">
@@ -47,3 +73,15 @@
 
 </body>
 </html>
+
+<?php
+
+$login_cookie = $_COOKIE['login'];
+   if(isset($login_cookie)){
+     echo"Bem vindo a MonsterShop , $login_cookie <br>";
+     echo "logado";
+   }else{
+     echo "Faça o login";
+   }
+
+?>

@@ -8,7 +8,7 @@
                     <li><a href="#"><i class="fa-xl fa-brands fa-whatsapp"></i></a></li>
                 </ul>
 
-                <hr>
+                <hr class="slogan">
 
                 <p class="slogan">Desde 2022 contribuindo para a sua saúde física!</p>
 

@@ -1,3 +1,5 @@
+<!-- php include 'navbar.php' -->
+
 <header>
     <nav class="navbar-custom navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">

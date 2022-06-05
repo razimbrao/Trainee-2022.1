@@ -10,4 +10,5 @@ $router->get('quem-somos', 'ViewController@quemSomos');
 $router->get('', 'ViewController@home');
 $router->get('home', 'ViewController@home');
 
+$router->get('produtos', 'ViewController@produtos');
 ?> 

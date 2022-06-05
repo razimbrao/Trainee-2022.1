@@ -17,6 +17,11 @@ class ViewController
     {
         return view('site/home');
     }
+    
+    public function produtos()
+    {
+        return view('site/produtos');
+    }
 
     public function create()
     {

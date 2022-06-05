@@ -13,7 +13,7 @@
                         <a class="link-nav nav-link active" aria-current="page" href="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="link-nav nav-link" href="#">Produtos</a>
+                        <a class="link-nav nav-link" href="produtos">Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a class="link-nav nav-link" href="quem-somos">Quem Somos</a>

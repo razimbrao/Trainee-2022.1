@@ -67,6 +67,7 @@
 .foot-list li {
     list-style: none;
     margin-left: 2.5%;
+    margin-bottom: -1rem;
     margin-right: 2.5%;
 }
 

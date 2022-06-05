@@ -21,7 +21,7 @@
                         <a class="link-nav nav-link" href="quem-somos">Quem Somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="link-nav nav-link" href="#">Contato</a>
+                        <a class="link-nav nav-link" href="contato">Contato</a>
                     </li>
                 </ul>
                 <a class="link-nav nav-link" href="#">Login</a>

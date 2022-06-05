@@ -11,4 +11,9 @@ $router->get('', 'ViewController@home');
 $router->get('home', 'ViewController@home');
 
 $router->get('produtos', 'ViewController@produtos');
+
+//-----------Rota de Contato-------------//
+
+$router->get('contato', 'ContatoController@view');
+
 ?> 

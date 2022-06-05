@@ -10,7 +10,7 @@
 
                 <hr>
 
-                <p>Desde 2022 contribuindo para a sua saúde física!</p>
+                <p class="slogan">Desde 2022 contribuindo para a sua saúde física!</p>
 
                 <div class="footer-img">
                     <img src="../../../public/assets/MS_sem_fundo.png" alt="Logo do site" width="150rem">

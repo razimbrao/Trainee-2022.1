@@ -3,10 +3,10 @@
 $login = $_POST['login'];
 $senha = md5($_POST['senha']);
 $entrar = $_POST['entrar']; 
-$connect = new mysqli('localhost', 'root' , ' ' , 'login');
+$connect = new mysqli('localhost', 'root' , ' ' , 'database');
 
 if(isset($entrar)){
-  $verifica = $connect -> query("SELECT * FROM usuarios_login WHERE  login = '$login' AND senha = '$senha'")
+  $verifica = $connect -> query("SELECT * FROM usuarios WHERE  login = '$login' AND senha = '$senha'")
   or die ("Erro");
 
   $rows = $verifica -> num_rows;

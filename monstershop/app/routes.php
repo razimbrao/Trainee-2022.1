@@ -28,5 +28,7 @@ $router->post('admin/categorias/edit', 'CategoriasController@update');
 
 //---------------Rotas de Login-------------//
 
+$router->get('admin/login','LoginController@view');
+
 
 ?>

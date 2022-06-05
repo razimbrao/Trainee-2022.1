@@ -8,9 +8,18 @@ use Exception;
 class LoginController
 {
 
+
+    public function view(){
+        $usuarios = App::get('database')->selectAll('usuarios');
+        $tables = [
+            'usuarios' => $usuarios,
+        ];
+        return view('admin/login',$tables);
+    }
+
     public function show()
     {
-        echo "Passou";
+        
     }
 
     public function create()

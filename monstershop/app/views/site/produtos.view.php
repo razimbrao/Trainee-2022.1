@@ -58,13 +58,15 @@
                     <button type="button" class="btn btn-dark btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                       <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <?php foreach ($categorias as $categoria) : ?>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><?=$categoria->nome?></a></li>
-                      </ul>
-                    <?php endforeach; ?>  
+                    <form action="" method="post">
+                      <?php foreach ($categorias as $categoria) : ?>
+                        <ul class="dropdown-menu" >
+                          <input type="hidden" name="categoria" value="<?= $categoria->nome ?>">
+                          <li><button class="dropdown-item" type="submit" ><?=$categoria->nome?></button></li>
+                        </ul>
+                      <?php endforeach;?>  
+                    </form>
                   </div>
-
 
 
 

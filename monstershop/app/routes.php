@@ -30,5 +30,6 @@ $router->post('admin/categorias/edit', 'CategoriasController@update');
 
 $router->get('admin/login','LoginController@view');
 
+$router->post('admin/login/validacao', 'LoginController@validacao');
 
 ?>

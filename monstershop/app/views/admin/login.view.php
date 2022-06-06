@@ -1,27 +1,5 @@
 <?php 
-
-$login = $_POST['login'];
-$senha = md5($_POST['senha']);
-$entrar = $_POST['entrar']; 
-$connect = new mysqli('localhost', 'root' , ' ' , 'database');
-
-if(isset($entrar)){
-  $verifica = $connect -> query("SELECT * FROM usuarios WHERE  login = '$login' AND senha = '$senha'")
-  or die ("Erro");
-
-  $rows = $verifica -> num_rows;
-  if($rows <= 0){
-     echo "<script language= 'javascript' type='text/javascript'>
-  }
-  alert('login e senha incorretos'); windows.location.href='login.view.php';</script>";
-  die();
-
-  }else{
-    setcookie("login", $login);
-    header("location:login.view.php");
-  }
-}
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +17,20 @@ if(isset($entrar)){
 
    <!--inicio do formulario de login-->
       <div class="edit-login">
-        <form method = "POST">
+      <?php
+            if(isset($_SESSION['Login_invalido'])):
+            ?>
+            <div class="notification is-danger">
+                <p>Login invalido!!!</p>
+            </div>
+            <?php
+            endif;
+            unset($_SESSION['Login_invalido']);
+            ?>
+        <form action = "admin/login/validacao" method = "POST">
             <div class="mb-3 edit-email">
               <label for="exampleInputEmail1" class="form-label">Email:</label>
-              <input type="text" class="form-control" name = "login" id="login" aria-describedby="emailHelp">
+              <input type="email" class="form-control" name = "email" id="email" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Ex: nomeusuario@email.com</div>
             </div>
             <div class="mb-3 edit-senha">
@@ -73,15 +61,3 @@ if(isset($entrar)){
 
 </body>
 </html>
-
-<?php
-
-$login_cookie = $_COOKIE['login'];
-   if(isset($login_cookie)){
-     echo"Bem vindo a MonsterShop , $login_cookie <br>";
-     echo "logado";
-   }else{
-     echo "Faça o login";
-   }
-
-?>

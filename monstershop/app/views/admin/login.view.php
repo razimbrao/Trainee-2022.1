@@ -16,7 +16,7 @@ session_start();
    <div class="container">
 
    <!--inicio do formulario de login-->
-      <div class="edit-login">
+    <div class="edit-login">
       <?php
             if(isset($_SESSION['Login_invalido'])):
             ?>
@@ -49,7 +49,7 @@ session_start();
                <br> Não tem uma conta? <a href="">Cadastre-se</a>
             </div>
         </form>
-      </div>
+    </div>
       
    <!--fim do formulario de login-->
 

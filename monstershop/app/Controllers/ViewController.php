@@ -13,6 +13,11 @@ class ViewController
         return view('site/quem-somos');
     }
 
+    public function dashboard()
+    {
+        return view('admin/dashboard');
+    }
+
     public function home()
     {
         $produtos = App::get('database')->selectAll('produtos');

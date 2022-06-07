@@ -62,4 +62,10 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
 
+//---------------Rotas de Login-------------//
+
+$router->get('admin/login','LoginController@view');
+
+$router->post('admin/login/validacao', 'LoginController@validacao');
+
 ?>

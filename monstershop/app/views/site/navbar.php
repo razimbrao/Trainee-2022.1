@@ -24,7 +24,7 @@
                         <a class="link-nav nav-link" href="contato">Contato</a>
                     </li>
                 </ul>
-                <a class="link-nav nav-link" href="#">Login</a>
+                <a class="link-nav nav-link" href="admin/login">Login</a>
             </div>
         </div>
     </nav>

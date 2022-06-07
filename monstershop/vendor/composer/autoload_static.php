@@ -28,6 +28,7 @@ class ComposerStaticInit77d18dcc81140e6fe6e1cf916f541701
         'App\\Controllers\\CategoriasController' => __DIR__ . '/../..' . '/app/Controllers/CategoriasController.php',
         'App\\Controllers\\ContatoController' => __DIR__ . '/../..' . '/app/Controllers/ContatoController.php',
         'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
+        'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/LoginController.php',
         'App\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/Controllers/UsuariosController.php',
         'App\\Controllers\\ViewController' => __DIR__ . '/../..' . '/app/Controllers/ViewController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',

@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\CategoriasController;
+use App\Controllers\ProdutosController;
 use App\Core\Router;
 
 $router->get('admin/categorias', 'CategoriasController@index');
@@ -13,6 +14,8 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
 $router->get('site/produtos', 'ProdutosController@index');
+$router->post('site/produtos', 'ProdutosController@index');
+
 
 
 

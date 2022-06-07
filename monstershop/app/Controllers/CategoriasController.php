@@ -11,7 +11,7 @@ class CategoriasController
     {
         if(!empty($_POST['categoria'])) {
             $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);  
-            $categorias = App::get('database')->procurarCategoria('categorias', $categoria);
+            $categorias = App::get('database')->procurar('categorias', 'nome', $categoria);
             return view('admin/frontend_adm_categorias', compact('categorias'));  
         }
         
@@ -30,7 +30,7 @@ class CategoriasController
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
         $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);      
         
-        App::get('database')->adicionaCategoria('categorias', compact('nome', 'descricao'));
+        App::get('database')->adicionar('categorias', compact('nome', 'descricao'));
 
         header('Location: /admin/categorias');
  
@@ -57,14 +57,14 @@ class CategoriasController
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
         $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
    
-        App::get('database')->editaCategoria('categorias', compact('nome', 'descricao'), $_POST['id']);
+        App::get('database')->editar('categorias', compact('nome', 'descricao'), $_POST['id']);
 
         header('Location: /admin/categorias');
     }
 
     public function delete()
     {
-        App::get('database')->deletaCategoria('categorias', $_POST['id']);
+        App::get('database')->deletar('categorias', $_POST['id']);
 
         header('Location: /admin/categorias');
     }

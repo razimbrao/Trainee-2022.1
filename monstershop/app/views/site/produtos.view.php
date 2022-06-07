@@ -52,23 +52,18 @@
 
                 
                   <div class="btn-group">
-                    <button class="btn btn-secondary btn-dark" type="button">
+                    <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categoria
                     </button>
-                    <button type="button" class="btn btn-dark btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <form action="" method="post">
-                      <?php foreach ($categorias as $categoria) : ?>
                         <ul class="dropdown-menu" >
-                          <input type="hidden" name="categoria" value="<?= $categoria->nome ?>">
-                          <li><button class="dropdown-item" type="submit" ><?=$categoria->nome?></button></li>
+                          <?php foreach ($categorias as $categoria) : ?>
+                            <form action="/site/produtos" method="post">
+                              <input type="hidden" name="categoria" value="<?= $categoria->nome ?>">
+                              <li><button class="dropdown-item" type="submit" ><?=$categoria->nome?></button></li>
+                            </form>
+                          <?php endforeach;?> 
                         </ul>
-                      <?php endforeach;?>  
-                    </form>
                   </div>
-
-
 
             </div>
            <!--Fim Filtro de categoria-->
@@ -77,44 +72,22 @@
 
 
     <!--Inicio cards-->
-  <div class="edit-card">
-    
+    <div class="edit-card">
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col d-flex justify-content-center">
-          <div class="card  card1 cartoes2" style="width: 18rem;">
-            <img src="../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
-            <div class="card-body ">
-              <h5 class="card-title cartao title-cards">Moletom</h5>
-              <p class="card-text text-cards">Moletom MonsterShop, o mais brabo do mercado!Garanta já o seu.<br>Tecido :100% Algodão.</p>
-              <a href="#" class="btn btn-dark btnc">COMPRAR - R$79,99</a>
-            </div> 
-          </div>  
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          <div class="card  card1 cartoes2" style="width: 18rem;">
-            <img src="../../public/img/multivitMS.jpg" class="card-img-top corpocards" alt="...">
-            <div class="card-body">
-              <h5 class="card-title cartao title-cards">Multivitamínico</h5>
-              <p class="card-text text-cards">Com mais de 20 micronutrientes o Multivitaminico MonsterShop vai te dar aquele impulso no seu dia a dia.<br>Vitamina A<br>Vitamina B12<br>Vitamina C<br>Vitamina D<br>Vitamina E<br></p>
-              <a href="#" class="btn btn-dark btnc">COMPRAR - R$20,00</a>
-            </div> 
-          </div>  
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          <div class="card  card1 cartoes2" style="width: 18rem;">
-            <img src="../../public/img/luvaMS.jpg" class="card-img-top corpocards" alt="...">
-            <div class="card-body">
-              <h5 class="card-title cartao title-cards">Luvas</h5>
-              <p class="card-text text-cards">Luvas pretas para musculação.<br>Composição em poliester e algodão.</p>
-              <a href="#" class="btn btn-dark btnc">COMPRAR - R$12,00</a>
-            </div> 
-          </div>  
-        </div>
-
+        <?php foreach ($produtos as $produto) : ?>
+          <div class="col d-flex justify-content-center">
+            <div class="card  card1 cartoes2" style="width: 18rem; min-width: 12rem;">
+              <img src="../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
+              <div class="card-body ">
+                <h5 class="card-title cartao title-cards"><?=$produto->nome?></h5>
+                <p class="card-text text-cards"><?=$produto->descricao?></p>
+                <a href="#" class="btn btn-dark btnc">COMPRAR  R$<?=$produto->preco?></a>
+              </div> 
+            </div>  
+          </div>
+        <?php endforeach; ?>
       </div>
-  </div>
+    </div>
     <!--fim cards-->
 
     <!--inicio paginação-->

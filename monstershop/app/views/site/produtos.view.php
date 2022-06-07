@@ -69,7 +69,25 @@
 
 
       <!--Inicio cards-->
-      <div class="edit-card">
+
+      <?php foreach ($produtos as $produto) : ?>
+        <div class="edit-card">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col d-flex justify-content-center">
+            <div class="card  card1 cartoes2" style="width: 18rem;">
+              <img src="../../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
+              <div class="card-body ">
+                <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
+                <p class="card-text text-cards"><?= $produto->descricao ?></p>
+                <a href="#" class="btn btn-dark btnc">COMPRAR - R$<?= $produto->preco ?></a>
+              </div>
+            </div>
+          </div>
+      <?php endforeach; ?>
+
+
+      
+      <!-- <div class="edit-card">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col d-flex justify-content-center">
             <div class="card  card1 cartoes2" style="width: 18rem;">
@@ -171,7 +189,7 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
       <!--fim cards-->
 
       <!--inicio paginação-->

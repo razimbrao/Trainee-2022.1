@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <?php include 'head.php' ?>
+<?php include 'app/views/includes/head.php' ?>
 
   <link rel="stylesheet" href="../../../public/css/home.css">
 
@@ -13,7 +13,7 @@
 
 <body>
 
-  <?php include 'navbar.php' ?>
+  <?php include 'app/views/includes/navbar.php' ?>
 
   <div class="img-fundo">
     <img class="w-100" src="../../../public/img/img_home/fundo6.jpg" height="80%" width="100%" alt="MonsterShop logo">
@@ -87,7 +87,7 @@
 
   </div>
 
-  <?php include 'footer.php' ?>
+  <?php include 'app/views/includes/footer.php' ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

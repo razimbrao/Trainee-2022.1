@@ -13,8 +13,9 @@ body {
  .edit-login{
     display: flex;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 15%;
     box-shadow: 0px 0px 25px 0px red;
+    margin-bottom: 5%;
  }
  .edit-email{
      color: red;

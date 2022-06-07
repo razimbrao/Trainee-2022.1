@@ -2,23 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <?php include 'app/views/includes/head.php' ?>
 
     <link rel="stylesheet" href="../../../public/css/usuarios.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/2b94009ee2.js" crossorigin="anonymous"></script>
     <title>Usuarios-MonsterShop</title>
 
 </head>
 
 <body>
+
+    <?php include 'app/views/includes/sidebar.php' ?>
 
     <div class="container-fluid cont-custom">
 
@@ -184,7 +179,7 @@
                                                     <br>
                                                     <input name="foto" type="file" class="form-control-file" id="exampleFormControlFile1" value="<?= $usuario->foto ?>">
                                                 </div>
-                                                <div class="modal-footer">  
+                                                <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                                     <input type="hidden" name="id" , value="<?= $usuario->id ?>">
                                                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
@@ -227,6 +222,8 @@
             </tbody>
         </table>
     </div>
+
+    <?php include 'app/views/includes/footer.php' ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

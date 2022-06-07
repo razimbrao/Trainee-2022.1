@@ -15,7 +15,6 @@ body {
    justify-content: center;
 }
 
-
 .edit-card {
    margin-top: 5%;
    margin-bottom: 10%;
@@ -28,4 +27,9 @@ body {
    margin-bottom: 10%;
    display: flex;
    justify-content: center;
+}
+
+.cartoes{
+   width: 18rem;
+   min-width: 12rem;
 }

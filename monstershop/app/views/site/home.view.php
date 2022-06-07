@@ -62,117 +62,18 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <?php foreach ($produtos as $produto) : ?>
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/moletomMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body ">
-            <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
-            <p class="card-text text-cards"><?= $produto->descricao ?></p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
+      <?php foreach ($produtos as $produto) : ?>
+        <div class="col d-flex justify-content-center">
+          <div class="card  card1 cartoes2" style="width: 18rem;">
+            <img src="../../../public/img/img_home/moletomMS.jpg" class="card-img-top corpocards" alt="...">
+            <div class="card-body ">
+              <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
+              <p class="card-text text-cards"><?= $produto->descricao ?></p>
+              <a href="#" class="btn btn-primary btnc">COMPRAR</a>
+            </div>
           </div>
         </div>
-      </div>
       <?php endforeach; ?>
-
-      <!-- <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/moletomMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body ">
-            <h5 class="card-title cartao title-cards">Moletom</h5>
-            <p class="card-text text-cards">Moletom branco MonsterShop.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/multivitMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Multivitamínico</h5>
-            <p class="card-text text-cards">Com mais de 20 micronutrientes.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/luvaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Luvas</h5>
-            <p class="card-text text-cards">Luvas pretas para musculação.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/pastaamendoimMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Pasta de amendoim</h5>
-            <p class="card-text text-cards">Amendoim torrado integral.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/coqueteleiraMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Coqueteleira</h5>
-            <p class="card-text text-cards">Coqueteleira preta 600ml.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/paradinhasMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">"Paradinhas"</h5>
-            <p class="card-text text-cards">Nem planta cresce natural.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/wheyMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Whey Protein</h5>
-            <p class="card-text text-cards">Sua proteína de qualidade.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Camiseta</h5>
-            <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card  card1 cartoes2" style="width: 18rem;">
-          <img src="../../../public/img/img_home/creatinaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Creatina</h5>
-            <p class="card-text text-cards">Creatina Monohidratada.</p>
-            <a href="#" class="btn btn-primary btnc">COMPRAR</a>
-          </div>
-        </div>
-      </div> -->
 
     </div>
 
@@ -185,7 +86,7 @@
     </div>
 
   </div>
-  
+
   <?php include 'footer.php' ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

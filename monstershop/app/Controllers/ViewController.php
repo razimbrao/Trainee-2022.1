@@ -15,9 +15,15 @@ class ViewController
 
     public function home()
     {
-        return view('site/home');
+        $produtos = App::get('database')->selectAll('produtos');
+
+        $tabela = [
+            'produtos' => $produtos
+        ];
+
+        return view('site/home', $tabela);
     }
-    
+
     public function produtos()
     {
         return view('site/produtos');
@@ -25,26 +31,21 @@ class ViewController
 
     public function create()
     {
- 
-    }   
+    }
 
     public function store()
     {
-
     }
 
     public function edit()
     {
-  
     }
 
     public function update()
     {
-        
     }
 
     public function delete()
     {
- 
     }
 }

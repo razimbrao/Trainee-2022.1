@@ -7,10 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
 <<<<<<< HEAD
+<<<<<<< HEAD
     'App\\Controllers\\ContatoController' => $baseDir . '/app/Controllers/ContatoController.php',
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
     'App\\Controllers\\ViewController' => $baseDir . '/app/Controllers/ViewController.php',
 =======
+=======
+>>>>>>> main
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
 <<<<<<< HEAD
     'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/UsuariosController.php',
@@ -18,7 +21,10 @@ return array(
 =======
     'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/usuariosController.php',
 >>>>>>> 82f2d8b54abd2f676690bad2af8f18870eb90fb1
+<<<<<<< HEAD
 >>>>>>> usuarios
+=======
+>>>>>>> main
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',

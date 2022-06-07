@@ -79,9 +79,9 @@
 
 
     <div class="linksimg">
-      <a class="img-qs " href="quem-somos" target="_blanck"><img class="social-img" src="../../../public/img/img_home/quemSomos.jpg" width="400" height="100" alt="Link para página de quem somos"></a>
+      <a class="img-qs " href="quem-somos"><img class="social-img" src="../../../public/img/img_home/quemSomos.jpg" width="400" height="100" alt="Link para página de quem somos"></a>
 
-      <a class="img-ct" href="contato" target="_blanck"><img class="social-img" src="../../../public/img/img_home//contato.jpg" width="400" height="100" alt="Link para página de contatos"></a>
+      <a class="img-ct" href="contato"><img class="social-img" src="../../../public/img/img_home//contato.jpg" width="400" height="100" alt="Link para página de contatos"></a>
 
     </div>
 

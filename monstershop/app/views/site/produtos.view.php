@@ -70,9 +70,10 @@
 
       <!--Inicio cards-->
 
-      <?php foreach ($produtos as $produto) : ?>
-        <div class="edit-card">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <div class="edit-card">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <?php foreach ($produtos as $produto) : ?>
             <div class="col d-flex justify-content-center">
               <div class="card  card1 cartoes2" style="width: 18rem;">
                 <img src="../../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
@@ -83,115 +84,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          <?php endforeach; ?>
         </div>
-      <?php endforeach; ?>
-
-
-
-      <!-- <div class="edit-card">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title cartao title-cards">Moletom</h5>
-                <p class="card-text text-cards">Moletom MonsterShop, o mais brabo do mercado!Garanta já o seu.<br>Tecido :100% Algodão.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$79,99</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/multivitMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Multivitamínico</h5>
-                <p class="card-text text-cards">Com mais de 20 micronutrientes o Multivitaminico MonsterShop vai te dar aquele impulso no seu dia a dia.<br>Vitamina A<br>Vitamina B12<br>Vitamina C<br>Vitamina D<br>Vitamina E<br></p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$20,00</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/luvaMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Luvas</h5>
-                <p class="card-text text-cards">Luvas pretas para musculação.<br>Composição em poliester e algodão.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$12,00</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/pastaamendoimMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Pasta de amendoim</h5>
-                <p class="card-text text-cards">Pasta de amendoim torrado integral, sem açucar, perfeita para sua dieta.<br>Ingredientes: Amendoim Torrado.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$15,99</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/coqueteleiraMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Coqueteleira</h5>
-                <p class="card-text text-cards">Coqueteleira preta 600ml.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$10,00</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/paradinhasMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">"Paradinhas"</h5>
-                <p class="card-text text-cards">Quer dar aquele up no seu shape? Conheça a famosa paradinha MonsterShop.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$50,00</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/wheyMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Whey Protein</h5>
-                <p class="card-text text-cards">O melhor suplemento tanto para você quer perder peso como ganhar massa.Aproveite essa oportunidade.<br>Whey protein : 22g de proteina por dose.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$89,99</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Camiseta</h5>
-                <p class="card-text text-cards">Camiseta preta MonsterShop.<br>Tecido: 100% Algodão</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$19,99</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem;">
-              <img src="../../../public/img/creatinaMS.jpg" class="card-img-top corpocards" alt="...">
-              <div class="card-body">
-                <h5 class="card-title cartao title-cards">Creatina</h5>
-                <p class="card-text text-cards">Creatina Monohidratada. Falta aquele impulso para treinar? Agora não falta mais.</p>
-                <a href="#" class="btn btn-dark btnc">COMPRAR - R$99,99</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div> -->
+      </div>
       <!--fim cards-->
 
       <!--inicio paginação-->

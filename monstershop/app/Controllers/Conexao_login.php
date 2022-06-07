@@ -1,4 +1,8 @@
 <?php
+
+//------------------------login--------------//
+
+
 define('HOST','127.0.0.1');
 define('EMAIL','root');
 define('SENHA',' ');

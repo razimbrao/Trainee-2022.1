@@ -30,21 +30,13 @@ class ProdutosController
             $produtos = App::get('database')->procurar('produtos', 'categoria', $categoria);
             $categorias = App::get('database')->selectAll('categorias');
 
-            $rows_count = App::get('database')->countAll('produtos');
-            echo($rows_count);
-            echo(" ");
+            $rows_count = count($produtos);
 
-            echo($items_per_page);
-            
-            
             if ($start_limit > $rows_count) {
                 return redirect('site/produtos');
             }
 
             $total_pages = ceil($rows_count / $items_per_page);
-            echo($total_pages);
-            exit();
-            
             return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages')); 
         }
 

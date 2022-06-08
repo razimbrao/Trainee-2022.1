@@ -21,13 +21,22 @@
         <div class="edit-pesquisa">
           <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Ex: Camiseta" aria-label="Search">
+              <!--
+                <form action="/admin/categorias" class="d-flex" method="POST">
+                    <input name="categoria" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    
+                    <button class="btn btn-outline-success" type="submit"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+
+                </form> -->
+              <form class="d-flex" action="/site/produtos" method="POST">
+                <input name="nome" class="form-control me-2" type="search" placeholder="Ex: Camiseta" aria-label="Search">
                 <button class="btn btn-outline-danger" type="submit">Buscar</button>
               </form>
             </div>
           </nav>
         </div>
+
          <!--Fim da barra de pesquisa-->
 
            <!--Inicio Filtro de categoria-->

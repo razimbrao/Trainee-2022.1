@@ -76,7 +76,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php foreach ($produtos as $produto) : ?>
           <div class="col d-flex justify-content-center">
-            <div class="card  card1 cartoes2" style="width: 18rem; min-width: 12rem;">
+            <div class="card  card1 cartoes">
               <img src="../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
               <div class="card-body ">
                 <h5 class="card-title cartao title-cards"><?=$produto->nome?></h5>

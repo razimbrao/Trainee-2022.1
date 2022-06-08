@@ -17,9 +17,9 @@ class ProdutosController
             return view('site/produtos', compact('produtos', 'categorias'));   
         }
 
-        if(!empty($_POST['categoria'])) {
-            $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);  
-            $produtos = App::get('database')->procurar('produtos', 'categoria', $categoria);
+        if(!empty($_POST['categoriaID'])) {
+            $categoria = filter_input(INPUT_POST, 'categoriaID', FILTER_SANITIZE_SPECIAL_CHARS);  
+            $produtos = App::get('database')->procurar('produtos', 'categoriaID', $categoria);
             $categorias = App::get('database')->selectAll('categorias');
             return view('site/produtos', compact('produtos', 'categorias'));  
         }

@@ -67,7 +67,8 @@
                         <ul class="dropdown-menu" >
                           <?php foreach ($categorias as $categoria) : ?>
                             <form action="/site/produtos" method="post">
-                              <input type="hidden" name="categoria" value="<?= $categoria->nome ?>">
+                              <input type="hidden" name="categoriaID" value="<?= $categoria->id?>">
+
                               <li><button class="dropdown-item" type="submit" ><?=$categoria->nome?></button></li>
                             </form>
                           <?php endforeach;?> 

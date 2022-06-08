@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\CategoriasController;
+use App\Controllers\ProdutosController;
 use App\Core\Router;
 
 //---------Rotas de Usuários----------//
@@ -26,9 +27,7 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
-//---------Rotas de Contato----------//
-
-$router->get('contato', 'ContatoController@view');
-$router->post('contato/enviaremail', 'ContatoController@enviaEmail');
+$router->get('site/produtos', 'ProdutosController@index');
+$router->post('site/produtos', 'ProdutosController@index');
 
 ?>

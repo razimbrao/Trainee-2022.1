@@ -31,7 +31,7 @@ class QueryBuilder
 
     //Funções de Categorias
 
-    public function adicionaCategoria($table, $dados)
+    public function adicionar($table, $dados)
     {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)', 
@@ -49,7 +49,7 @@ class QueryBuilder
     }
 
 
-    public function editaCategoria($table, $dados, $id)
+    public function editar($table, $dados, $id)
     {
         $sql = sprintf(
             'UPDATE %s SET %s WHERE %s', 
@@ -72,7 +72,7 @@ class QueryBuilder
     }
 
 
-    public function deletaCategoria($table, $id)
+    public function deletar($table, $id)
     {
         
         $sql = sprintf( 
@@ -91,103 +91,23 @@ class QueryBuilder
     }
 
 
-    public function procurarCategoria($table, $nome)
+    public function procurar($table, $nomeCampo, $campoPesquisado)
     {
 
         $sql = sprintf( 
             'SELECT * FROM %s WHERE %s;',
             $table,
-            "nome like '%' :nome '%' "
+            "$nomeCampo like '%' :campoPesquisado '%' "
         );
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute(compact('nome'));
+            $stmt->execute(compact('campoPesquisado'));
             return $stmt->fetchAll(PDO::FETCH_OBJ);
 
         } catch(Exception $e) {
             die($e->getMessage());
         }  
-    }
-
-
-    // Funções de Usuários
-
-    public function adicionaUsuario($table, $dados)
-    {
-        $sql = sprintf(
-            'INSERT INTO %s (%s) VALUES (%s)',
-            $table,
-            implode(',', array_keys($dados)),
-            ':' . implode(', :', array_keys($dados))
-        );
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute($dados);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function deletaUsuario($table, $id)
-    {
-        $sql = "delete from {$table} where id={$id}";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function editaUsuario($table, $dados, $foto, $id)
-    {
-        /* $dados['id'] = $id;
-
-       $sql = sprintf(
-            'UPDATE %s SET %s WHERE %s', 
-            $table, implode(', ', array_map(function ($dados){
-                return "{$dados} = :{$dados}";
-            },
-            array_keys($dados))),
-            'id = :id'  
-        );
-
-        if($foto != ''){
-            $sql = $sql . ", `foto` = {$foto}";
-        }
-
-        $sql = $sql . " WHERE `id` = {$id}";
-        
-
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute($dados);
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-    } */
-
-        $sql = "update {$table} set nome = '{$dados['nome']}', email = '{$dados['email']}', senha = '{$dados['senha']}'";
-
-        if ($foto != '') {
-            $sql = $sql . ", foto = '{$foto}' WHERE id = {$id}";
-        } else {
-            $sql = $sql . "WHERE id = {$id}";
-        }
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
     }
 }

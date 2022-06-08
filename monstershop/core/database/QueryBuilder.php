@@ -77,13 +77,13 @@ class QueryBuilder
     }
 
 
-    public function deletar($table, $id)
+    public function deletar($table, $id, $campoPesquisado = 'id')
     {
         
         $sql = sprintf( 
             'DELETE FROM %s WHERE %s;',
             $table,
-            "id = :id"
+            "$campoPesquisado = :id"
         );
 
         try {

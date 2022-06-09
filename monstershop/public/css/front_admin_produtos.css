@@ -1,6 +1,6 @@
 body{
     font-family: 'Nunito', sans-serif;
-    background-color: #171927;
+    background-color: #0f1223;
     color: white;
     overflow-x: hidden;
 }
@@ -8,15 +8,16 @@ body{
 .titulo{
     display: flex;
     align-items: center;
-    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .titulo-produtos{
+    margin-top: 10rem;
     max-height: 8rem;
 }
 
 .titulo-monster{
+    margin-top: 10rem;
     margin-left: -6vh;
     max-height: 8rem;
 }

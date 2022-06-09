@@ -18,8 +18,8 @@
     <div class="container-fluid cont-custom">
 
         <div class="title row justify-content-md-center">
-            <img class="usuarios-logo col-md-auto" src="../../../public/img/Usuários Logo.png" alt="Logo de usuários">
-            <img class="monster-logo col-md-auto" src="../../../public/img/Monster Logo.png" alt="Logo de usuários">
+            <img class="logo col-md-auto" src="../../../public/img/Usuários Logo.png" alt="Logo de usuários">
+            <img class="logo col-md-auto" src="../../../public/img/Monster Logo.png" alt="Logo de usuários">
         </div>
 
         <div class="d-flex justify-content-end">

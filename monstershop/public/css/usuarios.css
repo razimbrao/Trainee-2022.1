@@ -7,16 +7,13 @@ body {
     margin-bottom: 5rem;
 }
 
-.usuarios-logo{
+.logo{
+    margin-top: 10rem;
     margin-right: 1rem;
 }
 
-.monster-logo{
-    margin-left: 1rem;
-}
-
-
 .cont-custom {
+    width: 70%;
     padding-right: 2rem;
     padding-left: 2rem;
 }

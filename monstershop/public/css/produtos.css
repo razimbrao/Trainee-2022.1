@@ -2,8 +2,9 @@ body {
    background-color: #171927;
 }
 
+
 .edit-pesquisa{
-   margin-top: 15%;
+   margin-top: 5%;
    display: flex;
    justify-content: center;
 
@@ -24,12 +25,18 @@ body {
 }
 
 .edit-paginacao {
-   margin-bottom: 10%;
+   margin-bottom: 3%;
    display: flex;
    justify-content: center;
 }
 
+.row-edit {
+   display:flex;
+   justify-content: flex-start;
+   flex-grow: 3;
+}
+
 .cartoes {
-   width: 18rem;
-   min-width: 12rem;
+   max-width: 18rem;
+   min-width: 18rem;
 }

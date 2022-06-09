@@ -29,7 +29,7 @@ class QueryBuilder
         }
     }
     
-    public function deletaProdutos($tabela, $id)
+    public function delete($tabela, $id)
     {
         $sql = "delete from {$tabela} where id={$id}";
 
@@ -70,7 +70,7 @@ class QueryBuilder
     }
 
     
-    public function criaProdutos($table, $parametros)
+    public function insert($table, $parametros)
     {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)', 
@@ -87,18 +87,29 @@ class QueryBuilder
         }
     }
    
-    public function criaImagem($table, $parametros)
-    {
-        $sql = sprintf(
-            'INSERT INTO %s (%s) VALUES (%s)', 
-            $table, implode(',', array_keys($parametros)), 
-            ':' . implode(', :', array_keys($parametros))
-        );
+    public function selectImagem($id){
 
+        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produto_id = :id';
+        
         try {
-            $stmt = $this->pdo->prepare($sql);
 
-            $stmt->execute($parametros);
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id"=> $id]);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectProduto(){
+
+        $sql = 'SELECT id FROM produtos ORDER BY id DESC LIMIT 1';
+        
+        try {
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
         } catch(Exception $e) {
             die($e->getMessage());
         }

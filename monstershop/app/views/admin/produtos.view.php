@@ -38,7 +38,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="produtos/adicionar" method="POST">
+                            <form action="produtos/adicionar" method="POST" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nome</label>
                                     <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" placeholder="Nome do produto">
@@ -46,9 +46,9 @@
 
                                 <div class="mb-3">
                                     <label>Categoria</label>
-                                    <select class="form-select" aria-label="Default select example" name="categoria">
+                                    <select class="form-select" aria-label="Default select example" name="categoriaID">
                                         <?php foreach ($categorias as $cat) : ?>
-                                            <option value="<?= $cat->nome ?>"><?= $cat->nome ?></option>
+                                            <option value="<?= $cat->id ?>"><?= $cat->nome ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -65,7 +65,7 @@
 
                                 <div class="form-group img-edicao">
                                     <label for="exampleFormControlFile1">Imagem</label>
-                                    <input type="file" accept="image/*" multiple name="nome_imagem" class="form-control-file" id="exampleFormControlFile1">
+                                    <input type="file" accept="image/*" multiple name="txtimagem[]" class="form-control-file" id="exampleFormControlFile1" >
                                 </div>
 
                                 <div class="modal-footer">
@@ -74,7 +74,7 @@
                                 </div>
                                 
                                 <input type="hidden" name="id_produto" value="<?= $produto->id ?>">
-                            
+                                
                             </form>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputPassword1" class="form-label">Categoria</label>
-                                                        <input class="form-control" type="text" value="<?= $produto->categoria ?>" aria-label="<?= $produto->categoria ?>" disabled readonly>
+                                                        <input class="form-control" type="text" value="<?= $categorias[$produto->categoriaID]->nome ?>" aria-label="categoria Do Produto" disabled readonly>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Descrição</label>
@@ -204,9 +204,9 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Categoria</label>
-                                                        <select class="form-select" aria-label="Default select example" name="categoria">
+                                                        <select class="form-select" aria-label="Default select example" name="categoriaID">
                                                             <?php foreach ($categorias as $cat) : ?>
-                                                                <option value="<?= $cat->nome ?>"><?= $cat->nome ?></option>
+                                                                <option value="<?= $cat->id ?>"><?= $cat->nome ?></option>
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </div>
@@ -221,17 +221,10 @@
                                                     </div>
 
                                                     <div class="form-group img-edicao">
-                                                        <label for="exampleFormControlFile1">Imagem 1</label>
-                                                        <input type="file" accept="image/*" name="foto1" class="form-control-file" id="exampleFormControlFile1">
+                                                        <label for="exampleFormControlFile1">Imagem</label>
+                                                        <input type="file" accept="image/*" multiple name="txtimagem[]" class="form-control-file" id="exampleFormControlFile1" >
                                                     </div>
-                                                    <div class="form-group img-edicao">
-                                                        <label for="exampleFormControlFile1">Imagem 2</label>
-                                                        <input type="file" accept="image/*" name="foto2" class="form-control-file" id="exampleFormControlFile1">
-                                                    </div>
-                                                    <div class="form-group img-edicao">
-                                                        <label for="exampleFormControlFile1">Imagem 3</label>
-                                                        <input type="file" accept="image/*" name="foto3" class="form-control-file" id="exampleFormControlFile1">
-                                                    </div>
+
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                                         <input type="hidden" name="id" value="<?= $produto->id ?>">

@@ -8,6 +8,25 @@ use Exception;
 class ProdutosController
 {
 
+    public function view()
+    {
+        $produtos = App::get('database')->selectAll('produtos');
+
+        for ($i = 0; $i < count($produtos) ; $i++) { 
+            $produtoImagem = App::get('database')->selectImagem($produtos[$i]->id);
+            $produtos[$i]->imagens = $produtoImagem;
+        }
+
+        $categorias = App::get('database')->selectAll('categorias');
+        $imagens = App::get('database')->selectAll('imagens');
+
+        $table = [
+            'produtos' => $produtos,
+            'categorias' => $categorias
+        ];
+        return view('admin/produtos', $table);
+    }
+
     public function show()
     {
         
@@ -15,21 +34,37 @@ class ProdutosController
 
     public function create()
     {
-        $parametrosImagens = [
-            'nome_imagem' => $_POST['nome_imagem'],
-            'id_produto' => $_POST['id_produto'],
-        ];
 
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
-            'categoria' => $_POST['categoria'],
+            'categoriaID' => $_POST['categoriaID'],
             'preco' => $_POST['preco'],
         ];
         
-        App::get('database')->criaProdutos('produtos', $parametros);        
-        App::get('database')->criaImagem('imagens', $parametrosImagens);
+        App::get('database')->insert('produtos', $parametros);
+
+        $produto_id = App::get('database')->selectProduto();
+
+        var_dump($produto_id);
+
+        //$produto_id = $produto_id[0]->id;
+
+        $coluna = $_FILES['txtimagem']['name'];
+
+        for ($i=0; $i < count($coluna); $i++) { 
+            
+            $imagens = [
+                'produto_id' => $produto_id,
+                'nome_imagem' => $coluna[$i],
+            ];
+
+        }
+
+        App::get('database')->insert('imagens', $imagens);
+
         
+
         header('Location: /admin/produtos');
     }
 
@@ -48,34 +83,40 @@ class ProdutosController
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
-            'categoria' => $_POST['categoria'],
+            'categoriaID' => $_POST['categoriaID'],
             'preco' => $_POST['preco'],
-            'foto1' => "" + $_POST['foto1'],
-            'foto2' => "" + $_POST['foto2'],
-            'foto3' => "" + $_POST['foto3'],
         ];
+        
         $id = $_POST['id'];
+        
         App::get('database')->editaProdutos($id, 'produtos', $parametros);
+        
+        $contador = false;
+
+        if($_FILES["txtimagem"] && $_FILES["txtimagem"]["name"][0] != ""){
+            $contador = true;
+        }
+
+        if($contatador){
+            App::get('database')->delete('imagens', $_POST['id']);
+
+            for($i = 0; $i < cout($_FILES["txtimagem"]["name"]); $i++){
+                $imagens = [
+                    'produto_id' => $produto_id,
+                    'nome_imagem' => $_FILES["txtimagem"]["name"][$i],
+                ];
+            }
+            App::get('database')->insert('imagens', $imagens);
+        }
+        
         header('Location: /admin/produtos');
     }
-    public function view()
-    {
-        $produtos = App::get('database')->selectAll('produtos');
-        $categorias = App::get('database')->selectAll('categorias');
-        $imagens = App::get('database')->selectAll('imagens');
-
-        $table = [
-            'produtos' => $produtos,
-            'categorias' => $categorias,
-            'imagens' => $imagens,
-        ];
-        return view('admin/produtos', $table);
-    }
+    
 
     public function delete()
     {
 
-        app::get('database')->deletaProdutos('produtos', $_POST['id']);
+        app::get('database')->delete('produtos', $_POST['id']);
         header('Location: /admin/produtos');
     }
 }

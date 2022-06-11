@@ -28,7 +28,7 @@ class UsuariosController
             'foto' => $_POST['foto']
         ];
 
-        App::get('database')->adicionaUsuario('usuarios', $dados);
+        App::get('database')->adicionar('usuarios', $dados);
 
         header('Location: /admin/usuarios');
     }
@@ -62,7 +62,7 @@ class UsuariosController
     {
         $id = $_POST['id'];
 
-        App::get('database')->deletaUsuario('usuarios', $id);
+        App::get('database')->delete('usuarios', $id);
 
         header('Location: /admin/usuarios');
     }

@@ -114,12 +114,11 @@ class QueryBuilder
 
     // Funções de Usuários
 
-    public function adicionaUsuario($table, $dados)
+    public function adicionar($table, $dados)
     {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)',
-            $table,
-            implode(',', array_keys($dados)),
+            $table, implode(',', array_keys($dados)),
             ':' . implode(', :', array_keys($dados))
         );
 
@@ -132,7 +131,7 @@ class QueryBuilder
         }
     }
 
-    public function deletaUsuario($table, $id)
+    public function delete($table, $id)
     {
         $sql = "delete from {$table} where id={$id}";
 
@@ -189,5 +188,79 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+
+    //Funcoes de Produtos
+
+    public function editaProdutos($idp, $table, $parametros)
+    {
+        $sql = sprintf(
+            'UPDATE %s
+            SET %s
+            WHERE %s;', 
+            $table,
+            implode(', ', array_map(function ($parametros) {
+                return "{$parametros} = :{$parametros}";
+            }, array_keys($parametros))),
+            'id = :id'
+        );
+
+        $parametros['id'] = $idp;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parametros);
+        } catch (Exception $e) {
+            die("An error occurred when trying to update database: {$e->getMessage()}");
+        }
+    }
+
+    
+   
+    public function selectImagem($id){
+
+        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produto_id = :id';
+        
+        try {
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id"=> $id]);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectProduto(){
+
+        $sql = 'SELECT id FROM produtos ORDER BY id DESC LIMIT 1';
+        
+        try {
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function search($tabela, $nome){
+        $sql = sprintf( 
+            'SELECT * FROM %s WHERE %s;',
+            $tabela,
+            "nome like '%' :nome '%' "
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('nome'));
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }  
     }
 }

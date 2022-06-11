@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-<?php include 'app/views/includes/head.php' ?>
+    <?php include 'app/views/includes/head.php' ?>
 
     <link rel="stylesheet" href="../../../public/css/tabelas.css">
     <title>ADM - Produtos</title>
@@ -17,13 +17,11 @@
             <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/produtosMonsterTitle.png" alt="Logo de Categorias">
         </div>
 
-        <div class="add-produto">
-            <!-- Adicionar produto -->
+        <div class="d-flex justify-content-end">
+            <!-- Adicionar produtos -->
             <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
                 Adicionar Produto
             </button>
-            <!-- Modal de adicionar produto -->
-            <?php include 'modal/produtos/modal-add.php' ?>
         </div>
 
         <!-- Tabela-Start -->
@@ -65,16 +63,18 @@
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 
-                                <!----------------- Modais ------------------>
-                                <?php require 'modal/produtos/modal-view.php' ?>
-                                <?php require 'modal/produtos/modal-edit.php' ?>
-                                <?php require 'modal/produtos/modal-delete.php' ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
+
+        <!----------------- Modais ------------------>
+        <?php require 'modal/produtos/modal-view.php' ?>
+        <?php require 'modal/produtos/modal-edit.php' ?>
+        <?php require 'modal/produtos/modal-delete.php' ?>
+        <?php require 'modal/produtos/modal-add.php' ?>
 
         <?php include 'app/views/includes/footer.php' ?>
 

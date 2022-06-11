@@ -16,6 +16,10 @@ body{
     max-height: 8rem;
 }
 
+.cont-custom {
+    width: 70%;
+}
+
 .titulo-monster{
     margin-top: 10rem;
     margin-left: -6vh;

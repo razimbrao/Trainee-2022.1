@@ -4,10 +4,10 @@
     <div class="footer">
         <div class="container">
             <ul class="foot-list">
-                <li><a href="#"><i class="fa-xl fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-xl fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-xl fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-xl fa-brands fa-whatsapp"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/adrianoimperador/"><i class="fa-xl fa-brands fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/ZecaPagodinhoOficial"><i class="fa-xl fa-brands fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/paulomuzy"><i class="fa-xl fa-brands fa-twitter"></i></a></li>
+                <li><a target="_blank" href="https://github.com/Pedrocoutof/WhatsAppClone"><i class="fa-xl fa-brands fa-whatsapp"></i></a></li>
             </ul>
 
             <hr class="slogan">

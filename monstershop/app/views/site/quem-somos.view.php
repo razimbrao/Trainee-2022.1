@@ -21,7 +21,7 @@
             <div class="descricao-esq">
                 <p>Criada em 2022, a MonsterShop é uma empresa jovem com um time inteiramente formado por profissionais especializados e apaixonados pela área de esportes físicos.
                 </p>
-                <a href="https://www.youtube.com/watch?v=Ux5cQbO_ybw"><img src="../../../public/img/giga-chad.gif" alt="Chad."></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=Ux5cQbO_ybw"><img src="../../../public/img/giga-chad.gif" alt="Chad."></a>
             </div>
 
         </div>
@@ -31,7 +31,7 @@
             <div class="descricao-esq">
                 <p>O grupo Monster tem um compromisso firmado com a saúde! Nosso principal objetivo é comercializar produtos que possam auxiliar as pessoas a melhorarem sua saúde física, estimulando a compra de produtos que auxiliam na prática de exercícios físicos.
                 </p>
-                <a href="https://www.youtube.com/watch?v=8XuwZPGDMBA">
+                <a target="_blank" href="https://www.youtube.com/watch?v=8XuwZPGDMBA">
                     <img src="../../../public/img/goku-gym.gif" alt="Goku"></a>
             </div>
         </div>
@@ -41,7 +41,7 @@
             <div class="descricao-esq">
                 <p>Temos como visão nos tornarmos uma empresa de referência nacional na área de comercialização de produtos voltados à esportes físicos.
                 </p>
-                <a href="https://www.youtube.com/watch?v=8ZfhQRn4IEI"><img src="../../../public/img/dwayne-johnson-eyebrow-eye-brow.gif" alt="Dwayne-Johnson"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=8ZfhQRn4IEI"><img src="../../../public/img/dwayne-johnson-eyebrow-eye-brow.gif" alt="Dwayne-Johnson"></a>
             </div>
         </div>
         <div class="valores">
@@ -61,7 +61,7 @@
                         <span>Vitalidade</span>:<br>Levamos a energia do esporte para nossas lojas, nosso armazém e até ao escritório.
                     </li>
                 </ul>
-                <a href="">
+                <a target="_blank" href="https://www.youtube.com/watch?v=teL6mJfvbxI">
                     <img src="../../../public/img/aperto-de-maos.gif" alt="aperto-de-maos"></a>
             </div>
         </div>

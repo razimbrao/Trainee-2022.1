@@ -5,7 +5,7 @@
 
     <?php include 'app/views/includes/head.php' ?>
 
-    <link rel="stylesheet" href="../../../public/css/frontend_adm_categorias.css">
+    <link rel="stylesheet" href="../../../public/css/usuarios.css">
 
     <title>Frontend Administrador Categorias</title>
 
@@ -16,7 +16,7 @@
 
     <?php include 'app/views/includes/sidebar.php' ?>
 
-    <div class="content">
+    <div class="container-fluid">
 
         <div class="main">
 
@@ -30,12 +30,10 @@
 
 
                 <!-- Botão de adicionar categoria -->
-                <div class="botoes1">
-
-
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
-                        Adicionar categoria
+                <div class="d-flex justify-content-end">
+                    <!-- Adicionar usuarios -->
+                    <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
+                        Adicionar Usuário
                     </button>
 
                     <!-- Modal de adicionar -->

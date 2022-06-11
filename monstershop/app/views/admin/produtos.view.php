@@ -5,7 +5,7 @@
 
     <?php include 'app/views/includes/head.php' ?>
 
-    <link rel="stylesheet" href="../../../public/css/front_admin_produtos.css">
+    <link rel="stylesheet" href="../../../public/css/usuarios.css">
 
     <title>ADM - Produtos</title>
 </head>
@@ -14,7 +14,7 @@
 
     <?php include 'app/views/includes/sidebar.php' ?>
 
-    <div class="content">
+    <div class="container-fluid cont-custom">
 
         <main>
             <div class="titulo title row justify-content-md-center user-select-none">

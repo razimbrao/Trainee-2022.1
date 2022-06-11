@@ -63,6 +63,12 @@
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 
+                                <!----------------- Modais ------------------>
+                                <?php require 'modal/produtos/modal-view.php' ?>
+                                <?php require 'modal/produtos/modal-edit.php' ?>
+                                <?php require 'modal/produtos/modal-delete.php' ?>
+                                <?php require 'modal/produtos/modal-add.php' ?>
+
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -70,15 +76,12 @@
             </table>
         </div>
 
-        <!----------------- Modais ------------------>
-        <?php require 'modal/produtos/modal-view.php' ?>
-        <?php require 'modal/produtos/modal-edit.php' ?>
-        <?php require 'modal/produtos/modal-delete.php' ?>
-        <?php require 'modal/produtos/modal-add.php' ?>
+
 
         <?php include 'app/views/includes/footer.php' ?>
 
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

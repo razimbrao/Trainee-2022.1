@@ -48,7 +48,7 @@ class ProdutosController
             'preco' => $_POST['preco'],
         ];
         
-        App::get('database')->insert('produtos', $parametros);
+        App::get('database')->adicionar('produtos', $parametros);
 
         $produto_id = App::get('database')->selectProduto();
 
@@ -67,7 +67,7 @@ class ProdutosController
 
         }
 
-        App::get('database')->insert('imagens', $imagens);
+        App::get('database')->adicionar('imagens', $imagens);
 
         
 
@@ -112,7 +112,7 @@ class ProdutosController
                     'nome_imagem' => $_FILES["txtimagem"]["name"][$i],
                 ];
             }
-            App::get('database')->insert('imagens', $imagens);
+            App::get('database')->adicionar('imagens', $imagens);
         }
         
         header('Location: /admin/produtos');

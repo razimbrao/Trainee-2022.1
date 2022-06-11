@@ -5,7 +5,7 @@
   <?php include 'app/views/includes/head.php' ?>
 
   <link href="../../../public/css/login.css" rel="stylesheet">
-  <title>MonsterShop</title>
+  <title>Admin Monster - Login</title>
 </head>
 
 

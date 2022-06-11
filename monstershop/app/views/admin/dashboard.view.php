@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
 
-    <title> Monster Shop - Dashboard</title>
+    <title>Admin Monster - Dashboard</title>
 </head>
 
 <body>

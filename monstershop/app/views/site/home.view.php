@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="../../../public/css/home.css">
 
-  <title>Home</title>
+  <title>Monster Shop - Home</title>
 
 </head>
 

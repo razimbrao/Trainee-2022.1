@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="../../../public/css/contato.css">
 
-  <title> Monster Shop - Contato</title>
+  <title>Monster Shop - Contato</title>
 </head>
 
 

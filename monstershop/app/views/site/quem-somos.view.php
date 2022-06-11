@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../../../public/css/quem-somos.css">
 
-    <title>Quem Somos?</title>
+    <title>Monster Shop - Quem-somos</title>
 </head>
 
 

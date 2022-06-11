@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../../../public/css/tabelas.css">
 
-    <title>Usuarios-MonsterShop</title>
+    <title>Admin Monster - Usuários</title>
 
 </head>
 

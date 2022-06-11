@@ -5,7 +5,7 @@
     <?php include 'app/views/includes/head.php' ?>
 
     <link rel="stylesheet" href="../../../public/css/tabelas.css">
-    <title>ADM - Produtos</title>
+    <title>Admin Monster - Produtos</title>
 </head>
 
 <body>

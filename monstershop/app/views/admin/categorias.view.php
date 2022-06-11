@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../../../public/css/tabelas.css">
 
-    <title>Frontend Administrador Categorias</title>
+    <title>Admin Monster - Categorias</title>
 
 
 </head>

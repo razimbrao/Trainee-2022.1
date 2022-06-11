@@ -6,7 +6,7 @@
 
   <link href="../../../public/css/produtos.css" rel="stylesheet">
 
-  <title>Produtos</title>
+  <title>Monster Shop - Produtos</title>
 </head>
 
 <body>

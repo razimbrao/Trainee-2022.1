@@ -40,6 +40,17 @@ class ViewController
         return view('site/produtos', $tabela);
     }
 
+    public function produto()
+    {
+        $produtos = App::get('database')->selectAll('produtos');
+
+        $tabela = [
+            'produtos' => $produtos
+        ];
+
+        return view('site/produto', $tabela);
+    }
+
     public function create()
     {
     }

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<?php include 'app/views/includes/head.php' ?>
+  <?php include 'app/views/includes/head.php' ?>
 
   <link rel="stylesheet" href="../../../public/css/home.css">
 

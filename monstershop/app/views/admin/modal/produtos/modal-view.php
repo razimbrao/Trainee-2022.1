@@ -52,7 +52,7 @@
                     
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Preço</label>
-                        <input class="form-control" type="text" value="R$ <?= number_format($produto->preco, 2, ',', '') ?>" aria-label="Preço do produto" disabled readonly>
+                        <input class="form-control" type="text" value="R$ <?= $produto->preco ?>" aria-label="Preço do produto" disabled readonly>
                     </div>
                 </form>
             </div>

@@ -40,7 +40,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">
-                            <form class="d-flex" action="produtos/pesquisar" method="POST">
+                            <form class="d-flex" action="produtos" method="POST">
                                 <input class="form-control me-2" type="search" placeholder="Search" name="pesquisa" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>

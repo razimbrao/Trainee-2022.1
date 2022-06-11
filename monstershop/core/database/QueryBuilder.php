@@ -114,4 +114,22 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function search($tabela, $nome){
+        $sql = sprintf( 
+            'SELECT * FROM %s WHERE %s;',
+            $tabela,
+            "nome like '%' :nome '%' "
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('nome'));
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }  
+    }
 }

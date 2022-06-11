@@ -10,6 +10,12 @@ class ProdutosController
 
     public function view()
     {
+        if(!empty($_POST['pesquisa'])) {
+            $produto = filter_input(INPUT_POST, 'pesquisa', FILTER_SANITIZE_SPECIAL_CHARS);  
+            $produtos = App::get('database')->search('produtos', $produto);
+            return view('admin/produtos', compact('produtos'));  
+        }  
+
         $produtos = App::get('database')->selectAll('produtos');
 
         for ($i = 0; $i < count($produtos) ; $i++) { 

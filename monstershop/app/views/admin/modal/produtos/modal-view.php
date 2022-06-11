@@ -42,7 +42,9 @@
 
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Categoria</label>
-                        <input class="form-control" type="text" <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) ?> value="<?= $cat->nome ?>" <?php endforeach; ?> aria-label="categoria do Produto" disabled readonly>
+                        <input class="form-control" type="text" 
+                        <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) : ?> value="<?= $cat->nome ?>" <?php endif; endforeach; ?> 
+                        aria-label="categoria do Produto" disabled readonly>
                     </div>
 
                     <div class="mb-3">

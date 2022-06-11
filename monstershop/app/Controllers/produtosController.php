@@ -97,12 +97,12 @@ class ProdutosController
             $contador = true;
         }
 
-        if($contatador){
+        if($contador){
             App::get('database')->delete('imagens', $_POST['id']);
 
-            for($i = 0; $i < cout($_FILES["txtimagem"]["name"]); $i++){
+            for($i = 0; $i < sizeof($_FILES["txtimagem"]["name"]); $i++){
                 $imagens = [
-                    'produto_id' => $produto_id,
+                    'produto_id' => $_POST['id'],
                     'nome_imagem' => $_FILES["txtimagem"]["name"][$i],
                 ];
             }

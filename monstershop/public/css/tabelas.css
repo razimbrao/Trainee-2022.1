@@ -4,13 +4,14 @@ body {
 }
 
 .title {
+    padding-top: 10rem;
     margin-bottom: 5rem;
 }
 
 .logo{
-    margin-top: 10rem;
     margin-right: 1rem;
 }
+
 
 .cont-custom {
     width: 70%;
@@ -37,6 +38,13 @@ body {
     width: 45vh;
     max-width: 100%;
 }
+
+.carousel-modal{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
 
 /* Scroll-bar */
 

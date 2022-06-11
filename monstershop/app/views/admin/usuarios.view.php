@@ -5,7 +5,7 @@
 
     <?php include 'app/views/includes/head.php' ?>
 
-    <link rel="stylesheet" href="../../../public/css/usuarios.css">
+    <link rel="stylesheet" href="../../../public/css/tabelas.css">
 
     <title>Usuarios-MonsterShop</title>
 
@@ -18,8 +18,7 @@
     <div class="container-fluid cont-custom">
 
         <div class="title row justify-content-md-center">
-            <img class="logo col-md-auto" src="../../../public/img/Usuários Logo.png" alt="Logo de usuários">
-            <img class="logo col-md-auto" src="../../../public/img/Monster Logo.png" alt="Logo de usuários">
+            <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/usuariosMonsterTitle.png" alt="Logo de Categorias">
         </div>
 
         <div class="d-flex justify-content-end">

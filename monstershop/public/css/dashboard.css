@@ -7,6 +7,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
+    max-height: 600px;
     max-width: 50%;
     align-items: center;
     justify-items: center;
@@ -18,7 +19,8 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.125);
     margin-top: 20vh;
     margin-bottom: 20vh;
-}
+} 
+
  .titulo{
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -37,7 +39,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 40rem;
-    max-width: 80%;
+    max-width: 50%;
 }
 
 .botao{

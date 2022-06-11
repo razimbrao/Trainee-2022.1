@@ -5,7 +5,7 @@
 
     <?php include 'app/views/includes/head.php' ?>
 
-    <link rel="stylesheet" href="../../../public/css/usuarios.css">
+    <link rel="stylesheet" href="../../../public/css/tabelas.css">
 
     <title>Frontend Administrador Categorias</title>
 
@@ -22,12 +22,9 @@
 
             <div class="container cont-custom">
 
-                <div class="imgCat">
-                    <img src="../../../public/img/img_adm_categorias/Categorias.png" alt="a" width="55%">
-                    <img src="../../../public/img/img_adm_categorias/carMonsterShop.png" alt="a" width="55%">
+                <div class="title row justify-content-md-center">
+                    <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/categoriasMonsterTitle.png" alt="Logo de Categorias">
                 </div>
-
-
 
                 <!-- Botão de adicionar categoria -->
                 <div class="d-flex justify-content-end">

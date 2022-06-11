@@ -12,11 +12,11 @@ class CategoriasController
         if(!empty($_POST['categoria'])) {
             $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);  
             $categorias = App::get('database')->procurarCategoria('categorias', $categoria);
-            return view('admin/frontend_adm_categorias', compact('categorias'));  
+            return view('admin/categorias', compact('categorias'));  
         }
         
         $categorias = App::get('database')->selectAll('categorias');
-        return view('admin/frontend_adm_categorias', compact('categorias')); 
+        return view('admin/categorias', compact('categorias')); 
     }
 
 

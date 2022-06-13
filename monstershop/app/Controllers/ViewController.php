@@ -42,10 +42,21 @@ class ViewController
 
     public function produto()
     {
-        $produtos = App::get('database')->selectAll('produtos');
+        $id = intval($_GET['id']);
+        
+        $result = App::get('database')->selectProduto("produtos", "categorias" ,$id);
+
+        $categoriaProduto = array();
+        foreach ($result["categorias"] as $categoria)
+        {
+            $categoriaProduto += [
+                "{$categoria->id}" => $categoria->nome
+            ];
+        }
 
         $tabela = [
-            'produtos' => $produtos
+            "produto" => $result["produtos"][0],
+            "categorias" => $categoriaProduto
         ];
 
         return view('site/produto', $tabela);

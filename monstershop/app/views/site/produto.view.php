@@ -6,7 +6,7 @@
  
   <link rel="stylesheet" type="text/css" href="../../../public/css/front-produto.css" media="screen" />
 
-  <title>(nome-do-produto)</title>
+  <title><?= $produto->nome ?></title>
 </head>
 
 <body>
@@ -48,8 +48,8 @@
 
       </div>
       <div class="col-sm opcoes-de-compra">
-        <h1>(nome-do-produto)</h1>
-      <h2>(categoria-do-produto)</h2>
+        <h1><?= $produto->nome ?></h1>
+      <h2><?= $categorias[$produto->categoriaID] ?></h2>
 
 
       <hr>
@@ -81,7 +81,7 @@
 
       </div>
       <div class="col-sm opcoes-de-compra2">
-          <h3>Por: (preço-do-produto)</h3>
+          <h3>Por: <?= $produto->preco ?></h3>
     
           <hr>
     
@@ -141,7 +141,7 @@
       <div id="collapseInfo" class="accordion-collapse collapse" aria-labelledby="headingInfo"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>(nome-do-produto)</strong> aqui pode vir algumas informacoes do produto.
+          <strong><?= $produto->nome ?>: </strong><?= $produto->descricao ?>
         </div>
       </div>
     </div>

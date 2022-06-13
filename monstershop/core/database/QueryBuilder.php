@@ -190,6 +190,26 @@ class QueryBuilder
         }
     }
 
+    public function procurarUsuario($table, $nome)
+    {
+
+        $sql = sprintf( 
+            'SELECT * FROM %s WHERE %s;',
+            $table,
+            "nome like '%' :nome '%' "
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('nome'));
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }  
+    }
+
     //Funcoes de Produtos
 
     public function editaProdutos($idp, $table, $parametros)

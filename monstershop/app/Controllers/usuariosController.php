@@ -10,13 +10,22 @@ class UsuariosController
 
     public function view()
     {
+        if(!empty($_POST['usuario'])) {
+            $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);  
+            $usuarios = App::get('database')->procurarUsuario('usuarios', $usuario);
+            return view('admin/usuarios', compact('usuarios'));  
+        }
+        
         $usuarios = App::get('database')->selectAll('usuarios');
+        return view('admin/usuarios', compact('usuarios')); 
 
-        $tabela = [
-            'usuarios' => $usuarios
-        ];        
+        // $usuarios = App::get('database')->selectAll('usuarios');
 
-        return view('/admin/usuarios', $tabela);
+        // $tabela = [
+        //     'usuarios' => $usuarios
+        // ];        
+
+        // return view('/admin/usuarios', $tabela);
     }
 
     public function create()

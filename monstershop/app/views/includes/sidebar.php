@@ -1,6 +1,7 @@
-<input type="checkbox" id="check">
+<input type="checkbox" id="check" checked>
 
 <div class="retangle">
+
 
     <div class="btn-menu">
         <label class="label1" for="check">

@@ -8,19 +8,6 @@ use Exception;
 class UsuariosController
 {
 
-    /*public function __construct()
-    {
-        session_start();
-        $url = $_SERVER['REQUEST_URI'];
-        if(!str_contains($url, 'usuarios')) {
-            if(!isset($_SESSION['logado']) || empty($_SESSION['logado'])) {
-                $_SESSION['loginInvalido'] = 'Faça login para acessar!';
-                header('Location: /admin/login');
-                exit();
-            }
-        }
-    }*/
-
     public function __construct()
     {
         session_start();
@@ -30,8 +17,8 @@ class UsuariosController
                 $_SESSION['loginInvalido'] = 'Faça login para acessar!';
                 header('Location: /admin/login');
                 exit();
-        //    }
-        }
+            }
+        //}
     }
     
 

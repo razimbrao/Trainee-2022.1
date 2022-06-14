@@ -11,7 +11,7 @@ class CategoriasController
     {
         if(!empty($_POST['categoria'])) {
             $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);  
-            $categorias = App::get('database')->procurarCategoria('categorias', $categoria);
+            $categorias = App::get('database')->procurar('categorias', 'nome', $categoria);
             return view('admin/categorias', compact('categorias'));  
         }
         

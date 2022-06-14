@@ -85,8 +85,4 @@ $router->get('admin/login','LoginController@view');
 
 $router->post('admin/login/validacao', 'LoginController@validacao');
 
-
-//---------------Rotas de Login-------------//
-
-$router->get('admin/dashboard','ViewController@dashboard');
 ?>

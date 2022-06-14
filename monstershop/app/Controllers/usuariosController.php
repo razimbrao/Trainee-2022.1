@@ -12,7 +12,7 @@ class UsuariosController
     {
         if(!empty($_POST['usuario'])) {
             $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);  
-            $usuarios = App::get('database')->procurarUsuario('usuarios', $usuario);
+            $usuarios = App::get('database')->procurar('usuarios', 'nome', $usuario);
             return view('admin/usuarios', compact('usuarios'));  
         }
         

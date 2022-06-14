@@ -7,18 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\CategoriasController' => $baseDir . '/app/Controllers/CategoriasController.php',
-<<<<<<< HEAD
     'App\\Controllers\\ContatoController' => $baseDir . '/app/Controllers/ContatoController.php',
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
     'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
     'App\\Controllers\\ProdutosController' => $baseDir . '/app/Controllers/ProdutosController.php',
     'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/usuariosController.php',
     'App\\Controllers\\ViewController' => $baseDir . '/app/Controllers/ViewController.php',
-=======
-    'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
-    'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
-    'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/UsuariosController.php',
->>>>>>> login_backend_arrumando
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',

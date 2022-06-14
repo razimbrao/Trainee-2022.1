@@ -8,13 +8,26 @@ use Exception;
 class CategoriasController
 {
 
-    public function __construct()
+    /*public function __construct()
     {
         session_start();
         $url = $_SERVER['REQUEST_URI'];
         if (!str_contains($url, 'logout')) {
             if (!empty($_SESSION['logado'])) {
                 header('Location: /dashboard');
+                exit();
+            }
+        }
+    }*/
+
+    public function __construct()
+    {
+        session_start();
+        $url = $_SERVER['REQUEST_URI'];
+        if(!str_contains($url, 'usuarios')) {
+            if(!isset($_SESSION['logado']) || empty($_SESSION['logado'])) {
+                $_SESSION['loginInvalido'] = 'Faça login para acessar!';
+                header('Location: /admin/login');
                 exit();
             }
         }

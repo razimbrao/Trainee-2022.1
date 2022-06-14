@@ -19,7 +19,7 @@
         <img src="../../../public/img/monsterShop_oficial.png" class="image" alt="">
         <h2>Admin</h2>
     </center>
-    <a href="/admin/dashboard"><i class="fa-solid fa-user-gear"></i><span> Dashboard</span></a>
+    <a href="/dashboard"><i class="fa-solid fa-user-gear"></i><span> Dashboard</span></a>
     <a href="/admin/usuarios"><i class="fa-solid fa-users"> </i><span> Usuários</span></a>
     <a href="/admin/produtos"><i class="fa-solid fa-cart-shopping"> </i><span> Produtos</span></a>
     <a href="/admin/categorias"><i class="fa-solid fa-list"> </i><span> Categorias</span></a>

@@ -8,6 +8,24 @@ use Exception;
 class UsuariosController
 {
 
+    public function __construct()
+    {
+        session_start();
+        $url = $_SERVER['REQUEST_URI'];
+        if(!str_contains($url, 'usuarios')) {
+            if(!isset($_SESSION['logado']) || empty($_SESSION['logado'])) {
+                $_SESSION['loginInvalido'] = 'Faça login para acessar!';
+                header('Location: /admin/login');
+                exit();
+            }
+        }
+    }
+
+    public function dashboard()
+    {
+        return view('admin/dashboard');
+    }
+
     public function view()
     {
         $usuarios = App::get('database')->selectAll('usuarios');
@@ -21,16 +39,33 @@ class UsuariosController
 
     public function create()
     {
-        $dados = [
-            'nome' => $_POST['nome'],
-            'email' => $_POST['email'],
-            'senha' => $_POST['senha'],
-            'foto' => $_POST['foto']
-        ];
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha = password_hash($senha, PASSWORD_DEFAULT);
+        $foto = filter_input(INPUT_POST, 'foto');
 
-        App::get('database')->adicionaUsuario('usuarios', $dados);
+        if(!$nome || !$email || !$senha) {
+            header('Location: /admin/usuarios');
+            exit();
+        }
+
+        if(!$foto) {
+            $foto = 'fotoPadrao.txt';
+        }
+
+        $emailExist = App::get('database')->procurar('usuarios', 'email', $email);
+
+        if($emailExist) {
+            $_SESSION['emailCadastrado'] = 'Erro ao criar usuário';
+            header('Location: /admin/usuarios');
+            exit();
+        }
+
+        App::get('database')->adicionar('usuarios', compact('nome', 'email', 'senha', 'foto'));
 
         header('Location: /admin/usuarios');
+        exit();
     }
 
     public function store()

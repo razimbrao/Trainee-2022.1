@@ -20,6 +20,13 @@
 
 <body>
 
+        <?php if(isset($_SESSION['emailCadastrado']) && !empty($_SESSION['emailCadastrado'])): ?>
+            <div class="alert alert-danger edit-msg" role="alert">
+                <?= $_SESSION['emailCadastrado']; ?>
+            </div>
+            <?php unset($_SESSION['emailCadastrado']); ?>
+        <?php endif;?>
+
     <div class="container-fluid cont-custom">
 
         <div class="title row justify-content-md-center">
@@ -91,6 +98,7 @@
                 </tr>
             </thead>
             <tbody>
+            <?php  /*if(isset($_SESSION['logado']) && !empty($_SESSION['logado'])):*/ ?>
                 <?php foreach ($usuarios as $usuario) : ?>
                     <tr>
                         <th scope="row"><?= $usuario->id ?></th>
@@ -223,7 +231,7 @@
                     </tr>
                 <?php endforeach; ?>
 
-
+            <?/*hp  endif; */?>
             </tbody>
         </table>
     </div>

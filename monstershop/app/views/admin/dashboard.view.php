@@ -21,11 +21,11 @@
             </div>
             <div class="content">
                 <div class="btn-group-vertical botao-grupo">
-                    <a href="#" class="btn btn-primary btn-dark btn-lg botao" aria-current="page">Usuários</a>
+                    <a href="/admin/usuarios" class="btn btn-primary btn-dark btn-lg botao" aria-current="page">Usuários</a>
                     <a href="#" class="btn btn-primary btn-dark btn-lg botao">Produtos</a>
                     <a href="#" class="btn btn-primary btn-dark btn-lg botao">Categorias</a>
                 </div>
-                <a href="#" class="btn-sm btn-primary btn-dark botao logout">Logout</a>
+                <a href="/logout" class="btn-sm btn-primary btn-dark botao logout">Logout</a>
             </div>
         </div>
     </main>

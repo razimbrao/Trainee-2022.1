@@ -57,7 +57,7 @@ class UsuariosController
         $emailExist = App::get('database')->procurar('usuarios', 'email', $email);
 
         if($emailExist) {
-            $_SESSION['emailCadastrado'] = 'Erro ao criar usuário';
+            $_SESSION['emailCadastrado'] = 'Erro ao criar usuário: Email já cadastrado!';
             header('Location: /admin/usuarios');
             exit();
         }

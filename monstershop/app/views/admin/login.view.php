@@ -15,6 +15,14 @@
 <body>
    <div class="container">
      
+     <?php if(isset($_SESSION['loginInvalido']) && !empty($_SESSION['loginInvalido'])): ?>
+        <center>
+          <div class="alert alert-danger edit-msg" role="alert">
+              <?= $_SESSION['loginInvalido']; ?>
+          </div>
+        </center>
+           <?php unset($_SESSION['loginInvalido']); ?>
+     <?php endif;?>
      
      <!--inicio do formulario de login-->
      <div class="edit-login">
@@ -46,12 +54,6 @@
       
       <!--fim do formulario de login-->
       
-      <?php if(isset($_SESSION['loginInvalido']) && !empty($_SESSION['loginInvalido'])): ?>
-            <div class="alert alert-danger edit-msg" role="alert">
-              <?= $_SESSION['loginInvalido']; ?>
-            </div>
-            <?php unset($_SESSION['loginInvalido']); ?>
-      <?php endif;?>
 
 
    </div>

@@ -10,16 +10,14 @@ body {
     background-position-y: 5% ;
  }
 
- @keyframes hide {
-    from { opacity: 1 }
-    to   { opacity: 0 }
-}
-
-.edit-login{
-    display: flex;
-    justify-content: center;
-    margin-top: 20%;
-    box-shadow: 0px 0px 25px 0px red;
+@keyframes hide {
+    from { opacity: 1; 
+        }
+    to   { 
+            height: 0px;
+            width: 0px;
+            opacity: 0; 
+        }
 }
 
 .edit-msg {
@@ -29,10 +27,20 @@ body {
    display: flex;
    justify-content: center;
    width: 30vw;
-   margin-left: 35vw;
-   margin-right: 35vw;
-   animation: hide 2s 2s forwards
+   animation: hide 2s 2s forwards;
+   position: absolute; 
+    margin: auto;
+    right: 0;
+    left: 0;
 }
+
+.edit-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    box-shadow: 0px 0px 25px 0px red;
+}
+
 
  .edit-email{
      color: red;

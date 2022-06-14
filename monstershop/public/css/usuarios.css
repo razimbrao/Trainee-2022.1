@@ -4,6 +4,29 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+@keyframes hide {
+    from { opacity: 1; 
+        }
+    to   { 
+            opacity: 0; 
+        }
+}
+
+.edit-msg {
+    color: black;
+    border-color: black;
+    background-color: rgb(151, 57, 57);
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    animation: hide 2s 2s forwards;
+    position: absolute; 
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+
+
 .title {
     margin-bottom: 5rem;
 }

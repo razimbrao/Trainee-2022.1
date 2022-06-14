@@ -20,20 +20,23 @@
 
 <body>
 
-        <?php if(isset($_SESSION['emailCadastrado']) && !empty($_SESSION['emailCadastrado'])): ?>
-            <div class="alert alert-danger edit-msg" role="alert">
-                <?= $_SESSION['emailCadastrado']; ?>
-            </div>
-            <?php unset($_SESSION['emailCadastrado']); ?>
-        <?php endif;?>
-
+    
     <div class="container-fluid cont-custom">
-
+        
         <div class="title row justify-content-md-center">
             <img class="usuarios-logo col-md-auto" src="../../../public/img/Usuários Logo.png" alt="Logo de usuários">
             <img class="monster-logo col-md-auto" src="../../../public/img/Monster Logo.png" alt="Logo de usuários">
         </div>
 
+        <?php if(isset($_SESSION['emailCadastrado']) && !empty($_SESSION['emailCadastrado'])): ?>
+            <center>
+                <div class="alert alert-danger edit-msg" role="alert">
+                    <?= $_SESSION['emailCadastrado']; ?>
+                </div>
+            </center>
+            <?php unset($_SESSION['emailCadastrado']); ?>
+        <?php endif;?>
+        
         <div class="d-flex justify-content-end">
             <!-- Adicionar usuarios -->
             <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">

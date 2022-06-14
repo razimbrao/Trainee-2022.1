@@ -22,7 +22,7 @@
     <a href="/admin/usuarios"><i class="fa-solid fa-users"> </i><span> Usuários</span></a>
     <a href="/admin/produtos"><i class="fa-solid fa-cart-shopping"> </i><span> Produtos</span></a>
     <a href="/admin/categorias"><i class="fa-solid fa-list"> </i><span> Categorias</span></a>
-    <a href="/home"><i class="fa-solid fa-arrow-right-from-bracket"></i> </i><span> Sair</span></a>
+    <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> </i><span> Sair</span></a>
 
 </div>
 <!--sidebar final-->

@@ -7,6 +7,19 @@ use Exception;
 
 class CategoriasController
 {
+
+    public function __construct()
+    {
+        session_start();
+        $url = $_SERVER['REQUEST_URI'];
+        if (!str_contains($url, 'logout')) {
+            if (!empty($_SESSION['logado'])) {
+                header('Location: /dashboard');
+                exit();
+            }
+        }
+    }
+
     public function index()
     {
         if(!empty($_POST['categoria'])) {
@@ -18,7 +31,7 @@ class CategoriasController
         $categorias = App::get('database')->selectAll('categorias');
         return view('admin/categorias', compact('categorias')); 
     }
-
+    
 
     public function create()
     {
@@ -29,15 +42,14 @@ class CategoriasController
         App::get('database')->adicionar('categorias', compact('nome', 'descricao'));
 
         header('Location: /admin/categorias');
- 
     }
 
     public function update()
     {
         //filtagrem para seguranca
-        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
         $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
-   
+
         App::get('database')->editaCategoria('categorias', compact('nome', 'descricao'), $_POST['id']);
 
         header('Location: /admin/categorias');
@@ -49,6 +61,4 @@ class CategoriasController
 
         header('Location: /admin/categorias');
     }
-
-
 }

@@ -31,7 +31,7 @@
                     <a href="/admin/produtos" class="btn btn-primary btn-dark btn-lg botao">Produtos</a>
                     <a href="/admin/categorias" class="btn btn-primary btn-dark btn-lg botao">Categorias</a>
                 </div>
-                <a href="/home" class="btn-sm btn-primary btn-dark botao logout">Logout</a>
+                <a href="/logout" class="btn-sm btn-primary btn-dark botao logout">Logout</a>
             </div>
         </div>
     </main>

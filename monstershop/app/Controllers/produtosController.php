@@ -28,7 +28,8 @@ class ProdutosController
 
         $table = [
             'produtos' => $produtos,
-            'categorias' => $categorias
+            'categorias' => $categorias,
+            'imagens' => $imagens
         ];
         return view('admin/produtos', $table);
     }
@@ -52,25 +53,16 @@ class ProdutosController
 
         $produto_id = App::get('database')->selectProduto();
 
-        var_dump($produto_id);
-
-        //$produto_id = $produto_id[0]->id;
-
         $coluna = $_FILES['txtimagem']['name'];
 
         for ($i=0; $i < count($coluna); $i++) { 
             
             $imagens = [
-                'produto_id' => $produto_id,
+                'produtoID' => $produto_id[0]->id,
                 'nome_imagem' => $coluna[$i],
             ];
-
+            App::get('database')->insert('imagens', $imagens);
         }
-
-        App::get('database')->insert('imagens', $imagens);
-
-        
-
         header('Location: /admin/produtos');
     }
 
@@ -98,18 +90,18 @@ class ProdutosController
         App::get('database')->editaProdutos($id, 'produtos', $parametros);
         
         $contador = false;
-
-        if($_FILES["txtimagem"] && $_FILES["txtimagem"]["name"][0] != ""){
+        $coluna = $_FILES['txtimagem']['name'];
+        if($coluna[0] != ""){
             $contador = true;
         }
 
         if($contador){
             App::get('database')->delete('imagens', $_POST['id']);
 
-            for($i = 0; $i < sizeof($_FILES["txtimagem"]["name"]); $i++){
+            for($i = 0; $i < sizeof($coluna); $i++){
                 $imagens = [
-                    'produto_id' => $_POST['id'],
-                    'nome_imagem' => $_FILES["txtimagem"]["name"][$i],
+                    'produtoID' => $_POST['id'],
+                    'nome_imagem' => $coluna[$i],
                 ];
             }
             App::get('database')->insert('imagens', $imagens);

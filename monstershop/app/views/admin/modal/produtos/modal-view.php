@@ -12,7 +12,7 @@
                         <input class="form-control" type="text" value="<?= $produto->nome ?>" aria-label="<?= $produto->nome ?>" disabled readonly>
                     </div>
 
-                    <div id="carouselExampleIndicators" class="carousel slide carousel-modal" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-modal carousel-dark" data-bs-ride="carousel">
                         <label for="exampleInputPassword1" class="form-label">Imagens</label>
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -21,11 +21,11 @@
                         </div>
 
                         <div class="carousel-inner">
-                            <?php foreach ($imagens as $imagem) : ?>
+                            <?php foreach ($imagens as $img) : if ($img->produtoID === $produto->id) : ?>
                                 <div class="carousel-item active">
-                                    <img src="../../../public/img/adm-produtos/produtos/<?= $imagem->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
+                                    <img src="../../../public/img/adm-produtos/produtos/<?= $img->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
                                 </div>
-                            <?php endforeach; ?>
+                            <?php endif; endforeach; ?>
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

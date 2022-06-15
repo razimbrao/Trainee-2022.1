@@ -89,7 +89,7 @@ class QueryBuilder
    
     public function selectImagem($id){
 
-        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produto_id = :id';
+        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produtoID = :id';
         
         try {
 
@@ -106,10 +106,9 @@ class QueryBuilder
         $sql = 'SELECT id FROM produtos ORDER BY id DESC LIMIT 1';
         
         try {
-
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch(Exception $e) {
             die($e->getMessage());
         }

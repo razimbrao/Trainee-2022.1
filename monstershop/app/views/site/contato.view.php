@@ -56,9 +56,8 @@
     </form>
 
     <div class="mapa">
-      <label><img src="../../../public/img/contato/mapa.svg" alt="mapa"> Rua José Lourenço Kelmer, UFJF - Instituto de
-        Ciências Exatas</label>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.126477491424!2d-43.37377079214281!3d-21.775365488204166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989ba1c18d2a97%3A0xacf1ee467831259e!2sICE%20-%20UFJF!5e0!3m2!1spt-BR!2sbr!4v1649794084005!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      <label><img src="../../../public/img/contato/mapa.svg" alt="mapa"> Rua Espírito Santo, 781 - Centro, Juiz de Fora - MG</label>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.4294877995985!2d-43.347999184526294!3d-21.76363270355084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b5fed611a4b%3A0xe6aee88cac09b0b6!2sAcademia%20Pumping%20Iron!5e0!3m2!1spt-BR!2sbr!4v1655258907982!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </main>

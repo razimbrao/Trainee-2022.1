@@ -23,6 +23,7 @@ $router->get('produto', 'ViewController@produto');
 //-----------Rota de Contato-------------//
 
 $router->get('contato', 'ContatoController@view');
+$router->post('contato/enviaremail', 'ContatoController@enviaEmail');
 
 
 //---------Rotas de Usuários----------//

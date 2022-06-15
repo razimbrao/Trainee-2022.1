@@ -72,15 +72,19 @@ class UsuariosController
 
     public function update()
     {
-        $dados = [
+        /*$dados = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-        ];
+        ];*/
 
-        $foto = $_POST['foto'];
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha = password_hash($senha, PASSWORD_DEFAULT);
+        $foto = filter_input(INPUT_POST, 'foto');
 
-        App::get('database')->editaUsuario('usuarios', $dados, $foto, $_POST['id']);
+        App::get('database')->editar('usuarios', compact('nome', 'email', 'senha', 'foto'), $_POST['id']);
 
         header('Location: /admin/usuarios');
     }

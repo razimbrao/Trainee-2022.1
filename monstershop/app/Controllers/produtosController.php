@@ -36,7 +36,7 @@ class ProdutosController
 
     public function create()
     {
-
+        //parte de produtos
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
@@ -46,10 +46,10 @@ class ProdutosController
         
         App::get('database')->adicionar('produtos', $parametros);
 
+        //parte de imagens
         $produto_id = App::get('database')->selecionarIDProduto();
 
         $coluna = $_FILES['txtimagem']['name'];
-
         for ($i=0; $i < count($coluna); $i++) { 
             
             $imagens = [
@@ -63,6 +63,7 @@ class ProdutosController
 
     public function update()
     {
+        //parte de produtos
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
@@ -73,13 +74,15 @@ class ProdutosController
         $id = $_POST['id'];
         
         App::get('database')->editar('produtos', $parametros, $id);
-        
+
+        //parte de imagens
         $contador = false;
+
         $coluna = $_FILES['txtimagem']['name'];
-        if($_FILES['txtimagem'] && $coluna[0] != ""){
+        if($_FILES['txtimagem'] != NULL && $coluna[0] != ""){
             $contador = true;
         }
-
+        
         if($contador){
             app::get('database')->deletarImagens($_POST['id']);
 

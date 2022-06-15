@@ -148,7 +148,7 @@ class QueryBuilder
     
     public function deletarImagens( $id)
     {
-        $sql = "delete from 'imagens' where produtoID={$id}";
+        $sql = "delete from `imagens` where produtoID={$id}";
         
         try {
             $stmt = $this->pdo->prepare($sql);

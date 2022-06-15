@@ -52,7 +52,7 @@
                         <tr>
                             <th scope="row"><?= $produto->id ?></th>
                             <td><?= $produto->nome ?></td>
-
+                            
                             <td>
                                 <!----------------- Botões ------------------>
 

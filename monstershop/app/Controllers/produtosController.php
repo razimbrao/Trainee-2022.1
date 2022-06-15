@@ -23,6 +23,11 @@ class ProdutosController
             $produtos[$i]->imagens = $produtoImagem;
         }
 
+        // echo '<pre>';
+        // var_dump($produtos);
+        // echo '</pre>';
+        // exit();
+
         $categorias = App::get('database')->selectAll('categorias');
         $imagens = App::get('database')->selectAll('imagens');
 
@@ -36,6 +41,9 @@ class ProdutosController
 
     public function create()
     {
+        // SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto
+
+
         //parte de produtos
         $parametros = [
             'nome' => $_POST['nome'],
@@ -53,7 +61,7 @@ class ProdutosController
         for ($i=0; $i < count($coluna); $i++) { 
             
             $imagens = [
-                'produtoID' => $produto_id[0]->id,
+                'id_produto' => $produto_id[0]->id,
                 'nome_imagem' => $coluna[$i],
             ];
             App::get('database')->adicionar('imagens', $imagens);
@@ -88,7 +96,7 @@ class ProdutosController
 
             for($i = 0; $i < sizeof($coluna); $i++){
                 $imagens = [
-                    'produtoID' => $id,
+                    'id_produto' => $id,
                     'nome_imagem' => $coluna[$i],
                 ];
                 App::get('database')->adicionar('imagens', $imagens);

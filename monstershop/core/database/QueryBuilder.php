@@ -117,17 +117,36 @@ class QueryBuilder
     }
 
 
+    public function pegarImagensProduto($id) 
+    {
+        /// SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto
+
+        $sql = "SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto WHERE produto.id = $id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+            var_dump($stmt);
+            exit();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
     //Funcoes de Produtos
 
     public function selecionarNomeImagem($id){
 
-        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produtoID = :id';
+        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.id_produto = :id';
         
         try {
 
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(["id"=> $id]);
-            
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch(Exception $e) {
             die($e->getMessage());
         }
@@ -148,7 +167,7 @@ class QueryBuilder
     
     public function deletarImagens( $id)
     {
-        $sql = "delete from `imagens` where produtoID={$id}";
+        $sql = "delete from `imagens` where id_produto={$id}";
         
         try {
             $stmt = $this->pdo->prepare($sql);

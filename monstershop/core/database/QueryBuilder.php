@@ -143,6 +143,25 @@ class QueryBuilder
         }
     }
 
+    public function editaUsuario($table, $dados, $foto, $id)
+    {
+
+        $sql = "update {$table} set nome = '{$dados['nome']}', email = '{$dados['email']}', senha = '{$dados['senha']}'";
+
+        if ($foto != '') {
+            $sql = $sql . ", foto = '{$foto}' WHERE id = {$id}";
+        } else {
+            $sql = $sql . "WHERE id = {$id}";
+        }
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     
    
     public function selectImagem($id){

@@ -54,7 +54,7 @@ class LoginController
             exit();
         }
 
-        if(!password_verify($senha, $user[0]->senha)) {
+        if(strcmp(base64_encode($senha), $user[0]->senha)) {
             $_SESSION['loginInvalido'] = "Erro ao fazer login";
             header('Location: /admin/login');
             exit();

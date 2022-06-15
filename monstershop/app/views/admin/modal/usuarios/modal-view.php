@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<?= $usuario->senha ?>" readonly>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<?= base64_decode($usuario->senha) ?>" readonly>
                     </div>
                 </form>
             </div>

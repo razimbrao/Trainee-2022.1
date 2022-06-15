@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Senha</label>
-                        <input name="senha" type="password" class="form-control" id="exampleInputPassword1" value="<?= $usuario->senha ?>">
+                        <input name="senha" type="password" class="form-control" id="exampleInputPassword1" value="<?= base64_decode($usuario->senha) ?>">
                     </div>
 
                     <div class="form-group">

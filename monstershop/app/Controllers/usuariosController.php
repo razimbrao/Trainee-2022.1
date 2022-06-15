@@ -12,13 +12,13 @@ class UsuariosController
     {
         session_start();
         $url = $_SERVER['REQUEST_URI'];
-        //if(!str_contains($url, 'usuarios')) {
+        if(!str_contains($url, 'usuarios')) {
             if(!isset($_SESSION['logado']) || empty($_SESSION['logado'])) {
                 $_SESSION['loginInvalido'] = 'Faça login para acessar!';
                 header('Location: /admin/login');
                 exit();
             }
-        //}
+        }
     }
     
 
@@ -44,7 +44,7 @@ class UsuariosController
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-        $senha = password_hash($senha, PASSWORD_DEFAULT);
+        $senha = base64_encode($senha);
         $foto = filter_input(INPUT_POST, 'foto');
 
         if(!$nome || !$email || !$senha) {
@@ -53,7 +53,7 @@ class UsuariosController
         }
 
         if(!$foto) {
-            $foto = 'fotoPadrao.txt';
+            $foto = 'MonsterShop-logo.png';
         }
 
         $emailExist = App::get('database')->procurar('usuarios', 'email', $email);
@@ -72,19 +72,15 @@ class UsuariosController
 
     public function update()
     {
-        /*$dados = [
-            'nome' => $_POST['nome'],
-            'email' => $_POST['email'],
-            'senha' => $_POST['senha'],
-        ];*/
+        $dados = [
+            'nome' => filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS),
+            'email' => filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL),
+            'senha' => base64_encode(filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS)),
+        ];
 
-        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-        $senha = password_hash($senha, PASSWORD_DEFAULT);
         $foto = filter_input(INPUT_POST, 'foto');
 
-        App::get('database')->editar('usuarios', compact('nome', 'email', 'senha', 'foto'), $_POST['id']);
+        App::get('database')->editaUsuario('usuarios', $dados, $foto, $_POST['id']);
 
         header('Location: /admin/usuarios');
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Jun-2022 às 16:59
+-- Tempo de geração: 15-Jun-2022 às 04:17
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -49,8 +49,8 @@ INSERT INTO `categorias` (`id`, `nome`, `descricao`) VALUES
 
 CREATE TABLE `imagens` (
   `id` int(11) NOT NULL,
-  `produto_id` text NOT NULL,
-  `nome_imagem` text NOT NULL
+  `nome_imagem` text NOT NULL,
+  `produtoID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -67,15 +67,6 @@ CREATE TABLE `produtos` (
   `categoriaID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `produtos`
---
-
-INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `categoriaID`) VALUES
-(10, 'teste22', 'afafdrre', '22', 10),
-(13, 'aaa', '', '', 14),
-(14, 'bbbb', '', '', 10);
-
 -- --------------------------------------------------------
 
 --
@@ -89,13 +80,6 @@ CREATE TABLE `usuarios` (
   `senha` text NOT NULL,
   `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
-(1, 'Frederico', 'fred@teste.com', '123', '');
 
 --
 -- Índices para tabelas despejadas
@@ -146,13 +130,13 @@ ALTER TABLE `imagens`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para despejos de tabelas

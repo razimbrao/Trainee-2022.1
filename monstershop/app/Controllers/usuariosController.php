@@ -93,7 +93,7 @@ class UsuariosController
     {
         $id = $_POST['id'];
 
-        App::get('database')->delete('usuarios', $id);
+        App::get('database')->deletar('usuarios', $id);
 
         header('Location: /admin/usuarios');
     }

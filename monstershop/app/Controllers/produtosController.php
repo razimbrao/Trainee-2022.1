@@ -76,14 +76,14 @@ class ProdutosController
         App::get('database')->editar('produtos', $parametros, $id);
 
         //parte de imagens
-        $contador = false;
+        $verificaImg = false;
 
         $coluna = $_FILES['txtimagem']['name'];
         if($_FILES['txtimagem'] != NULL && $coluna[0] != ""){
-            $contador = true;
+            $verificaImg = true;
         }
         
-        if($contador){
+        if($verificaImg){
             app::get('database')->deletarImagens($_POST['id']);
 
             for($i = 0; $i < sizeof($coluna); $i++){
@@ -98,7 +98,6 @@ class ProdutosController
         header('Location: /admin/produtos');
     }
     
-
     public function delete()
     {
         app::get('database')->deletar('produtos', $_POST['id']);

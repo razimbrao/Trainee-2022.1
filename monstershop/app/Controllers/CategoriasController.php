@@ -63,7 +63,7 @@ class CategoriasController
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
         $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        App::get('database')->editaCategoria('categorias', compact('nome', 'descricao'), $_POST['id']);
+        App::get('database')->editar('categorias', compact('nome', 'descricao'), $_POST['id']);
 
         header('Location: /admin/categorias');
     }

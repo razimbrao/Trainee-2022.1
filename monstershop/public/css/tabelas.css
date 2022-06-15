@@ -43,7 +43,14 @@ body {
 }
 
 .table-custom {
-    background-color: #a7a9ac;
+    font-size: 22px;
+    color: white;
+    border-radius: 10px;
+    background-color: #a53339;
+}
+
+.btn-search {
+    background-color: #171927;
 }
 
 .btn-add {

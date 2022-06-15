@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <?php include 'app/views/includes/head.php' ?>
 
@@ -22,13 +19,22 @@
       <div class="edit-pesquisa">
         <nav class="navbar navbar-dark bg-dark">
           <div class="container-fluid">
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Ex: Camiseta" aria-label="Search">
+            <!--
+                <form action="/admin/categorias" class="d-flex" method="POST">
+                    <input name="categoria" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    
+                    <button class="btn btn-outline-success" type="submit"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+
+                </form> -->
+            <form class="d-flex" action="/site/produtos" method="POST">
+              <input name="nome" class="form-control me-2" type="search" placeholder="Ex: Camiseta" aria-label="Search">
               <button class="btn btn-outline-danger" type="submit">Buscar</button>
             </form>
           </div>
         </nav>
       </div>
+
       <!--Fim da barra de pesquisa-->
 
       <!--Inicio Filtro de categoria-->
@@ -49,19 +55,24 @@
             <li><a class="dropdown-item" href="#">Moletom Monstershop</a></li>
           </ul>
         </div>
+
+
+
         <div class="btn-group">
-          <button class="btn btn-secondary btn-dark" type="button">
+          <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categoria
           </button>
-          <button type="button" class="btn btn-dark btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Roupas</a></li>
-            <li><a class="dropdown-item" href="#">Equipamentos</a></li>
-            <li><a class="dropdown-item" href="#">Suplementos</a></li>
+            <?php foreach ($categorias as $categoria) : ?>
+              <form action="/site/produtos" method="post">
+                <input type="hidden" name="categoriaID" value="<?= $categoria->id ?>">
+
+                <li><button class="dropdown-item" type="submit"><?= $categoria->nome ?></button></li>
+              </form>
+            <?php endforeach; ?>
           </ul>
         </div>
+
       </div>
       <!--Fim Filtro de categoria-->
 
@@ -69,14 +80,12 @@
 
 
       <!--Inicio cards-->
-
-
       <div class="edit-card">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 row-edit">
           <?php foreach ($produtos as $produto) : ?>
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex justify-content-center col-edit ">
               <div class="card card1 cartoes">
-                <img src="../../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
+                <img src="../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
                 <div class="card-body ">
                   <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
                   <p class="card-text text-cards"><?= $produto->descricao ?></p>
@@ -88,6 +97,7 @@
         </div>
       </div>
       <!--fim cards-->
+
 
       <!--inicio paginação-->
       <div class="edit-paginacao">
@@ -105,9 +115,6 @@
     </div>
 
     <?php include 'app/views/includes/footer.php' ?>
-
-
-
 </body>
 
 </html>

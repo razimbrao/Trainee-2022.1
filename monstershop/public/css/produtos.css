@@ -3,6 +3,7 @@ body {
    font-family: 'Nunito', sans-serif;
 }
 
+
 .edit-pesquisa{
    margin-top: 3%;
    display: flex;
@@ -24,7 +25,7 @@ body {
 }
 
 .edit-paginacao {
-   margin-bottom: 10%;
+   margin-bottom: 3%;
    display: flex;
    justify-content: center;
 }
@@ -32,4 +33,9 @@ body {
 .cartoes{
    width: 18rem;
    min-width: 12rem;
+}
+.row-edit {
+   display:flex;
+   justify-content: flex-start;
+   flex-grow: 3;
 }

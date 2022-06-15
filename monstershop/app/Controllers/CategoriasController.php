@@ -62,7 +62,6 @@ class CategoriasController
         //filtagrem para seguranca
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
         $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
-
         App::get('database')->editar('categorias', compact('nome', 'descricao'), $_POST['id']);
 
         header('Location: /admin/categorias');
@@ -70,7 +69,7 @@ class CategoriasController
 
     public function delete()
     {
-        App::get('database')->delete('categorias', $_POST['id']);
+        App::get('database')->deletar('categorias', $_POST['id']);
 
         header('Location: /admin/categorias');
     }

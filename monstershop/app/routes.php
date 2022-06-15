@@ -2,6 +2,7 @@
 
 use App\Controllers\CategoriasController;
 use App\Controllers\UsuariosController;
+use App\Controllers\ProdutosController;
 use App\Core\Router;
 
 //-----------Rotas do Front-------------//
@@ -43,6 +44,12 @@ $router->post('admin/categorias/create', 'CategoriasController@create');
 $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
 $router->post('admin/categorias/edit', 'CategoriasController@update');
+
+$router->get('site/produtos', 'ProdutosController@index');
+$router->post('site/produtos', 'ProdutosController@index');
+
+
+
 
 
 

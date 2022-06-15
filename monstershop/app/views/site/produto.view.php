@@ -133,12 +133,12 @@
   <div class="accordion informacoes-produto" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingInfo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo">
           Informações do produto
         </button>
       </h2>
-      <div id="collapseInfo" class="accordion-collapse collapse" aria-labelledby="headingInfo"
+      <div id="collapseInfo" class="accordion-collapse collapse show" aria-labelledby="headingInfo"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong><?= $produto->nome ?>: </strong><?= $produto->descricao ?>
@@ -151,12 +151,12 @@
     <div class="accordion avaliacoes-produto" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
             aria-expanded="true" aria-controls="collapseOne">
             Avaliações
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
 
@@ -165,15 +165,15 @@
             <h2 class="accordion-header" id="headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Primeira avaliação
+                Avaliação mais relevante
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <div class="corpo-avaliacao">
-                  <h4>(nome-do-cliente)</h4>
-                  <p>Produto de excelente qualidade!</p>
+                  <h4>Zezinho Maromba</h4>
+                  <p>Produto de excelente qualidade e em preço acessível</p>
                 </div>
               </div>
             </div>
@@ -182,15 +182,15 @@
             <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Segunda avaliação
+                Última avaliação 
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <div class="corpo-avaliacao">
-                  <h4>(nome-do-cliente)</h4>
-                  <p>Era exatamente o que esperava!</p>
+                  <h4>Gustavirus</h4>
+                  <p>Ótimas paradinhas!</p>
                 </div>
               </div>
             </div>

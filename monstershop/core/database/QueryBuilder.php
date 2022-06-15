@@ -31,6 +31,24 @@ class QueryBuilder
 
     //Funções Genéricas
 
+
+    public function adicionar($table, $dados)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)', 
+            $table, implode(',', array_keys($dados)), 
+            ':' . implode(', :', array_keys($dados))
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute($dados);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function editar($table, $dados, $id)
     {
         $sql = sprintf(
@@ -96,22 +114,6 @@ class QueryBuilder
 
     // Funções de Usuários
 
-    public function adicionar($table, $dados)
-    {
-        $sql = sprintf(
-            'INSERT INTO %s (%s) VALUES (%s)',
-            $table, implode(',', array_keys($dados)),
-            ':' . implode(', :', array_keys($dados))
-        );
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute($dados);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
 
     public function delete($table, $id)
     {

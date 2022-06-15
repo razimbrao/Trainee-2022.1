@@ -12,7 +12,7 @@ class ProdutosController
     {
         if(!empty($_POST['pesquisa'])) {
             $produto = filter_input(INPUT_POST, 'pesquisa', FILTER_SANITIZE_SPECIAL_CHARS);  
-            $produtos = App::get('database')->procurar('produtos', $produto);
+            $produtos = App::get('database')->procurar('produtos', 'nome', $produto);
             return view('admin/produtos', compact('produtos'));  
         }  
 
@@ -22,11 +22,6 @@ class ProdutosController
             $produtoImagem = App::get('database')->selecionarNomeImagem($produtos[$i]->id);
             $produtos[$i]->imagens = $produtoImagem;
         }
-
-        // echo '<pre>';
-        // var_dump($produtos);
-        // echo '</pre>';
-        // exit();
 
         $categorias = App::get('database')->selectAll('categorias');
         $imagens = App::get('database')->selectAll('imagens');
@@ -41,15 +36,16 @@ class ProdutosController
 
     public function create()
     {
-        // SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto
-
-
         //parte de produtos
+        $preco=$_POST['preco'];
+        if($preco==NULL)
+            $preco=0.00;
+
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'categoriaID' => $_POST['categoriaID'],
-            'preco' => $_POST['preco'],
+            'preco' => $preco,
         ];
         
         App::get('database')->adicionar('produtos', $parametros);
@@ -72,11 +68,15 @@ class ProdutosController
     public function update()
     {
         //parte de produtos
+        $preco=$_POST['preco'];
+        if($preco==NULL)
+            $preco=0.00;
+            
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'categoriaID' => $_POST['categoriaID'],
-            'preco' => $_POST['preco'],
+            'preco' => $preco,
         ];
         
         $id = $_POST['id'];

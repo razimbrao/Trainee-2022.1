@@ -115,26 +115,6 @@ class QueryBuilder
             die($e->getMessage());
         }  
     }
-
-
-    public function pegarImagensProduto($id) 
-    {
-        /// SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto
-
-        $sql = "SELECT * FROM produtos JOIN imagens ON produtos.id = imagens.id_produto WHERE produto.id = $id";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-            var_dump($stmt);
-            exit();
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
-
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-    }
     
     //Funcoes de Produtos
 

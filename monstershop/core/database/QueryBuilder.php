@@ -14,9 +14,14 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $start_limit = null, $rows_amount = null)
     {
         $sql = "select * from {$table}"; 
+
+        if  ($start_limit >= 0 && $rows_amount > 0)
+        {
+            $sql .= " LIMIT {$start_limit}, {$rows_amount}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -72,13 +77,13 @@ class QueryBuilder
     }
 
 
-    public function deletar($table, $id)
+    public function deletar($table, $id, $campoPesquisado = 'id')
     {
         
         $sql = sprintf( 
             'DELETE FROM %s WHERE %s;',
             $table,
-            "id = :id"
+            "$campoPesquisado = :id"
         );
 
         try {
@@ -109,23 +114,6 @@ class QueryBuilder
         } catch(Exception $e) {
             die($e->getMessage());
         }  
-    }
-
-
-    // Funções de Usuários
-
-
-    public function delete($table, $id)
-    {
-        $sql = "delete from {$table} where id={$id}";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
     }
 
 
@@ -192,4 +180,19 @@ class QueryBuilder
         }
     }
 
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+    
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die("An error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+    
 }

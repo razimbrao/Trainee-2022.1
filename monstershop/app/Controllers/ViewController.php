@@ -31,24 +31,75 @@ class ViewController
 
     public function produtos()
     {
-        $produtos = App::get('database')->selectAll('produtos');
+        $page = 1;
 
-        $tabela = [
-            'produtos' => $produtos
-        ];
+        if (!empty($_POST['nome'])) {
+            $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+            $produtos = App::get('database')->procurar('produtos', 'nome', $nome);
+            $categorias = App::get('database')->selectAll('categorias');
+            return view('site/produtos', compact('produtos', 'categorias'));
+        }
 
-        return view('site/produtos', $tabela);
+        if (!empty($_POST['categoriaID'])) {
+
+            if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
+                $page = intval($_GET['pagina']);
+
+                if ($page <= 0) {
+                    return redirect('produtos');
+                }
+            }
+
+            $items_per_page = 9;
+            $start_limit = $items_per_page * $page - $items_per_page;
+
+            $categoria = filter_input(INPUT_POST, 'categoriaID', FILTER_SANITIZE_SPECIAL_CHARS);
+            $produtos = App::get('database')->procurar('produtos', 'categoriaID', $categoria);
+            $categorias = App::get('database')->selectAll('categorias');
+
+            $rows_count = count($produtos);
+
+            if ($start_limit > $rows_count) {
+                return redirect('produtos');
+            }
+
+            $total_pages = ceil($rows_count / $items_per_page);
+            return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
+        }
+
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
+            $page = intval($_GET['pagina']);
+
+            if ($page <= 0) {
+                return redirect('produtos');
+            }
+        }
+
+        $items_per_page = 9;
+        $start_limit = $items_per_page * $page - $items_per_page;
+        $rows_count = App::get('database')->countAll('produtos');
+
+        if ($start_limit > $rows_count) {
+            return redirect('produtos');
+        }
+
+        $total_pages = ceil($rows_count / $items_per_page);
+
+        $produtos = App::get('database')->selectAll('produtos', $start_limit, $items_per_page);
+        $categorias = App::get('database')->selectAll('categorias');
+        return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
     }
 
+
+    
     public function produto()
     {
         $id = intval($_GET['id']);
-        
-        $result = App::get('database')->selectProduto("produtos", "categorias" ,$id);
+
+        $result = App::get('database')->selectProduto("produtos", "categorias", $id);
 
         $categoriaProduto = array();
-        foreach ($result["categorias"] as $categoria)
-        {
+        foreach ($result["categorias"] as $categoria) {
             $categoriaProduto += [
                 "{$categoria->id}" => $categoria->nome
             ];

@@ -27,7 +27,7 @@
                     class="fa-solid fa-magnifying-glass"></i></button>
 
                 </form> -->
-            <form class="d-flex" action="/site/produtos" method="POST">
+            <form class="d-flex" action="/produtos" method="POST">
               <input name="nome" class="form-control me-2" type="search" placeholder="Ex: Camiseta" aria-label="Search">
               <button class="btn btn-outline-danger" type="submit">Buscar</button>
             </form>
@@ -43,7 +43,7 @@
           <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Produtos
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Camiseta Monstershop</a></li>
             <li><a class="dropdown-item" href="#">Coqueteleira Monstershop</a></li>
             <li><a class="dropdown-item" href="#">Creatina</a></li>
@@ -62,9 +62,9 @@
           <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categoria
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-dark">
             <?php foreach ($categorias as $categoria) : ?>
-              <form action="/site/produtos" method="post">
+              <form action="/produtos" method="post">
                 <input type="hidden" name="categoriaID" value="<?= $categoria->id ?>">
 
                 <li><button class="dropdown-item" type="submit"><?= $categoria->nome ?></button></li>
@@ -98,23 +98,46 @@
       </div>
       <!--fim cards-->
 
+    </div>
+    <!--fim cards-->
 
-      <!--inicio paginação-->
-      <div class="edit-paginacao">
-        <nav aria-label="Page navigation example ">
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">Proximo</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!--fim paginação-->
+    <!--inicio paginação-->
+    
+    
+  
+    <div class="edit-paginacao">
+      <nav aria-label="Page navigation" class="mt-3">
+        <ul class="pagination">
 
+         <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>">
+              <a class="page-link text-dark" href="?pagina=<?= $page > 1 ? $page - 1 : 1 ?>" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+              </a>
+          </li>
+
+          <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++) : ?>
+              <li class="page-item <?= $page_number == $page ? "active" : "" ?>">
+                  <a class="page-link text-dark" href="?pagina=<?= $page_number ?>"><?= $page_number ?></a>
+              </li>
+          <?php endfor; ?>
+
+          <li class="page-item <?= $page >= $total_pages ? "disabled" : "" ?>">
+              <a class="page-link text-dark" href="?pagina=<?= $page < $total_pages ? $page + 1 : $total_pages ?>" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+              </a>
+          </li>
+
+        </ul>
+      </nav>
     </div>
 
+
+    <!--fim paginação-->
+
+</div>
+
     <?php include 'app/views/includes/footer.php' ?>
+    
 </body>
 
 </html>

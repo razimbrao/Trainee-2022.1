@@ -2,6 +2,7 @@
 
 use App\Controllers\CategoriasController;
 use App\Controllers\UsuariosController;
+use App\Controllers\ViewController;
 use App\Controllers\ProdutosController;
 use App\Core\Router;
 
@@ -13,6 +14,9 @@ $router->get('', 'ViewController@home');
 $router->get('home', 'ViewController@home');
 
 $router->get('produtos', 'ViewController@produtos');
+$router->post('produtos', 'ViewController@produtos');
+
+
 $router->get('produto', 'ViewController@produto');
 
 
@@ -45,14 +49,6 @@ $router->post('admin/categorias/delete', 'CategoriasController@delete');
 
 $router->post('admin/categorias/edit', 'CategoriasController@update');
 
-$router->get('site/produtos', 'ProdutosController@index');
-$router->post('site/produtos', 'ProdutosController@index');
-
-
-
-
-
-
 //---------Rotas de Produtos----------//
 
 
@@ -68,28 +64,10 @@ $router->post('admin/produtos/editar', 'ProdutosController@update');
 
 
 
-//---------Rotas de Categorias----------//
-
-$router->get('admin/categorias', 'CategoriasController@index');
-$router->post('admin/categorias', 'CategoriasController@index');
-
-$router->post('admin/categorias/create', 'CategoriasController@create');
-
-$router->post('admin/categorias/delete', 'CategoriasController@delete');
-
-$router->post('admin/categorias/edit', 'CategoriasController@update');
-
 //---------------Rotas de Login-------------//
 
 $router->get('admin/login','LoginController@view');
 $router->post('admin/login/validacao', 'LoginController@validacao');
 $router->get('dashboard', 'UsuariosController@dashboard');
 $router->get('logout', 'LoginController@logout');
-
-//---------------Rotas de Login-------------//
-
-$router->get('admin/login','LoginController@view');
-
-$router->post('admin/login/validacao', 'LoginController@validacao');
-
 ?>

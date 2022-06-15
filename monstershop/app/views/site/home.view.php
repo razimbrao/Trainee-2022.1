@@ -69,7 +69,7 @@
             <div class="card-body ">
               <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
               <p class="card-text text-cards"><?= $produto->descricao ?></p>
-              <a href="#" class="btn btn-primary btnc">COMPRAR</a>
+              <a href="/produto?id=<?= $produto->id ?>" class="btn btn-primary btnc">COMPRAR</a>
             </div>
           </div>
         </div>

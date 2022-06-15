@@ -45,11 +45,6 @@ class ProdutosController
         return view('admin/produtos', $table);
     }
 
-    public function show()
-    {
-        
-    }
-
     public function create()
     {
 
@@ -86,10 +81,6 @@ class ProdutosController
         header('Location: /admin/produtos');
     }
 
-    public function store()
-    {
-
-    }
 
     public function edit()
     {

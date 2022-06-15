@@ -49,17 +49,17 @@
                                 <!----------------- Botões ------------------>
 
                                 <!-- Botão de vizualização -->
-                                <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $produto->id ?>">
+                                <button type="button" class="btn-custom btn btn-primary btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $produto->id ?>">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
 
                                 <!-- Botão de Edição -->
-                                <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $produto->id ?>">
+                                <button type="button" class="btn-custom btn btn-primary btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $produto->id ?>">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
 
                                 <!-- Botão de exclusão -->
-                                <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $produto->id ?>">
+                                <button type="button" class="btn-custom btn btn-danger btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $produto->id ?>">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 

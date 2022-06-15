@@ -64,17 +64,17 @@
 
                         <td>
                             <!-- Botão de vizualização -->
-                            <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $usuario->id ?>">
+                            <button type="button" class="btn-custom btn btn-primary btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-visualizar-<?= $usuario->id ?>">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
 
                             <!-- Botão de Edição -->
-                            <button type="button" class="btn-custom btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $usuario->id ?>">
+                            <button type="button" class="btn-custom btn btn-primary btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-editar-<?= $usuario->id ?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
 
                             <!-- Botão de exclusão -->
-                            <button type="button" class="btn-custom btn btn-danger" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $usuario->id ?>">
+                            <button type="button" class="btn-custom btn btn-danger btn-outline-light" data-bs-toggle="modal" data-bs-target="#mod-excluir-<?= $usuario->id ?>">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>
 

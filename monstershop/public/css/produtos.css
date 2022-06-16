@@ -12,6 +12,7 @@ body {
 }
 
 
+
 .edit-filtro{
    max-height: 70px;
    margin-top: 2%;
@@ -31,6 +32,12 @@ body {
    margin-bottom: 3%;
    display: flex;
    justify-content: center;
+}
+
+.edicao-element {
+   display: flex;
+   flex-direction: column; 
+   justify-content: space-between;
 }
 
 .cartoes{

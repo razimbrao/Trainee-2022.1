@@ -66,7 +66,7 @@
         <div class="col d-flex justify-content-center">
           <div class="card  card1 cartoes2" style="width: 18rem;">
             <img src="..\..\..\public\img\adm-produtos\produtos\<?= $produto->imagem->nome_imagem ?>" class="card-img-top corpocards" alt="...">
-            <div class="card-body ">
+            <div class="card-body edicaoCartoes">
               <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
               <p class="card-text text-cards"><?= $produto->descricao ?></p>
               <a href="/produto?id=<?= $produto->id ?>" class="btn btn-primary btnc">COMPRAR</a>

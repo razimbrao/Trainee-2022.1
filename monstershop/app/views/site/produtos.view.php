@@ -71,7 +71,7 @@
             <div class="col d-flex justify-content-center col-edit ">
               <div class="card card1 cartoes">
                 <img src="..\..\..\public\img\adm-produtos\produtos\<?= $produto->imagem->nome_imagem ?>" class="card-img-top corpocards" alt="...">
-                <div class="card-body ">
+                <div class="card-body edicao-element">
                   <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
                   <p class="card-text text-cards"><?= $produto->descricao ?></p>
                   <a href="/produto?id=<?= $produto->id ?>" class="btn btn-dark btnc">COMPRAR - R$ <?= number_format($produto->preco, 2, ',', '') ?></a>
@@ -83,7 +83,6 @@
       </div>
       <!--fim cards-->
 
-    </div>
     <!--fim cards-->
 
     <!--inicio paginação-->

@@ -112,7 +112,7 @@ class ViewController
 
             return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
         }
-        // FiM categorias dropdown
+        // Fim categorias dropdown
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
             $page = intval($_GET['pagina']);

@@ -176,6 +176,7 @@ hr{
 }
 
 .avaliacoes-produto{
+    margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 50px;
@@ -319,12 +320,8 @@ hr{
     font-size: 20px;
 }
 
-.cartoes2, .lista-recomendacoes{
+.recomendacoes{
     display: none;
-}
-
-.recomendacoes-responsivo, .cartoes2-responsivo{
-    display: flex;
 }
 
 .cartoes2-responsivo{
@@ -338,7 +335,7 @@ hr{
     justify-content: center;
 }
 
-.container{
+.editContainer{
     display: flex;
     align-items: center;
     justify-content: center;

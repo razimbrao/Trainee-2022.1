@@ -14,7 +14,7 @@
 
   <?php include 'app/views/includes/navbar.php' ?>
 
-  <div class="container">
+  <div class="container editContainer">
     <div class="row">
       <div class="col-sm img-produto-principal">
 
@@ -24,7 +24,7 @@
 
           <div class="carousel-inner">
             <?php for ($i = 0; $i < count($produto[0]->imagens); $i++) : ?>
-              <div class="carousel-item <?php echo ($i===0 ? ' active' : ''); ?>">
+              <div class="carousel-item <?php echo ($i === 0 ? ' active' : ''); ?>">
                 <img src="../../../public/img/adm-produtos/produtos/<?= $produto[0]->imagens[$i]->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
               </div>
             <?php endfor; ?>
@@ -193,8 +193,8 @@
       <div class="card  card1 cartoes2" style="width: 18rem;">
         <img src="../../../public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
         <div class="card-body">
-          <h5 class="card-title cartao title-cards"><?php $produtos[0]->nome ?></h5>
-          <p class="card-text text-cards"><?php $produtos[0]->descricao ?></p>
+          <h5 class="card-title cartao title-cards">Camiseta</h5>
+          <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
           <a href="#" class="btn btn-primary btnc">Ver</a>
         </div>
       </div>
@@ -217,48 +217,7 @@
     </div>
   </div>
 
-  <div id="carouselExampleControls" class="carousel slide recomendacoes-responsivo" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="card card1 cartoes2-responsivo">
-          <img src="../../../public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Camiseta</h5>
-            <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
-            <a href="#" class="btn btn-primary btnc">Ver</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card card1 cartoes2-responsivo">
-          <img src="../../../public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Camiseta</h5>
-            <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
-            <a href="#" class="btn btn-primary btnc">Ver</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card card1 cartoes2-responsivo">
-          <img src="../../../public/img/camisetaMS.jpg" class="card-img-top corpocards" alt="...">
-          <div class="card-body">
-            <h5 class="card-title cartao title-cards">Camiseta</h5>
-            <p class="card-text text-cards">Camiseta preta MonsterShop.</p>
-            <a href="#" class="btn btn-primary btnc">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+
 
   <?php include 'app/views/includes/footer.php' ?>
 

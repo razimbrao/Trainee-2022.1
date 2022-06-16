@@ -17,6 +17,15 @@
             <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/produtosMonsterTitle.png" alt="Logo de Categorias">
         </div>
 
+        <?php if(isset($_SESSION['faltaCampos']) && !empty($_SESSION['faltaCampos'])): ?>
+            <center>
+                <div class="alert alert-danger edit-msg" role="alert">
+                    <?= $_SESSION['faltaCampos']; ?>
+                </div>
+            </center>
+            <?php unset($_SESSION['faltaCampos']); ?>
+        <?php endif;?>
+
         <div class="d-flex justify-content-end">
             <!-- Adicionar produtos -->
             <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">

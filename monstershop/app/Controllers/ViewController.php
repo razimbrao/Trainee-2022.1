@@ -22,6 +22,11 @@ class ViewController
     {
         $produtos = App::get('database')->selectAll('produtos');
 
+        for ($i = 0; $i < count($produtos) ; $i++) { 
+            $produtoImagem = App::get('database')->selecionarNomeImagem($produtos[$i]->id);
+            $produtos[$i]->imagem = $produtoImagem[0];
+        }
+
         $produtosHome = [];
 
         for($i = 0; $i < 6; $i++) {
@@ -44,6 +49,7 @@ class ViewController
             $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
             $produtos = App::get('database')->procurar('produtos', 'nome', $nome);
             $categorias = App::get('database')->selectAll('categorias');
+            $imagens = App::get('database')->selectAll('imagens');
             return view('site/produtos', compact('produtos', 'categorias'));
         }
 
@@ -64,6 +70,12 @@ class ViewController
             $categoria = filter_input(INPUT_POST, 'categoriaID', FILTER_SANITIZE_SPECIAL_CHARS);
             $produtos = App::get('database')->procurar('produtos', 'categoriaID', $categoria);
             $categorias = App::get('database')->selectAll('categorias');
+            
+
+            for ($i = 0; $i < count($produtos) ; $i++) { 
+                $produtoImagem = App::get('database')->selecionarNomeImagem($produtos[$i]->id);
+                $produtos[$i]->imagem = $produtoImagem[0];
+            }
 
             $rows_count = count($produtos);
 
@@ -73,15 +85,6 @@ class ViewController
 
             $total_pages = ceil($rows_count / $items_per_page);
             return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
-        }
-
-
-        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
-            $page = intval($_GET['pagina']);
-
-            if ($page <= 0) {
-                return redirect('produtos');
-            }
         }
 
         $items_per_page = 9;
@@ -96,7 +99,14 @@ class ViewController
 
         $produtos = App::get('database')->selectAll('produtos', $start_limit, $items_per_page);
         $categorias = App::get('database')->selectAll('categorias');
-        return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
+
+        for ($i = 0; $i < count($produtos) ; $i++) { 
+            $produtoImagem = App::get('database')->selecionarNomeImagem($produtos[$i]->id);
+            $produtos[$i]->imagem = $produtoImagem[0];
+        }
+
+
+        return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages', 'imagens'));
     }
 
 

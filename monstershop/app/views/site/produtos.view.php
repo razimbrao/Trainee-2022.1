@@ -70,11 +70,11 @@
           <?php foreach ($produtos as $produto) : ?>
             <div class="col d-flex justify-content-center col-edit ">
               <div class="card card1 cartoes">
-                <img src="../../public/img/moletomMS.jpg" class="card-img-top corpocards" alt="...">
+                <img src="..\..\..\public\img\adm-produtos\produtos\<?= $produto->imagem->nome_imagem ?>" class="card-img-top corpocards" alt="...">
                 <div class="card-body ">
                   <h5 class="card-title cartao title-cards"><?= $produto->nome ?></h5>
                   <p class="card-text text-cards"><?= $produto->descricao ?></p>
-                  <a href="/produto?id=<?= $produto->id ?>" class="btn btn-dark btnc">COMPRAR - R$<?= $produto->preco ?></a>
+                  <a href="/produto?id=<?= $produto->id ?>" class="btn btn-dark btnc">COMPRAR - R$ <?= number_format($produto->preco, 2, ',', '') ?></a>
                 </div>
               </div>
             </div>

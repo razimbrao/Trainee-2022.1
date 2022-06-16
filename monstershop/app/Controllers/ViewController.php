@@ -105,40 +105,17 @@ class ViewController
     {
         $id = intval($_GET['id']);
 
-        $result = App::get('database')->selectProduto("produtos", "categorias", $id);
+        $produto = App::get('database')->procurar("produtos", "id", $id);
+        $produtoImagem = App::get('database')->selecionarNomeImagem($id);
+        $produtoCategoria = App::get('database')->procurar("categorias", "id", $produto[0]->categoriaID);
 
-        $categoriaProduto = array();
-        foreach ($result["categorias"] as $categoria) {
-            $categoriaProduto += [
-                "{$categoria->id}" => $categoria->nome
-            ];
-        }
+        $produtos = App::get('database')->selectAll('produtos');
 
-        $tabela = [
-            "produto" => $result["produtos"][0],
-            "categorias" => $categoriaProduto
-        ];
+        /*$produtoImagem = App::get('database')->selecionarNomeImagem($produtos->id);
+        $produtos->imagens = $produtoImagem;*/
 
-        return view('site/produto', $tabela);
+        return view('site/produto', compact('produto', 'produtoImagem', 'produtoCategoria', 'produtos'));
     }
 
-    public function create()
-    {
-    }
-
-    public function store()
-    {
-    }
-
-    public function edit()
-    {
-    }
-
-    public function update()
-    {
-    }
-
-    public function delete()
-    {
-    }
+    
 }

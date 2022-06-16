@@ -16,30 +16,30 @@
     <?php include 'app/views/includes/sidebar.php' ?>
 
     <div class="container-fluid cont-custom">
-        
+
         <div class="title row justify-content-md-center">
             <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/usuariosMonsterTitle.png" alt="Logo de Categorias">
         </div>
 
-        <?php if(isset($_SESSION['emailCadastrado']) && !empty($_SESSION['emailCadastrado'])): ?>
+        <?php if (isset($_SESSION['emailCadastrado']) && !empty($_SESSION['emailCadastrado'])) : ?>
             <center>
                 <div class="alert alert-danger edit-msg" role="alert">
                     <?= $_SESSION['emailCadastrado']; ?>
                 </div>
             </center>
             <?php unset($_SESSION['emailCadastrado']); ?>
-        <?php endif;?>
+        <?php endif; ?>
 
-        
-        <?php if(isset($_SESSION['faltaCampos']) && !empty($_SESSION['faltaCampos'])): ?>
+
+        <?php if (isset($_SESSION['faltaCampos']) && !empty($_SESSION['faltaCampos'])) : ?>
             <center>
                 <div class="alert alert-danger edit-msg" role="alert">
                     <?= $_SESSION['faltaCampos']; ?>
                 </div>
             </center>
             <?php unset($_SESSION['faltaCampos']); ?>
-        <?php endif;?>
-        
+        <?php endif; ?>
+
         <div class="d-flex justify-content-end">
             <!-- Adicionar usuarios -->
             <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
@@ -66,7 +66,7 @@
                 </tr>
             </thead>
             <tbody>
-            <?php  /*if(isset($_SESSION['logado']) && !empty($_SESSION['logado'])):*/ ?>
+                <?php  /*if(isset($_SESSION['logado']) && !empty($_SESSION['logado'])):*/ ?>
                 <?php foreach ($usuarios as $usuario) : ?>
                     <tr>
                         <th scope="row"><?= $usuario->id ?></th>
@@ -91,7 +91,7 @@
 
                             <!----------------- Modais ------------------>
 
-                            <?php require 'modal/usuarios/modal-view.php' ?>              
+                            <?php require 'modal/usuarios/modal-view.php' ?>
                             <?php require 'modal/usuarios/modal-edit.php' ?>
                             <?php require 'modal/usuarios/modal-delete.php' ?>
 
@@ -100,7 +100,7 @@
                     </tr>
                 <?php endforeach; ?>
 
-            <?/*hp  endif; */?>
+                <?/*hp  endif; */ ?>
             </tbody>
         </table>
     </div>

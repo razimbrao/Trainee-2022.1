@@ -36,7 +36,6 @@
         </div>
 
         <!-- Tabela-Start -->
-        <div class="tabela">
             <table class="table table-hover table-bordered border-dark table-custom">
                 <thead>
                     <tr>
@@ -86,7 +85,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
-        </div>
+        
 
 
         <?php include 'app/views/includes/footer.php' ?>

@@ -25,6 +25,12 @@ main{
     align-items: center;
     margin-top: 2rem;
 }
+
+
+.social-telefone .icon-tel {
+    margin-left: 10px;
+}
+
 .divisao{
     padding-right: 0.5rem;
     border-right: 2px solid #a7a9ac;
@@ -99,6 +105,35 @@ main{
         margin-top: 2rem;
     }
 
+    
+    .social-email {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .social-email .icon-email {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .social-telefone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .social-telefone .icon-tel {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .divisao{
         padding-right: 0.5rem;
         border-right: 2px solid #a7a9ac;
@@ -146,6 +181,11 @@ main{
         margin-top: 0.5rem;
     }
 
+    .social{
+        display: flex;
+        flex-direction: column;
+    }
+
     .divisao{
         padding-right: 0.5rem;
         border-right: 0px solid #a7a9ac;
@@ -156,6 +196,7 @@ main{
         border-bottom: 2px solid #a7a9ac;
     }
 }
+
 
 @media (max-width: 280px){
     .social-telefone{

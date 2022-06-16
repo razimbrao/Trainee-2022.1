@@ -22,15 +22,16 @@
         <h2>ALGUMA DUVIDA? <span>FALE COM A GENTE!</span></h2>
       </div>
 
-      <div class="social">
+    <div class="social">
         <div class="social-email">
-          <img src="../../../public/img/contato/email.svg" alt="e-mail">
+           <i class="fa-solid fa-envelope icon-email iconTam fa-xl"></i>
         <span class="divisao">adm.monstershop@gmail.com</span>
-      </div>
-      <div class="social-telefone">
-        <img src="../../../public/img/contato/telefone.svg" alt="telefone">
-        <span>+55 (32) 20112413</span>
-      </div>
+        </div>
+
+        <div class="social-telefone">
+          <i class="fa-solid fa-phone icon-tel iconTam fa-xl"></i>
+          <span>+55 (32) 20112413</span>
+        </div>
     </div>
 
     <form class="formulario" method="post" action="/contato/enviaremail">

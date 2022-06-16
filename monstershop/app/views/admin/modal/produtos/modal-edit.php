@@ -9,7 +9,7 @@
             <!-- Form de Edição -->
 
             <div class="modal-body">
-                <form action="produtos/editar" method="POST">
+                <form action="produtos/editar" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nome</label>
                         <input type="text" name="nome" class="form-control" id="formGroupExampleInput2" value="<?= $produto->nome ?>">

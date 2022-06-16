@@ -33,6 +33,50 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    
+    //Funcoes de Produtos
+
+    public function selecionarNomeImagem($id){
+
+        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.id_produto = :id';
+        
+        try {
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id"=> $id]);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selecionarIDProduto(){
+        
+        $sql = 'SELECT id FROM produtos ORDER BY id DESC LIMIT 1';
+        
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function deletarImagens( $id)
+    {
+        $sql = "delete from `imagens` where id_produto={$id}";
+        
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ); 
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
     //Funções Genéricas
 
@@ -78,8 +122,7 @@ class QueryBuilder
 
 
     public function deletar($table, $id, $campoPesquisado = 'id')
-    {
-        
+    { 
         $sql = sprintf( 
             'DELETE FROM %s WHERE %s;',
             $table,
@@ -94,6 +137,8 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    
 
 
     public function procurar($table, $nomeCampo, $campoPesquisado)
@@ -115,7 +160,6 @@ class QueryBuilder
             die($e->getMessage());
         }  
     }
-
 
     //Funcoes de Produtos
 

@@ -32,9 +32,11 @@
                         <th scope="col">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">
-                            <form class="d-flex" action="produtos" method="POST">
-                                <input class="form-control me-2" type="search" placeholder="Search" name="pesquisa" aria-label="Search">
+                            <form action="/admin/produtos" class="d-flex" method="POST">
+                                <input name="produto" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
                                 <button class="btn-search btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
                             </form>
                         </th>
                     </tr>
@@ -44,7 +46,6 @@
                         <tr>
                             <th scope="row"><?= $produto->id ?></th>
                             <td><?= $produto->nome ?></td>
-
                             <td>
                                 <!----------------- Botões ------------------>
 
@@ -75,7 +76,6 @@
                 </tbody>
             </table>
         </div>
-
 
 
         <?php include 'app/views/includes/footer.php' ?>

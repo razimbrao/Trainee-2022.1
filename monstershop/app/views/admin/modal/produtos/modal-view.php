@@ -12,8 +12,7 @@
                         <input class="form-control" type="text" value="<?= $produto->nome ?>" aria-label="<?= $produto->nome ?>" disabled readonly>
                     </div>
 
-
-                    <!-- -------------------->
+                    <!-- Início Carrosel -->
 
                     <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
                         <label for="exampleInputPassword1" class="form-label">Imagens</label>
@@ -40,12 +39,11 @@
                         </button>
                     </div>
 
-
+                    <!-- Fim Carrosel -->
 
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Categoria</label>
-                        <input class="form-control" type="text" <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) : ?> value="<?= $cat->nome ?>" <?php endif;
-                                                                                                                                                                        endforeach; ?> aria-label="categoria do Produto" disabled readonly>
+                        <input class="form-control" type="text" <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) : ?> value="<?= $cat->nome ?>" <?php endif;                                                                                                                            endforeach; ?> aria-label="categoria do Produto" disabled readonly>
                     </div>
 
                     <div class="mb-3">

@@ -1,13 +1,4 @@
-<?php $index = 0 ?>
 
-<?php for($i = 0; $i < count($produtoImagem); $i++) : 
-
- $str = $produtoImagem[$i]->nome_imagem;
- $str2 =  "../../../public/img/adm-produtos/produtos/" . $str;
-
- $slider[$i]['img'] = $str2;
-
-endfor; ?>
 
 <!DOCTYPE html>
 <html lang="pt-Br">

@@ -15,6 +15,8 @@
     <!-- Inicio Filtro de categoria e barra de pesquisa-->
     <div class="edit-categoria-pesquisa">
 
+    <center>
+    <div class="edit-filtros">
       <!--Inicio da barra de pesquisa-->
       <div class="edit-pesquisa">
         <nav class="navbar navbar-dark bg-dark">
@@ -34,29 +36,10 @@
           </div>
         </nav>
       </div>
-
       <!--Fim da barra de pesquisa-->
 
       <!--Inicio Filtro de categoria-->
       <div class="edit-filtro">
-        <div class="btn-grou">
-          <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Produtos
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Camiseta Monstershop</a></li>
-            <li><a class="dropdown-item" href="#">Coqueteleira Monstershop</a></li>
-            <li><a class="dropdown-item" href="#">Creatina</a></li>
-            <li><a class="dropdown-item" href="#">Pasta de amendoim</a></li>
-            <li><a class="dropdown-item" href="#">Multivitaminico</a></li>
-            <li><a class="dropdown-item" href="#">Paradinhas</a></li>
-            <li><a class="dropdown-item" href="#">Whey Protein</a></li>
-            <li><a class="dropdown-item" href="#">Luva Monstershop</a></li>
-            <li><a class="dropdown-item" href="#">Moletom Monstershop</a></li>
-          </ul>
-        </div>
-
-
 
         <div class="btn-group">
           <button class="btn btn-secondary btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,7 +57,9 @@
         </div>
 
       </div>
-      <!--Fim Filtro de categoria-->
+    </div>
+  </center>
+    <!--Fim Filtro de categoria-->
 
       <!--fim Filtro de categoria e barra de pesquisa-->
 

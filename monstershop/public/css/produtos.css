@@ -10,7 +10,10 @@ body {
    justify-content: center;
 
 }
+
+
 .edit-filtro{
+   max-height: 70px;
    margin-top: 2%;
    display: flex;
    justify-content: center;

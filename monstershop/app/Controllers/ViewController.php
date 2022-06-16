@@ -39,6 +39,7 @@ class ViewController
     {
         $page = 1;
 
+        // Filtro produtos barra de pesquisa
         if (!empty($_POST['nome'])) {
             $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
             $produtos = App::get('database')->procurar('produtos', 'nome', $nome);
@@ -46,6 +47,7 @@ class ViewController
             return view('site/produtos', compact('produtos', 'categorias'));
         }
 
+        // Filtro categorias dropdown
         if (!empty($_POST['categoriaID'])) {
 
             if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
@@ -72,6 +74,7 @@ class ViewController
             $total_pages = ceil($rows_count / $items_per_page);
             return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
         }
+
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
             $page = intval($_GET['pagina']);

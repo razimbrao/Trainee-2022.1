@@ -62,6 +62,27 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function selectProduto($produtos, $categ, $id){
+
+        $sql = "SELECT * FROM {$produtos} WHERE id = {$id}";
+        $categorias = $this->selectAll($categ);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            $result = [
+                "produtos" => $stmt->fetchAll(PDO::FETCH_CLASS),
+                "categorias" => $categorias
+            ];
+
+            return $result;
+
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
     
     public function deletarImagens( $id)
     {

@@ -22,10 +22,25 @@ class ProdutosController
 
     public function view()
     {
-        if(!empty($_POST['pesquisa'])) {
-            $produto = filter_input(INPUT_POST, 'pesquisa', FILTER_SANITIZE_SPECIAL_CHARS);  
+        if(!empty($_POST['produto'])) {
+            $produto = filter_input(INPUT_POST, 'produto', FILTER_SANITIZE_SPECIAL_CHARS);  
             $produtos = App::get('database')->procurar('produtos', 'nome', $produto);
-            return view('admin/produtos', compact('produtos'));  
+
+            for ($i = 0; $i < count($produtos) ; $i++) { 
+                $produtoImagem = App::get('database')->selecionarNomeImagem($produtos[$i]->id);
+                $produtos[$i]->imagens = $produtoImagem;
+            }
+    
+            $categorias = App::get('database')->selectAll('categorias');
+            $imagens = App::get('database')->selectAll('imagens');
+    
+            $table = [
+                'produtos' => $produtos,
+                'categorias' => $categorias,
+                'imagens' => $imagens
+            ];
+
+            return view('admin/produtos', $table);  
         }  
 
         $produtos = App::get('database')->selectAll('produtos');
@@ -53,23 +68,12 @@ class ProdutosController
         if($preco==NULL)
             $preco=0.00;
 
-        $nome = $_POST['nome'];
-        $preco = $_POST['preco'];
-
-            
-        if(!$nome || !$preco) {
-            $_SESSION['faltaCampos'] = 'ERRO: Preencha os campos de nome e preço!';
-            header('Location: /admin/produtos');
-            exit();
-        }
-
         $parametros = [
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'categoriaID' => $_POST['categoriaID'],
             'preco' => $preco,
         ];
-
         
         App::get('database')->adicionar('produtos', $parametros);
 

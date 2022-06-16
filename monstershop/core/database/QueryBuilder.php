@@ -161,32 +161,6 @@ class QueryBuilder
         }  
     }
 
-    //Funcoes de Produtos
-
-    public function editaProdutos($idp, $table, $parametros)
-    {
-        $sql = sprintf(
-            'UPDATE %s
-            SET %s
-            WHERE %s;', 
-            $table,
-            implode(', ', array_map(function ($parametros) {
-                return "{$parametros} = :{$parametros}";
-            }, array_keys($parametros))),
-            'id = :id'
-        );
-
-        $parametros['id'] = $idp;
-
-        try {
-            $statement = $this->pdo->prepare($sql);
-
-            $statement->execute($parametros);
-        } catch (Exception $e) {
-            die("An error occurred when trying to update database: {$e->getMessage()}");
-        }
-    }
-
     public function editaUsuario($table, $dados, $foto, $id)
     {
 
@@ -206,43 +180,7 @@ class QueryBuilder
         }
     }
 
-    
    
-    public function selectImagem($id){
-
-        $sql = 'SELECT nome_imagem FROM imagens WHERE imagens.produto_id = :id';
-        
-        try {
-
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(["id"=> $id]);
-
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function selectProduto($produtos, $categ, $id){        
-
-        $sql = "SELECT * FROM {$produtos} WHERE id = {$id}";
-        $categorias = $this->selectAll($categ);
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            $result = [
-                "produtos" => $stmt->fetchAll(PDO::FETCH_CLASS),
-                "categorias" => $categorias
-            ];
-
-            return $result;
-
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
     public function countAll($table)
     {
         $sql = "SELECT COUNT(*) FROM {$table}";

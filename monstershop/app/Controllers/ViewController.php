@@ -22,8 +22,14 @@ class ViewController
     {
         $produtos = App::get('database')->selectAll('produtos');
 
+        $produtosHome = [];
+
+        for($i = 0; $i < 6; $i++) {
+            $produtosHome[$i] =  $produtos[$i];
+        }
+
         $tabela = [
-            'produtos' => $produtos
+            'produtos' => $produtosHome
         ];
 
         return view('site/home', $tabela);

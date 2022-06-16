@@ -55,10 +55,31 @@ body{
 
 .logout{
     width: 4rem;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 522px) {
     .botao{
-        font-size: 16px;
+        font-size: 14px;
+        min-width: 6rem;
+        min-height: 14px;
+    }
+    .botao-grupo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 14px;
+    }
+    .logout{
+        width: 4rem;
+        margin-bottom: 1rem;
     }
 }
+
+/*@media (max-width: 400px) {
+    .botao{
+        font-size: 16px;
+
+    }
+}*/

@@ -31,6 +31,8 @@
             <button type="button" class="btn btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#mod-adicionar">
                 Adicionar Produto
             </button>
+
+            <?php require 'modal/produtos/modal-add.php' ?>
         </div>
 
         <!-- Tabela-Start -->
@@ -77,7 +79,7 @@
                                 <?php require 'modal/produtos/modal-view.php' ?>
                                 <?php require 'modal/produtos/modal-edit.php' ?>
                                 <?php require 'modal/produtos/modal-delete.php' ?>
-                                <?php require 'modal/produtos/modal-add.php' ?>
+
 
                             </td>
                         </tr>

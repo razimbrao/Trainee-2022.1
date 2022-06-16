@@ -69,6 +69,6 @@ $router->post('admin/produtos/editar', 'ProdutosController@update');
 
 $router->get('admin/login','LoginController@view');
 $router->post('admin/login/validacao', 'LoginController@validacao');
-$router->get('dashboard', 'UsuariosController@dashboard');
+$router->get('admin/dashboard', 'UsuariosController@dashboard');
 $router->get('logout', 'LoginController@logout');
 ?>

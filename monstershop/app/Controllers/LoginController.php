@@ -14,7 +14,7 @@ class LoginController
         $url = $_SERVER['REQUEST_URI'];
         if(!str_contains($url, 'logout')) {
             if(!empty($_SESSION['logado'])) {
-                header('Location: /dashboard');
+                header('Location: /admin/dashboard');
                 exit();
             }
         }
@@ -61,7 +61,7 @@ class LoginController
         }
 
         $_SESSION['logado'] = 'logado';
-        header('Location: /dashboard');
+        header('Location: /admin/dashboard');
         exit();
     }
 

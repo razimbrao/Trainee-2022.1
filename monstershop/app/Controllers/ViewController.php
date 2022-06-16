@@ -106,7 +106,7 @@ class ViewController
         }
 
 
-        return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages', 'imagens'));
+        return view('site/produtos', compact('produtos', 'categorias', 'page', 'total_pages'));
     }
 
 

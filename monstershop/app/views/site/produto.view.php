@@ -55,7 +55,8 @@
           <input class="form-control input-qtde" type="text" placeholder="1" readonly>
           <button type="button" class="btn btn-success aumentar-quantidade">+</button>
         </div>
-
+        
+        <?php if($produto[0]->categoriaID === 1) :?>
         <h3>Tamanho:</h3>
         <div class="btn-group btn-tamanho" role="group" aria-label="Basic radio toggle button group">
           <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
@@ -73,6 +74,7 @@
           <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
           <label class="btn btn-outline-primary" for="btnradio5">GG</label>
         </div>
+        <?php endif; ?>
 
       </div>
       <div class="col-sm opcoes-de-compra2">

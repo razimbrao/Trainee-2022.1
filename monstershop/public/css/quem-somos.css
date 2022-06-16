@@ -198,10 +198,12 @@ body{
 
 @keyframes animacao-background-h1{
     0%{
-        transform: scaleX(0.2);
+        opacity: 0%;
+        transform: scaleX(0.8);
         transform-origin: 0% 0%;
     }
     100%{
+        opacity: 100%;
         transform: scaleX(1);
         transform-origin: 0% 0%;
     }

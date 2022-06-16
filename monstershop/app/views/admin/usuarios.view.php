@@ -29,6 +29,16 @@
             </center>
             <?php unset($_SESSION['emailCadastrado']); ?>
         <?php endif;?>
+
+        
+        <?php if(isset($_SESSION['faltaCampos']) && !empty($_SESSION['faltaCampos'])): ?>
+            <center>
+                <div class="alert alert-danger edit-msg" role="alert">
+                    <?= $_SESSION['faltaCampos']; ?>
+                </div>
+            </center>
+            <?php unset($_SESSION['faltaCampos']); ?>
+        <?php endif;?>
         
         <div class="d-flex justify-content-end">
             <!-- Adicionar usuarios -->

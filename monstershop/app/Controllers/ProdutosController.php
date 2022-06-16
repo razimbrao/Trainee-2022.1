@@ -62,20 +62,19 @@ class ProdutosController
     }
 
     public function create()
-    {
-        //parte de produtos
-        $preco=$_POST['preco'];
-        if($preco==NULL)
-            $preco=0.00;
+    {   
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);             
+        $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS); 
+        $categoriaID = filter_input(INPUT_POST, 'categoriaID', FILTER_SANITIZE_SPECIAL_CHARS);
+        $preco = filter_input(INPUT_POST, 'preco', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $parametros = [
-            'nome' => $_POST['nome'],
-            'descricao' => $_POST['descricao'],
-            'categoriaID' => $_POST['categoriaID'],
-            'preco' => $preco,
-        ];
+        if(!$nome || !$preco) {
+            $_SESSION['faltaCampos'] = 'ERRO: Preencha os campos de nome e preço!';
+            header('Location: /admin/produtos');
+            exit();
+        }
         
-        App::get('database')->adicionar('produtos', $parametros);
+        App::get('database')->adicionar('produtos', compact('nome', 'descricao', 'categoriaID', 'preco'));
 
         //parte de imagens
         $produto_id = App::get('database')->selecionarIDProduto();

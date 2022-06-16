@@ -7,7 +7,7 @@
             </div>
             <form action="produtos/excluir" method="POST">
                 <div class="modal-body">
-                    Tem certeza que deseja excluir esse usuário?
+                    Tem certeza que deseja excluir esse produto?
                 </div>
                 <input type="hidden" value="<?= $produto->id ?>" name="id">
                 <div class="modal-footer">

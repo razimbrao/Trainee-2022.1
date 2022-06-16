@@ -120,11 +120,9 @@ class ViewController
         $produtoCategoria = App::get('database')->procurar("categorias", "id", $produto[0]->categoriaID);
 
         $produtos = App::get('database')->selectAll('produtos');
-
-        /*$produtoImagem = App::get('database')->selecionarNomeImagem($produtos->id);
-        $produtos->imagens = $produtoImagem;*/
-
-        return view('site/produto', compact('produto', 'produtoImagem', 'produtoCategoria', 'produtos'));
+        $produto[0]->imagens = $produtoImagem;
+        
+        return view('site/produto', compact('produto', 'produtoCategoria', 'produtos'));
     }
 
     

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -22,32 +20,24 @@
 
 
         <!-- Inicio Carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide carrosel-produto-principal carousel-dark" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide carrosel-produto-principal carousel-dark" data-ride="carousel">
 
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <?php for ($i = 0; $i < count($produtoImagem); $i++) : ?>
-              <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i; ?>" <?php echo ($index === $i ? ' class="active"' : ''); ?>></li>
-            <?php endfor; ?>
-          </ol>
-
-          <div class="carousel-inner" role="listbox">
-            <?php foreach ($slider as $i => $item) : ?>
-              <div class="carousel-item<?php echo ($index === $i ? ' active' : ''); ?>">
-                <?php echo '<img class="d-block img-fluid" src="' . $item['img'] . '" alt="...">'; ?>
+          <div class="carousel-inner">
+            <?php for ($i = 0; $i < count($produto[0]->imagens); $i++) : ?>
+              <div class="carousel-item <?php echo ($i===0 ? ' active' : ''); ?>">
+                <img src="../../../public/img/adm-produtos/produtos/<?= $produto[0]->imagens[$i]->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
               </div>
-            <?php endforeach; ?>
-
+            <?php endfor; ?>
           </div>
 
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+            <span class="visually-hidden">Next</span>
+          </button>
 
         </div>
 

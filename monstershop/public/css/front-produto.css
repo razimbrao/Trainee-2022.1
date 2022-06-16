@@ -232,7 +232,7 @@ hr{
 }
 
 
-.recomendacoes-responsivo, .cartoes2-responsivo, .carousel-control-prev, .carousel-control-next{
+.recomendacoes-responsivo, .cartoes2-responsivo{
     display: none;
 }
 
@@ -323,7 +323,7 @@ hr{
     display: none;
 }
 
-.recomendacoes-responsivo, .cartoes2-responsivo, .carousel-control-prev, .carousel-control-next{
+.recomendacoes-responsivo, .cartoes2-responsivo{
     display: flex;
 }
 

@@ -17,17 +17,13 @@
                     <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
                         <label for="exampleInputPassword1" class="form-label">Imagens</label>
                         <div class="carousel-inner">
-
-                            <div class="carousel-item active">
-                                <img src="../../../public/img/adm-produtos/produtos/<?= $produto->imagens[0]->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
+                            <div class="carousel-inner">
+                                <?php for ($i = 0; $i < count($produto->imagens); $i++) : ?>
+                                    <div class="carousel-item<?php echo ($i === 0 ? ' active' : ''); ?>">
+                                        <img src="../../../public/img/adm-produtos/produtos/<?= $produto->imagens[$i]->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
+                                    </div>
+                                <?php endfor; ?>
                             </div>
-
-                            <?php for ($i = 1; $i < count($produto->imagens); $i++) : ?>
-                                <div class="carousel-item">
-                                    <img src="../../../public/img/adm-produtos/produtos/<?= $produto->imagens[$i]->nome_imagem ?>" class="d-block w-100 imagem-teste" alt="Imagem do produto">
-                                </div>
-                            <?php endfor; ?>
-
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -43,7 +39,8 @@
 
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Categoria</label>
-                        <input class="form-control" type="text" <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) : ?> value="<?= $cat->nome ?>" <?php endif;                                                                                                                            endforeach; ?> aria-label="categoria do Produto" disabled readonly>
+                        <input class="form-control" type="text" <?php foreach ($categorias as $cat) : if ($cat->id === $produto->categoriaID) : ?> value="<?= $cat->nome ?>" <?php endif;
+                                                                                                                                                                        endforeach; ?> aria-label="categoria do Produto" disabled readonly>
                     </div>
 
                     <div class="mb-3">

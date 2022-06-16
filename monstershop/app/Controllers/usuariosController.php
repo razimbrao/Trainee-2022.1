@@ -48,7 +48,7 @@ class UsuariosController
         $foto = filter_input(INPUT_POST, 'foto');
 
         if(!$nome || !$email || !$senha) {
-            $_SESSION['faltaCampos'] = 'Preencha todos os campos corretamente!';
+            $_SESSION['faltaCampos'] = 'ERRO: Preencha todos os campos corretamente!';
             header('Location: /admin/usuarios');
             exit();
         }

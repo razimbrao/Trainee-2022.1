@@ -26,6 +26,15 @@
                     <img class="logo col-md-auto" src="../../../public/img/Tabelas-Admin/categoriasMonsterTitle.png" alt="Logo de Categorias">
                 </div>
 
+                <?php if (isset($_SESSION['faltaCampos']) && !empty($_SESSION['faltaCampos'])) : ?>
+                    <center>
+                        <div class="alert alert-danger edit-msg" role="alert">
+                            <?= $_SESSION['faltaCampos']; ?>
+                        </div>
+                    </center>
+                    <?php unset($_SESSION['faltaCampos']); ?>
+                <?php endif; ?>
+
                 <!-- Botão de adicionar categoria -->
                 <div class="d-flex justify-content-end">
                     <!-- Adicionar usuarios -->

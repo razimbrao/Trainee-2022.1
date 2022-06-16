@@ -58,7 +58,7 @@ class ProdutosController
 
             
         if(!$nome || !$preco) {
-            $_SESSION['faltaCampos'] = 'Preencha os campos de nome e preço!';
+            $_SESSION['faltaCampos'] = 'ERRO: Preencha os campos de nome e preço!';
             header('Location: /admin/produtos');
             exit();
         }

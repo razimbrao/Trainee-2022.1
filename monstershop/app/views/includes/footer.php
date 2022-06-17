@@ -18,8 +18,7 @@
                 <img src="../../../public/assets/MS_sem_fundo.png" alt="Logo do site" width="150rem">
             </div>
 
-            <p class="sign">© 2022 Codejr</p>
-
+            <p class="sign">© 2022 Codejr - Frederico Vieira, Pedro Couto, Gabriel Bahia, Christian Coelho e Rafael Zimbrão</p>
         </div>
     </div>
 </footer>
